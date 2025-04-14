@@ -2,6 +2,7 @@ import s from "./header.module.scss";
 import logo from "../../assets/images/Logo.svg";
 
 import { Link } from "react-router";
+import Search from "../Search";
 
 export default function Header() {
   return (
@@ -12,56 +13,18 @@ export default function Header() {
             <Link to='#'>
               <img src={logo} alt='logotype' className={s.logo} />
             </Link>
-            <div className={s.search}>
-              <svg
-                width='24.000000'
-                height='24.000000'
-                viewBox='0 0 24 24'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <defs>
-                  <clipPath id='clip2603_2811'>
-                    <rect
-                      id='Icon/32px/Search'
-                      rx='0.000000'
-                      width='23.000000'
-                      height='23.000000'
-                      transform='translate(0.500000 0.500000)'
-                      fill='white'
-                      fillOpacity='0'
-                    />
-                  </clipPath>
-                </defs>
-                <g clipPath='url(#clip2603_2811)'>
-                  <path
-                    id='Vector'
-                    d='M20 20L16.22 16.21M16.21 16.21C14.87 17.56 13.05 18.31 11.15 18.31C9.25 18.31 7.43 17.56 6.09 16.21C4.75 14.87 4 13.05 4 11.15C4 9.25 4.75 7.43 6.09 6.09C7.43 4.75 9.25 4 11.15 4C13.05 4 14.87 4.75 16.21 6.09C17.56 7.43 18.31 9.25 18.31 11.15C18.31 13.05 17.56 14.87 16.21 16.21Z'
-                    stroke='#989898'
-                    strokeOpacity='1.000000'
-                    strokeWidth='1.500000'
-                    strokeLinecap='round'
-                  />
-                </g>
-              </svg>
-
-              <input
-                className={s.input}
-                type='text'
-                placeholder='Search'
-              ></input>
-            </div>
+            <Search />
             <ul className={s.nav}>
-              <li className={s.nav_el.active}>
-                <Link to='#'>Home</Link>
+              <li className={s.items}>
+                <Link to='#' className={s.active}>Home</Link>
               </li>
-              <li className={s.nav_el}>
+              <li className={s.item}>
                 <Link to='#'>About</Link>
               </li>
-              <li className={s.nav_el}>
+              <li className={s.item}>
                 <Link to='#'>Contact Us</Link>
               </li>
-              <li className={s.nav_el}>
+              <li className={s.item}>
                 <Link to='#'>Blog</Link>
               </li>
             </ul>

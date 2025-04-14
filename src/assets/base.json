@@ -1,0 +1,168 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "Phones",
+      "name": "iPhone 15 Pro",
+      "brand": "Apple",
+      "price": 999,
+      "color": "Titanium Black",
+      "memory": "256GB",
+      "screenSize": "6.1 inches",
+      "processor": "A17 Pro",
+      "camera": "Triple 48MP+12MP+12MP",
+      "battery": "3274 mAh",
+      "os": "iOS 17",
+      "stock": 50,
+      "rating": 4.8,
+      "reviews": []
+    },
+    {
+      "id": 2,
+      "category": "Phones",
+      "name": "Samsung Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "price": 1199,
+      "color": "Phantom Black",
+      "memory": "512GB",
+      "screenSize": "6.8 inches",
+      "processor": "Snapdragon 8 Gen 2",
+      "camera": "Quad 200MP+12MP+10MP+10MP",
+      "battery": "5000 mAh",
+      "os": "Android 13",
+      "stock": 35,
+      "rating": 4.7,
+      "reviews": []
+    },
+    {
+      "id": 3,
+      "category": "Smart Watches",
+      "name": "Apple Watch Series 9",
+      "brand": "Apple",
+      "price": 399,
+      "color": "Midnight",
+      "memory": "32GB",
+      "screenSize": "45mm",
+      "features": ["ECG", "Blood Oxygen", "GPS"],
+      "batteryLife": "18 hours",
+      "waterResistance": "50m",
+      "compatibility": "iPhone",
+      "stock": 80,
+      "rating": 4.6,
+      "reviews": []
+    },
+    {
+      "id": 4,
+      "category": "Cameras",
+      "name": "Sony A7 IV",
+      "brand": "Sony",
+      "price": 2499,
+      "color": "Black",
+      "sensor": "Full-frame 33MP",
+      "lensMount": "Sony E-mount",
+      "videoResolution": "4K 60fps",
+      "isoRange": "100-51200",
+      "autofocus": "Real-time Tracking",
+      "memoryCard": "Dual SD/CFexpress",
+      "stock": 15,
+      "rating": 4.9,
+      "reviews": []
+    },
+    {
+      "id": 5,
+      "category": "Headphones",
+      "name": "Sony WH-1000XM5",
+      "brand": "Sony",
+      "price": 349,
+      "color": "Black",
+      "type": "Over-ear",
+      "noiseCancelling": "Yes",
+      "batteryLife": "30 hours",
+      "wireless": "Bluetooth 5.2",
+      "weight": "250g",
+      "stock": 60,
+      "rating": 4.8,
+      "reviews": []
+    },
+    {
+      "id": 6,
+      "category": "Computers",
+      "name": "MacBook Pro 16\" M2 Max",
+      "brand": "Apple",
+      "price": 3499,
+      "color": "Space Gray",
+      "memory": "32GB",
+      "storage": "1TB SSD",
+      "screenSize": "16.2 inches",
+      "processor": "M2 Max 12-core",
+      "gpu": "38-core",
+      "batteryLife": "22 hours",
+      "os": "macOS Ventura",
+      "stock": 20,
+      "rating": 4.9,
+      "reviews": []
+    },
+    {
+      "id": 7,
+      "category": "Gaming",
+      "name": "PlayStation 5",
+      "brand": "Sony",
+      "price": 499,
+      "color": "White",
+      "storage": "825GB SSD",
+      "resolution": "4K 120Hz",
+      "features": ["Ray Tracing", "3D Audio", "Backward Compatibility"],
+      "controller": "DualSense",
+      "stock": 30,
+      "rating": 4.8,
+      "reviews": []
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Phones",
+      "description": "Latest smartphones from top brands"
+    },
+    {
+      "id": 2,
+      "name": "Smart Watches",
+      "description": "Wearable technology for fitness and communication"
+    },
+    {
+      "id": 3,
+      "name": "Cameras",
+      "description": "Professional and amateur photography equipment"
+    },
+    {
+      "id": 4,
+      "name": "Headphones",
+      "description": "Audio devices for music and calls"
+    },
+    {
+      "id": 5,
+      "name": "Computers",
+      "description": "Laptops and desktops for work and entertainment"
+    },
+    {
+      "id": 6,
+      "name": "Gaming",
+      "description": "Consoles and accessories for gamers"
+    }
+  ],
+  "reviewsSchema": {
+    "userId": "string",
+    "userName": "string",
+    "rating": "number (1-5)",
+    "date": "ISO date string",
+    "text": "string",
+    "pros": "array of strings",
+    "cons": "array of strings",
+    "verifiedPurchase": "boolean",
+    "ratings": {
+      "quality": "number (1-5)",
+      "value": "number (1-5)",
+      "features": "number (1-5)"
+    }
+  }
+}

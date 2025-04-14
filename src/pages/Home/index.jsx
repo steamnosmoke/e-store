@@ -1,3 +1,4 @@
+import Categories from "../../components/Categories";
 import MainBanner from "../../components/MainBanner";
 import Tablets from "../../components/Tablets";
 import s from "./home.module.scss";
@@ -10,6 +11,7 @@ export default function Home() {
       <main className={s.main}>
         <MainBanner/>
         <Tablets/>
+        <Categories/>
       </main>
     </>
   );
