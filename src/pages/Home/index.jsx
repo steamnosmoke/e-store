@@ -1,5 +1,7 @@
 import Categories from "../../components/Categories";
+import Footer from "../../components/Footer";
 import MainBanner from "../../components/MainBanner";
+import Products from "../../components/Products";
 import Tablets from "../../components/Tablets";
 import s from "./home.module.scss";
 
@@ -12,6 +14,8 @@ export default function Home() {
         <MainBanner/>
         <Tablets/>
         <Categories/>
+        <Products/>
+        <Footer/>
       </main>
     </>
   );
