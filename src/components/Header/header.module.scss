@@ -18,19 +18,19 @@
   align-items: center;
 }
 
-.logo {
-  transition: all 0.1s ease-in-out;
+// .logo {
+//   transition: all 0.1s ease-in-out;
 
-  &:hover {
-    transform: scale(1.05);
-  }
-}
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+// }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 369px;
+  // max-width: 369px;
   gap: 52px;
 
   .item,

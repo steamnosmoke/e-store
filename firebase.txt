@@ -1,0 +1,23 @@
+"predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+
+      // // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDhZKqBEcppVAySnIJaFZ8XnQN5xgIDo9Y",
+//   authDomain: "e-store-4ca3a.firebaseapp.com",
+//   databaseURL:
+//     "https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app",
+//   projectId: "e-store-4ca3a",
+//   storageBucket: "e-store-4ca3a.firebasestorage.app",
+//   messagingSenderId: "463858100058",
+//   appId: "1:463858100058:web:e2bbfabb50af5650877563",
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);

@@ -3,151 +3,863 @@
     {
       "id": 1,
       "category": "Phones",
-      "name": "iPhone 15 Pro",
+      "name": "iPhone 16 Pro",
       "brand": "Apple",
-      "price": 999,
+      "price": [999, 1099, 1299, 1499],
       "color": "Titanium Black",
-      "memory": "256GB",
+      "memory": [128, 256, 512, 1],
       "screenSize": "6.1 inches",
       "processor": "A17 Pro",
       "camera": "Triple 48MP+12MP+12MP",
       "battery": "3274 mAh",
       "os": "iOS 17",
       "stock": 50,
-      "rating": 4.8,
-      "reviews": []
+      "rating": 4.5,
+      "reviews": [
+        {
+          "userId": 101,
+          "userName": "TechLover22",
+          "rating": 5,
+          "comment": "Amazing phone! The camera quality is unreal."
+        },
+        {
+          "userId": 102,
+          "userName": "GadgetFan",
+          "rating": 4,
+          "comment": "Great performance, but battery could be better."
+        }
+      ]
     },
     {
       "id": 2,
       "category": "Phones",
-      "name": "Samsung Galaxy S23 Ultra",
-      "brand": "Samsung",
-      "price": 1199,
-      "color": "Phantom Black",
-      "memory": "512GB",
-      "screenSize": "6.8 inches",
-      "processor": "Snapdragon 8 Gen 2",
-      "camera": "Quad 200MP+12MP+10MP+10MP",
-      "battery": "5000 mAh",
-      "os": "Android 13",
-      "stock": 35,
-      "rating": 4.7,
-      "reviews": []
+      "name": "iPhone 16",
+      "brand": "Apple",
+      "price": [799, 899, 1099],
+      "color": "Titanium Black",
+      "memory": [128, 256, 512],
+      "screenSize": "6.1 inches",
+      "processor": "A17 Pro",
+      "camera": "Triple 48MP+12MP+12MP",
+      "battery": "3274 mAh",
+      "os": "iOS 17",
+      "stock": 50,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 103,
+          "userName": "AppleFanatic",
+          "rating": 5,
+          "comment": "Perfect balance of price and features!"
+        }
+      ]
     },
     {
       "id": 3,
-      "category": "Smart Watches",
-      "name": "Apple Watch Series 9",
-      "brand": "Apple",
-      "price": 399,
-      "color": "Midnight",
-      "memory": "32GB",
-      "screenSize": "45mm",
-      "features": ["ECG", "Blood Oxygen", "GPS"],
-      "batteryLife": "18 hours",
-      "waterResistance": "50m",
-      "compatibility": "iPhone",
-      "stock": 80,
-      "rating": 4.6,
-      "reviews": []
+      "category": "Phones",
+      "name": "Samsung Galaxy S24 Ultra",
+      "brand": "Samsung",
+      "price": [1199, 1299, 1499],
+      "color": "Phantom Black",
+      "memory": [256, 512, 1],
+      "screenSize": "6.8 inches",
+      "processor": "Snapdragon 8 Gen 3",
+      "camera": "Quad 200MP+50MP+12MP+10MP",
+      "battery": "5000 mAh",
+      "os": "Android 14",
+      "stock": 35,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 104,
+          "userName": "AndroidMaster",
+          "rating": 5,
+          "comment": "The best Android phone ever made!"
+        }
+      ]
     },
     {
       "id": 4,
-      "category": "Cameras",
-      "name": "Sony A7 IV",
-      "brand": "Sony",
-      "price": 2499,
-      "color": "Black",
-      "sensor": "Full-frame 33MP",
-      "lensMount": "Sony E-mount",
-      "videoResolution": "4K 60fps",
-      "isoRange": "100-51200",
-      "autofocus": "Real-time Tracking",
-      "memoryCard": "Dual SD/CFexpress",
-      "stock": 15,
-      "rating": 4.9,
-      "reviews": []
+      "category": "Phones",
+      "name": "Google Pixel 8 Pro",
+      "brand": "Google",
+      "price": [999, 1099, 1299],
+      "color": "Obsidian",
+      "memory": [128, 256, 512],
+      "screenSize": "6.7 inches",
+      "processor": "Google Tensor G3",
+      "camera": "Triple 50MP+48MP+48MP",
+      "battery": "5050 mAh",
+      "os": "Android 14",
+      "stock": 40,
+      "rating": 4,
+      "reviews": [
+        {
+          "userId": 105,
+          "userName": "PixelFan",
+          "rating": 4,
+          "comment": "Love the AI features, but the processor could be faster."
+        }
+      ]
     },
     {
       "id": 5,
-      "category": "Headphones",
-      "name": "Sony WH-1000XM5",
-      "brand": "Sony",
-      "price": 349,
-      "color": "Black",
-      "type": "Over-ear",
-      "noiseCancelling": "Yes",
-      "batteryLife": "30 hours",
-      "wireless": "Bluetooth 5.2",
-      "weight": "250g",
-      "stock": 60,
-      "rating": 4.8,
+      "category": "Phones",
+      "name": "OnePlus 12",
+      "brand": "OnePlus",
+      "price": [799, 899, 999],
+      "color": "Emerald Green",
+      "memory": [128, 256, 512],
+      "screenSize": "6.82 inches",
+      "processor": "Snapdragon 8 Gen 3",
+      "camera": "Triple 50MP+64MP+48MP",
+      "battery": "5400 mAh",
+      "os": "Android 14",
+      "stock": 30,
+      "rating": 0,
       "reviews": []
     },
+
     {
       "id": 6,
-      "category": "Computers",
-      "name": "MacBook Pro 16\" M2 Max",
+      "category": "Smartwatches",
+      "name": "Apple Watch Series 9",
       "brand": "Apple",
-      "price": 3499,
-      "color": "Space Gray",
-      "memory": "32GB",
-      "storage": "1TB SSD",
-      "screenSize": "16.2 inches",
-      "processor": "M2 Max 12-core",
-      "gpu": "38-core",
-      "batteryLife": "22 hours",
-      "os": "macOS Ventura",
-      "stock": 20,
-      "rating": 4.9,
-      "reviews": []
+      "price": [399, 499, 799],
+      "color": "Midnight",
+      "size": ["41mm", "45mm"],
+      "material": "Aluminum",
+      "screenType": "Retina LTPO OLED",
+      "waterResistance": "50m",
+      "batteryLife": "18 hours",
+      "os": "watchOS 10",
+      "features": ["ECG", "Blood Oxygen", "GPS", "Fall Detection"],
+      "stock": 30,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 201,
+          "userName": "FitnessPro",
+          "rating": 5,
+          "comment": "Лучшие часы для тренировок! Датчики очень точные."
+        }
+      ]
     },
     {
       "id": 7,
-      "category": "Gaming",
-      "name": "PlayStation 5",
-      "brand": "Sony",
-      "price": 499,
-      "color": "White",
-      "storage": "825GB SSD",
-      "resolution": "4K 120Hz",
-      "features": ["Ray Tracing", "3D Audio", "Backward Compatibility"],
-      "controller": "DualSense",
-      "stock": 30,
-      "rating": 4.8,
+      "category": "Smartwatches",
+      "name": "Samsung Galaxy Watch 6 Classic",
+      "brand": "Samsung",
+      "price": [349, 429],
+      "color": "Black",
+      "size": ["43mm", "47mm"],
+      "material": "Stainless Steel",
+      "screenType": "Super AMOLED",
+      "waterResistance": "50m",
+      "batteryLife": "40 hours",
+      "os": "Wear OS",
+      "features": ["ECG", "Blood Pressure", "Rotating Bezel", "Sleep Tracking"],
+      "stock": 25,
+      "rating": 4,
+      "reviews": [
+        {
+          "userId": 202,
+          "userName": "AndroidUser",
+          "rating": 4,
+          "comment": "Отличная альтернатива Apple Watch для Android."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Smartwatches",
+      "name": "Garmin Venu 3",
+      "brand": "Garmin",
+      "price": [449, 499],
+      "color": "Slate Gray",
+      "size": ["45mm"],
+      "material": "Fiber-Reinforced Polymer",
+      "screenType": "AMOLED",
+      "waterResistance": "50m",
+      "batteryLife": "14 days",
+      "os": "Garmin OS",
+      "features": ["Advanced Sleep Coaching", "HRV Status", "Offline Music"],
+      "stock": 20,
+      "rating": 0,
       "reviews": []
+    },
+    {
+      "id": 9,
+      "category": "Smartwatches",
+      "name": "Xiaomi Watch 2 Pro",
+      "brand": "Xiaomi",
+      "price": [199, 249],
+      "color": "Silver",
+      "size": ["46mm"],
+      "material": "Stainless Steel",
+      "screenType": "AMOLED",
+      "waterResistance": "50m",
+      "batteryLife": "65 hours",
+      "os": "Wear OS",
+      "features": ["Dual-Band GPS", "NFC", "Bluetooth Calls"],
+      "stock": 35,
+      "rating": 4,
+      "reviews": [
+        {
+          "userId": 203,
+          "userName": "BudgetTech",
+          "rating": 4,
+          "comment": "Идеальное соотношение цены и качества."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "category": "Smartwatches",
+      "name": "Huawei Watch GT 4",
+      "brand": "Huawei",
+      "price": [249, 299],
+      "color": "Brown Leather",
+      "size": ["41mm", "46mm"],
+      "material": "Stainless Steel + Leather",
+      "screenType": "AMOLED",
+      "waterResistance": "50m",
+      "batteryLife": "14 days",
+      "os": "HarmonyOS",
+      "features": ["TruSeen 5.5+", "Stay Fit App", "Wireless Charging"],
+      "stock": 18,
+      "rating": 0,
+      "reviews": []
+    },
+    {
+      "id": 11,
+      "category": "Cameras",
+      "name": "Sony Alpha A7 IV",
+      "brand": "Sony",
+      "price": [2499, 2799],
+      "color": "Black",
+      "type": "Mirrorless",
+      "sensor": "Full-frame 33MP",
+      "lensMount": "Sony E-mount",
+      "isoRange": "100-51200 (expandable to 50-204800)",
+      "videoResolution": "4K 60fps",
+      "autofocus": "Real-time Eye AF",
+      "weight": "658g",
+      "stock": 15,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 301,
+          "userName": "ProPhotographer",
+          "rating": 5,
+          "comment": "Идеальный баланс качества и функциональности. Отличный выбор для профессионалов."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "category": "Cameras",
+      "name": "Canon EOS R5",
+      "brand": "Canon",
+      "price": [3899],
+      "color": "Black",
+      "type": "Mirrorless",
+      "sensor": "Full-frame 45MP",
+      "lensMount": "Canon RF-mount",
+      "isoRange": "100-51200 (expandable to 50-102400)",
+      "videoResolution": "8K 30fps",
+      "autofocus": "Dual Pixel CMOS AF II",
+      "weight": "738g",
+      "stock": 10,
+      "rating": 4,
+      "reviews": [
+        {
+          "userId": 302,
+          "userName": "VideoMaker",
+          "rating": 4,
+          "comment": "Фантастическое качество видео, но сильно греется при съемке 8K."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "category": "Cameras",
+      "name": "Fujifilm X-T5",
+      "brand": "Fujifilm",
+      "price": [1699],
+      "color": "Silver",
+      "type": "Mirrorless",
+      "sensor": "APS-C 40MP",
+      "lensMount": "Fujifilm X-mount",
+      "isoRange": "160-12800 (expandable to 80-51200)",
+      "videoResolution": "6K 30fps",
+      "autofocus": "Intelligent Hybrid AF",
+      "weight": "557g",
+      "stock": 20,
+      "rating": 0,
+      "reviews": []
+    },
+    {
+      "id": 14,
+      "category": "Cameras",
+      "name": "Nikon Z6 II",
+      "brand": "Nikon",
+      "price": [1999],
+      "color": "Black",
+      "type": "Mirrorless",
+      "sensor": "Full-frame 24MP",
+      "lensMount": "Nikon Z-mount",
+      "isoRange": "100-51200 (expandable to 50-204800)",
+      "videoResolution": "4K 60fps",
+      "autofocus": "273-point Hybrid AF",
+      "weight": "705g",
+      "stock": 12,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 303,
+          "userName": "TravelShooter",
+          "rating": 5,
+          "comment": "Надежная камера для путешествий. Отличная эргономика."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "category": "Cameras",
+      "name": "GoPro HERO12 Black",
+      "brand": "GoPro",
+      "price": [399],
+      "color": "Black",
+      "type": "Action Camera",
+      "sensor": "1/1.9\" 27MP",
+      "videoResolution": "5.3K 60fps",
+      "waterResistance": "10m (без бокса)",
+      "stabilization": "HyperSmooth 6.0",
+      "weight": "154g",
+      "stock": 25,
+      "rating": 4,
+      "reviews": [
+        {
+          "userId": 304,
+          "userName": "ExtremeSports",
+          "rating": 4,
+          "comment": "Лучшая камера для экстремальных съемок, но батарея садится быстро."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "category": "Headphones",
+      "name": "Sony WH-1000XM5",
+      "brand": "Sony",
+      "price": [399, 449],
+      "color": "Black",
+      "type": "Over-ear",
+      "wireless": true,
+      "noiseCancellation": "Active Noise Cancelling (ANC)",
+      "batteryLife": "30 hours (ANC on)",
+      "bluetoothVersion": "5.2",
+      "weight": "250g",
+      "features": ["Touch controls", "Speak-to-Chat", "Hi-Res Audio"],
+      "stock": 25,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 401,
+          "userName": "Audiophile",
+          "rating": 5,
+          "comment": "Лучшие шумодавы на рынке. Звук просто потрясающий!"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "category": "Headphones",
+      "name": "Apple AirPods Max",
+      "brand": "Apple",
+      "price": [549],
+      "color": "Space Gray",
+      "type": "Over-ear",
+      "wireless": true,
+      "noiseCancellation": "Active Noise Cancelling (ANC)",
+      "batteryLife": "20 hours (ANC on)",
+      "bluetoothVersion": "5.0",
+      "weight": "385g",
+      "features": ["Spatial Audio", "H1 Chip", "Digital Crown"],
+      "stock": 18,
+      "rating": 4,
+      "reviews": [
+        {
+          "userId": 402,
+          "userName": "AppleLover",
+          "rating": 4,
+          "comment": "Отличное качество звука, но тяжеловаты для длительного ношения."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "category": "Headphones",
+      "name": "Bose QuietComfort 45",
+      "brand": "Bose",
+      "price": [329],
+      "color": "Black",
+      "type": "Over-ear",
+      "wireless": true,
+      "noiseCancellation": "Active Noise Cancelling (ANC)",
+      "batteryLife": "24 hours (ANC on)",
+      "bluetoothVersion": "5.1",
+      "weight": "238g",
+      "features": ["Triple-mode ANC", "Built-in mic", "Bose AR"],
+      "stock": 20,
+      "rating": 0,
+      "reviews": []
+    },
+    {
+      "id": 19,
+      "category": "Headphones",
+      "name": "Samsung Galaxy Buds2 Pro",
+      "brand": "Samsung",
+      "price": [229],
+      "color": "White",
+      "type": "In-ear",
+      "wireless": true,
+      "noiseCancellation": "Active Noise Cancelling (ANC)",
+      "batteryLife": "18 hours (with case)",
+      "bluetoothVersion": "5.3",
+      "weight": "5.5g (each bud)",
+      "features": ["24-bit Hi-Fi", "360 Audio", "IPX7 water resistance"],
+      "stock": 30,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 403,
+          "userName": "AndroidUser",
+          "rating": 5,
+          "comment": "Идеально сочетаются с Galaxy смартфонами. Шумодав на уровне!"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "category": "Headphones",
+      "name": "JBL Tune 760NC",
+      "brand": "JBL",
+      "price": [129],
+      "color": "Blue",
+      "type": "Over-ear",
+      "wireless": true,
+      "noiseCancellation": "Active Noise Cancelling (ANC)",
+      "batteryLife": "35 hours (ANC on)",
+      "bluetoothVersion": "5.0",
+      "weight": "220g",
+      "features": ["JBL Pure Bass", "Ambient Aware", "Fast Charge"],
+      "stock": 35,
+      "rating": 4,
+      "reviews": [
+        {
+          "userId": 404,
+          "userName": "BassLover",
+          "rating": 4,
+          "comment": "Отличные наушники за свои деньги. Басс мощный, но ANC слабее топовых моделей."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "category": "Headphones",
+      "name": "Beats Studio Pro",
+      "brand": "Beats",
+      "price": [349],
+      "color": "Sandstone",
+      "type": "Over-ear",
+      "wireless": true,
+      "noiseCancellation": "Active Noise Cancelling (ANC)",
+      "batteryLife": "40 hours (ANC off)",
+      "bluetoothVersion": "5.3",
+      "weight": "260g",
+      "features": ["Spatial Audio", "USB-C Lossless", "Transparency Mode"],
+      "stock": 15,
+      "rating": 0,
+      "reviews": []
+    },
+    {
+      "id": 22,
+      "category": "Computers",
+      "name": "MacBook Pro 16\" M3 Max",
+      "brand": "Apple",
+      "price": [3499, 3999, 4599],
+      "color": "Space Gray",
+      "type": "Laptop",
+      "screenSize": "16.2 inches",
+      "resolution": "3456x2234 (Retina)",
+      "processor": "Apple M3 Max (12-core CPU, 38-core GPU)",
+      "ram": [32, 64, 96],
+      "storage": [512, 1024, 2048],
+      "batteryLife": "22 hours",
+      "weight": "2.16 kg",
+      "os": "macOS Sonoma",
+      "stock": 12,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 501,
+          "userName": "ProDesigner",
+          "rating": 5,
+          "comment": "Идеально для 3D-рендеринга. Аккумулятор держит невероятно долго!"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "category": "Computers",
+      "name": "Dell XPS 15 (2024)",
+      "brand": "Dell",
+      "price": [2299, 2799, 3299],
+      "color": "Platinum",
+      "type": "Laptop",
+      "screenSize": "15.6 inches",
+      "resolution": "3840x2400 (4K OLED)",
+      "processor": "Intel Core i9-13900H",
+      "ram": [16, 32, 64],
+      "storage": [512, 1024, 2048],
+      "graphics": "NVIDIA RTX 4070 (8GB)",
+      "batteryLife": "14 hours",
+      "weight": "1.8 kg",
+      "os": "Windows 11 Pro",
+      "stock": 18,
+      "rating": 4,
+      "reviews": [
+        {
+          "userId": 502,
+          "userName": "TechEnthusiast",
+          "rating": 4,
+          "comment": "Лучший Windows-ноутбук, но греется под нагрузкой."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "category": "Computers",
+      "name": "HP Spectre x360 14",
+      "brand": "HP",
+      "price": [1599, 1899],
+      "color": "Nightfall Black",
+      "type": "2-in-1 Laptop",
+      "screenSize": "14 inches",
+      "resolution": "3000x2000 (OLED)",
+      "processor": "Intel Core i7-1360P",
+      "ram": [16, 32],
+      "storage": [512, 1024],
+      "batteryLife": "16 hours",
+      "weight": "1.37 kg",
+      "os": "Windows 11 Home",
+      "stock": 15,
+      "rating": 0,
+      "reviews": []
+    },
+    {
+      "id": 25,
+      "category": "Computers",
+      "name": "Apple iMac 24\" M3",
+      "brand": "Apple",
+      "price": [1499, 1699, 1999],
+      "color": "Blue",
+      "type": "All-in-One",
+      "screenSize": "24 inches",
+      "resolution": "4480x2520 (4.5K Retina)",
+      "processor": "Apple M3 (8-core CPU, 10-core GPU)",
+      "ram": [8, 16, 24],
+      "storage": [256, 512, 1024],
+      "weight": "4.48 kg",
+      "os": "macOS Sonoma",
+      "stock": 10,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 503,
+          "userName": "CreativePro",
+          "rating": 5,
+          "comment": "Яркий дизайн и отличная производительность для работы с фото."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "category": "Computers",
+      "name": "Lenovo Legion Pro 7i",
+      "brand": "Lenovo",
+      "price": [2499, 2999],
+      "color": "Storm Gray",
+      "type": "Gaming Laptop",
+      "screenSize": "16 inches",
+      "resolution": "2560x1600 (240Hz)",
+      "processor": "Intel Core i9-13900HX",
+      "ram": [32, 64],
+      "storage": [1024, 2048],
+      "graphics": "NVIDIA RTX 4090 (16GB)",
+      "batteryLife": "5 hours (gaming)",
+      "weight": "2.8 kg",
+      "os": "Windows 11 Home",
+      "stock": 8,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 504,
+          "userName": "HardcoreGamer",
+          "rating": 5,
+          "comment": "Тянет все новинки на ультра-настройках. Мечта геймера!"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "category": "Computers",
+      "name": "ASUS ROG Strix G16",
+      "brand": "ASUS",
+      "price": [1799, 2199],
+      "color": "Eclipse Gray",
+      "type": "Gaming Laptop",
+      "screenSize": "16 inches",
+      "resolution": "1920x1200 (165Hz)",
+      "processor": "Intel Core i7-13650HX",
+      "ram": [16, 32],
+      "storage": [512, 1024],
+      "graphics": "NVIDIA RTX 4060 (8GB)",
+      "batteryLife": "6 hours",
+      "weight": "2.5 kg",
+      "os": "Windows 11 Home",
+      "stock": 14,
+      "rating": 0,
+      "reviews": []
+    },{
+      "id": 28,
+      "category": "Gaming Consoles",
+      "name": "PlayStation 5 (Standard Edition)",
+      "brand": "Sony",
+      "price": [499],
+      "color": "White",
+      "type": "Home Console",
+      "releaseYear": 2020,
+      "storage": "825GB SSD",
+      "resolution": "4K UHD",
+      "fps": "Up to 120Hz",
+      "features": ["Ray Tracing", "3D Audio", "Backward Compatibility"],
+      "exclusiveGames": ["Spider-Man 2", "God of War: Ragnarök"],
+      "controller": "DualSense",
+      "onlineService": "PlayStation Plus",
+      "stock": 20,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 601,
+          "userName": "ConsoleMaster",
+          "rating": 5,
+          "comment": "Невероятная графика и тактильная отдача в геймпаде. PS5 — это новый уровень!"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "category": "Gaming Consoles",
+      "name": "Xbox Series X",
+      "brand": "Microsoft",
+      "price": [499],
+      "color": "Black",
+      "type": "Home Console",
+      "releaseYear": 2020,
+      "storage": "1TB SSD",
+      "resolution": "4K UHD",
+      "fps": "Up to 120Hz",
+      "features": ["Quick Resume", "Smart Delivery", "Game Pass"],
+      "exclusiveGames": ["Halo Infinite", "Forza Horizon 5"],
+      "controller": "Xbox Wireless",
+      "onlineService": "Xbox Game Pass Ultimate",
+      "stock": 18,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 602,
+          "userName": "GamePassFan",
+          "rating": 5,
+          "comment": "Game Pass — лучшая подписка в мире. Доступ к сотням игр с первого дня."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "category": "Gaming Consoles",
+      "name": "Nintendo Switch OLED",
+      "brand": "Nintendo",
+      "price": [349],
+      "color": "White",
+      "type": "Hybrid Console",
+      "releaseYear": 2021,
+      "storage": "64GB (expandable)",
+      "resolution": "720p (Handheld) / 1080p (Docked)",
+      "fps": "60Hz",
+      "features": ["Tabletop Mode", "Local Multiplayer", "HD Rumble"],
+      "exclusiveGames": ["Zelda: Tears of the Kingdom", "Super Mario Odyssey"],
+      "controller": "Joy-Con",
+      "onlineService": "Nintendo Switch Online",
+      "stock": 25,
+      "rating": 4,
+      "reviews": [
+        {
+          "userId": 603,
+          "userName": "FamilyGamer",
+          "rating": 4,
+          "comment": "Идеально для семейных игр. Уникальные эксклюзивы Nintendo!"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "category": "Gaming Consoles",
+      "name": "Steam Deck OLED (512GB)",
+      "brand": "Valve",
+      "price": [549],
+      "color": "Black",
+      "type": "Handheld PC",
+      "releaseYear": 2023,
+      "storage": "512GB SSD",
+      "resolution": "1280x800 (OLED)",
+      "fps": "90Hz",
+      "features": ["PC Game Library", "Trackpads", "Linux-based OS"],
+      "controller": "Built-in Controls",
+      "os": "SteamOS",
+      "stock": 12,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 604,
+          "userName": "PCTraveler",
+          "rating": 5,
+          "comment": "Моя Steam-библиотека в кармане. Экран OLED — просто огонь!"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "category": "Gaming Consoles",
+      "name": "PlayStation Portal",
+      "brand": "Sony",
+      "price": [199],
+      "color": "White",
+      "type": "Streaming Device",
+      "releaseYear": 2023,
+      "resolution": "1080p (60Hz)",
+      "features": ["Remote Play for PS5", "DualSense Integration"],
+      "controller": "Built-in",
+      "requirements": "Requires PS5 Console",
+      "stock": 15,
+      "rating": 4,
+      "reviews": [
+        {
+          "userId": 605,
+          "userName": "RemotePlayer",
+          "rating": 4,
+          "comment": "Удобно играть в PS5 в другой комнате, но зависимость от Wi-Fi раздражает."
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "category": "Gaming Consoles",
+      "name": "Xbox Series S",
+      "brand": "Microsoft",
+      "price": [299],
+      "color": "White",
+      "type": "Home Console",
+      "releaseYear": 2020,
+      "storage": "512GB SSD",
+      "resolution": "1440p (Up to 4K upscaling)",
+      "fps": "120Hz",
+      "features": ["All-Digital", "Game Pass", "Quick Resume"],
+      "controller": "Xbox Wireless",
+      "onlineService": "Xbox Game Pass",
+      "stock": 22,
+      "rating": 4,
+      "reviews": [
+        {
+          "userId": 606,
+          "userName": "BudgetGamer",
+          "rating": 4,
+          "comment": "Лучшая консоль за свои деньги. Нет дисковода, но Game Pass компенсирует."
+        }
+      ]
     }
   ],
   "categories": [
     {
       "id": 1,
       "name": "Phones",
-      "description": "Latest smartphones from top brands"
+      "description": "Latest smartphones from top brands",
+      "filters": {
+        "brands": ["Apple", "Samsung", "Google", "OnePlus"],
+        "memory": [128, 256, 512, 1024],
+        "priceRange": {
+          "min": 799,
+          "max": 1499
+        },
+        "os": ["iOS", "Android"],
+        "screenSizes": ["6.1 inches", "6.7 inches", "6.8 inches"]
+      }
     },
     {
       "id": 2,
-      "name": "Smart Watches",
-      "description": "Wearable technology for fitness and communication"
+      "name": "SmartWatches",
+      "description": "Wearable technology for fitness and communication",
+      "filters": {
+        "brands": ["Apple", "Samsung", "Garmin", "Xiaomi", "Huawei"],
+        "size": ["41mm", "43mm", "45mm", "46mm", "47mm"],
+        "os": ["watchOS", "Wear OS", "Garmin OS", "HarmonyOS"],
+        "features": ["ECG", "GPS", "Blood Oxygen", "Sleep Tracking"]
+      }
     },
     {
       "id": 3,
       "name": "Cameras",
-      "description": "Professional and amateur photography equipment"
+      "description": "Professional and amateur photography equipment",
+      "filters": {
+        "brands": ["Sony", "Canon", "Fujifilm", "Nikon", "GoPro"],
+        "type": ["Mirrorless", "Action Camera"],
+        "resolution": ["4K", "6K", "8K", "5.3K"],
+        "sensor": ["Full-frame", "APS-C"]
+      }
     },
     {
       "id": 4,
       "name": "Headphones",
-      "description": "Audio devices for music and calls"
+      "description": "Audio devices for music and calls",
+      "filters": {
+        "brands": ["Sony", "Apple", "Bose", "Samsung", "JBL", "Beats"],
+        "type": ["Over-ear", "In-ear"],
+        "features": ["Noise Cancelling", "Wireless", "Water Resistant"]
+      }
     },
     {
       "id": 5,
       "name": "Computers",
-      "description": "Laptops and desktops for work and entertainment"
+      "description": "Laptops and desktops for work and entertainment",
+      "filters": {
+        "brands": ["Apple", "Dell", "HP", "Lenovo", "ASUS"],
+        "type": ["Laptop", "2-in-1", "All-in-One", "Gaming"],
+        "ram": [8, 16, 32, 64, 96],
+        "storage": [256, 512, 1024, 2048]
+      }
     },
     {
       "id": 6,
       "name": "Gaming",
-      "description": "Consoles and accessories for gamers"
+      "description": "Consoles and accessories for gamers",
+      "filters": {
+        "brands": ["Sony", "Microsoft", "Nintendo", "Valve"],
+        "type": ["Home Console", "Hybrid", "Handheld"],
+        "storage": ["64GB", "512GB", "825GB", "1TB"],
+        "resolution": ["720p", "1080p", "4K"]
+      }
     }
   ],
   "reviewsSchema": {

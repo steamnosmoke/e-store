@@ -1,0 +1,63 @@
+.main {
+  margin-top: 88px;
+}
+
+.header {
+  padding: 20px 0;
+  position: sticky;
+  top: 88px;
+  background-color: #fff;
+  z-index: 100;
+  margin-bottom: 40px;
+
+  // border-bottom: 1px solid #dfdfdf;
+  box-shadow: 0 7px 20px -5px rgb(223, 223, 223);
+}
+
+.catalog {
+  // position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  margin: 0 auto 0;
+  gap: 20px;
+}
+
+.paths {
+  padding: 0 0 20px;
+}
+
+.filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.arrow {
+  transition: all 0.2s ease-in-out;
+}
+
+.rotated {
+  transform: rotateX(-180deg);
+}
+
+.title {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.block {
+  display: flex;
+  gap:20px;
+  align-items: center;
+}
+
+.count {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+}

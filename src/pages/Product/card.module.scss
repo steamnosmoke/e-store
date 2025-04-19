@@ -1,15 +1,12 @@
 .card {
-  background-color: #fff;
+  background-color: #f7f7f7;
   position: relative;
 
   border-radius: 16px;
   transition: all 0.2s ease-in-out;
 
-  box-shadow: 0 0px 0px -5px rgb(223, 223, 223);
-
   &:hover {
     transform: translateY(-24px);
-    box-shadow: 0 20px 24px -1px rgb(223, 223, 223);
   }
 }
 

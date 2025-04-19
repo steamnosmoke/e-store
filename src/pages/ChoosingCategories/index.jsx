@@ -4,7 +4,7 @@ import s from "./categories.module.scss";
 import { Link } from "react-router";
 import { chooseCategory } from "../../redux/slices/productSlice";
 
-export default function Categories() {
+export default function ChoosingCategories() {
   const dispatch = useDispatch()
   const category = useSelector(state => state.product.category)
   return (

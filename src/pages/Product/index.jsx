@@ -37,6 +37,12 @@ export default function Card({ product }) {
           <img className={s.picture} src={card} alt='product' />
           <h3 className={s.title}>{product.name}, <br/>"{product.color}"</h3>
           <p className={s.price}>from {product.price[0]}$</p>
+          {/* <div className={s.info}>
+            <h3 className={s.title}>
+              {product.name}
+            </h3>
+            <p className={s.price}>from {product.price[0]}$</p>
+          </div> */}
           <button className='black-btn'>Learn more</button>
         </div>
       </section>

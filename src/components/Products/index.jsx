@@ -1,62 +1,43 @@
+import { useSelector, useDispatch } from "react-redux";
 import Card from "../ProductCard";
 import s from "./products.module.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDhZKqBEcppVAySnIJaFZ8XnQN5xgIDo9Y",
-  authDomain: "e-store-4ca3a.firebaseapp.com",
-  databaseURL: "https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "e-store-4ca3a",
-  storageBucket: "e-store-4ca3a.firebasestorage.app",
-  messagingSenderId: "463858100058",
-  appId: "1:463858100058:web:e2bbfabb50af5650877563"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
+import { fetchProducts } from "../../redux/slices/productSlice";
 
 export default function Products() {
-  const [products, setProducts] = useState([]);
+  const isFiltersOpened = useSelector((state) => state.catalog.isFiltersOpened);
+  const { products, category } = useSelector((state) => state.product);
+  const dispatch = useDispatch();
+
+  // const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    async function fetchProducts() {
-      const { data } = await axios.get(
-        "https://techstoredb.firebaseio.com/products.json",
-        {
-          params: {
-            orderBy: "category",
-            equalTo: "Phones",
-            // Фильтрация по цене выполняется на клиенте
-          },
-        }
-      );
-      // const {data} = await axios.get("https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products.json?orderBy=category&equalTo=Phones")
-      await console.log(data);
-      await setProducts(data);
-    }
+    // async function fetchProducts() {
+    //   const { data } = await axios.get(
+    //     "https://6803741a0a99cb7408ec07d0.mockapi.io/products"
+    //   );
+    //   // const { data } = await axios.get(
+    //   //   "https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products.json"
+    //   // );
+    //   await setProducts(data);
+    // }
 
-    fetchProducts();
-  }, []);
+    // fetchProducts();
+    dispatch(fetchProducts(category));
+    console.log(category);
+    console.log(products);
+  }, [dispatch, category]);
 
   return (
     <>
-      <section className={s.products}>
-        <div className='container'>
-          <div className={s.inner}>
-            {products.map((el) => (
-              <Card key={el.id} product={el} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className={`${s.inner}`}>
+        {products
+          .filter((product) => product.category !== category)
+          .map((el) => (
+            <Card key={el.id} product={el} />
+          ))}
+      </div>
     </>
   );
 }

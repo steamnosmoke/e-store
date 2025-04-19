@@ -1,13 +1,17 @@
 import s from "./search.module.scss";
-import { useReducer,useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+import { ClearValue, Searching } from "../../redux/slices/searchSlice";
 
 export default function Search() {
+  const inputValue = useSelector((state) => state.search.value);
+  const dispatch = useDispatch();
   const ref = useRef(null);
-  const counterRef = useRef(0); // Используем ref вместо let
+  const placeholder = "Search";
 
   const [iconColor, setIconColor] = useState("%23989898");
   const [isFocus, setFocus] = useState(false);
-  const [isType, setInt] = useState(true);
   // const [placeholder, setPlaceholder] = useState("");
 
   const onMauseIn = () => {
@@ -36,27 +40,8 @@ export default function Search() {
     };
   }, []);
 
-  const [placeholder, dispatch] = useReducer((state, action) => {
-    if (action.type === 'ADD_CHAR') return state + action.char;
-    if (action.type === 'RESET') return '';
-    return state;
-  }, '');
-  
   useEffect(() => {
-    const text = "Type here...";
-    let index = 0;
     
-    const type = () => {
-      if (index < text.length) {
-        dispatch({ type: 'ADD_CHAR', char: text[index] });
-        index++;
-        setTimeout(type, 70);
-      }
-    };
-    
-    type();
-    
-    return () => { index = text.length; };
   }, []);
   return (
     <>
@@ -71,7 +56,13 @@ export default function Search() {
           onMouseEnter={onMauseIn}
           onMouseLeave={onMauseOut}
           onClick={changeSvgStroke}
+          value={inputValue}
+          onChange={(e) => dispatch(Searching(e.target.value))}
         />
+        <button
+          className={`${s.clear} ${!inputValue && "display-none"}`}
+          onClick={() => dispatch(ClearValue())}
+        ></button>
       </div>
     </>
   );

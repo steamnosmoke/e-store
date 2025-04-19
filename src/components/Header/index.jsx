@@ -3,34 +3,44 @@ import logo from "../../assets/images/Logo.svg";
 
 import { Link } from "react-router";
 import Search from "../Search";
+import { useDispatch } from "react-redux";
+import { chooseCategory } from "../../redux/slices/productSlice";
+
+
 
 export default function Header() {
+  const dispatch = useDispatch()
+
+  const clearCategory = ()=>{
+    dispatch(chooseCategory(''))
+  }
+
   return (
     <>
       <header className={s.header}>
         <div className='container'>
-          <div className={s.inner}>
-            <Link to='#'>
+          <div className={s.inner} >
+            <Link to='/' onClick={clearCategory}>
               <img src={logo} alt='logotype' className={s.logo} />
             </Link>
             <Search />
             <ul className={s.nav}>
-              <li className={s.items}>
-                <Link to='#' className={s.active}>Home</Link>
+              <li className={s.items}  onClick={clearCategory}>
+                <Link to='/' className={s.active}>Home</Link>
               </li>
-              <li className={s.item}>
-                <Link to='#'>About</Link>
+              <li className={s.item}  onClick={clearCategory}>
+                <Link to='/catalog'>Catalog</Link>
               </li>
-              <li className={s.item}>
-                <Link to='#'>Contact Us</Link>
+              <li className={s.item}  onClick={clearCategory}>
+                <Link to='/contacts'>Contact Us</Link>
               </li>
-              <li className={s.item}>
-                <Link to='#'>Blog</Link>
+              <li className={s.item}  onClick={clearCategory}>
+                <Link to='/blog'>Blog</Link>
               </li>
             </ul>
             <ul className={s.buttons}>
-              <li className={s.button}>
-                <Link to='#'>
+              <li className={s.button}  onClick={clearCategory}>
+                <Link to='#' >
                   <svg
                     width='32.000000'
                     height='32.000000'
@@ -73,7 +83,7 @@ export default function Header() {
                   </svg>
                 </Link>
               </li>
-              <li className={s.button}>
+              <li className={s.button}  onClick={clearCategory}>
                 <Link to='#'>
                   <svg
                     width='32.000000'
@@ -118,7 +128,7 @@ export default function Header() {
                   </svg>
                 </Link>
               </li>
-              <li className={s.button}>
+              <li className={s.button}  onClick={clearCategory}>
                 <Link to='#'>
                   <svg
                     width='32.000000'
