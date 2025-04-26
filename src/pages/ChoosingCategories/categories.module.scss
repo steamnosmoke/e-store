@@ -1,56 +1,132 @@
 .categories {
-  padding: 80px 0;
+  padding: 16px 0;
   background-color: #fafafa;
   cursor: pointer;
 
-  margin: 80px 0;
-}
-
-.title {
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 1%;
-
-  margin-bottom: 32px;
+  // margin: 88px 0 0;
 }
 
 .list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.phones {
+  grid-row: span 2;
+  grid-column: span 1;
+  background-image: url("../../assets/images/categories/black-iphone.png");
+
+  &:hover {
+    background-image: url("../../assets/images/categories/white-iphone.png");
+  }
+}
+.gaming {
+  grid-row: span 1;
+  grid-column: span 2;
+  background-image: url("../../assets/images/categories/black-console-2.png");
+
+  &:hover {
+    background-image: url("../../assets/images/categories/white-console-2.png");
+  }
+}
+.watch {
+  grid-row: span 1;
+  grid-column: span 1;
+  background-image: url("../../assets/images/categories/black-watch.png");
+
+  &:hover {
+    background-image: url("../../assets/images/categories/white-watch.png");
+  }
+}
+
+.cameras {
+  grid-row: span 1;
+  grid-column: span 1;
+  background-image: url("../../assets/images/categories/black-keyboard.png");
+
+  &:hover {
+    background-image: url("../../assets/images/categories/white-keyboard.png");
+  }
+}
+.computers {
+  grid-row: span 1;
+  grid-column: span 2;
+  background-image: url("../../assets/images/categories/black-computer.png");
+
+  &:hover {
+    background-image: url("../../assets/images/categories/white-computer.png");
+  }
+}
+
+.headphones {
+  grid-row: span 1;
+  grid-column: span 1;
+  background-image: url("../../assets/images/categories/airpods-max-black.png");
+
+  &:hover {
+    background-image: url("../../assets/images/categories/airpods-max-white.png");
+  }
 }
 
 .item {
-  width: 160px;
-  height: 128px;
-  padding: 24px 21px;
-  border-radius: 15px;
+  --start-grad: #ededed;
+  --end-grad: rgba(237, 237, 237, 0); /* Прозрачность через rgba для лучшей поддержки */
 
+  min-height: 220px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end; /* Заменяем 'end' на 'flex-end' */
   gap: 8px;
+  background-color: var(--start-grad);
+  transition: all 0.23s ease-in-out; /* Увеличиваем время для плавности */
+  position: relative; /* Для псевдоэлемента */
+  overflow: hidden; /* Чтобы градиент не выходил за границы */
+  color: inherit; /* Наследуем цвет текста */
 
-  background-color: rgb(237, 237, 237);
-
-  transition: all .2s ease-in-out;
-  svg path, svg line{
-    transition: all .2s ease-in-out;
-  }
-
-
-  &:hover,&.active{
-    transform: scale(1.1);
-    background-color: rgb(53,53,53);
-    color:#fafafa;
-    svg{
-      path,line{
-        stroke: #fafafa;
-      }
-    }
-  }
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.item.active{
-  transform: scale(1);
+.item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%; /* Высота градиентной области */
+  background: linear-gradient(0deg, var(--start-grad) 0%, var(--end-grad) 100%);
+  transition: all 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.category {
+  position: relative; /* Чтобы текст был поверх псевдоэлемента */
+  z-index: 1;
+  padding: 60px 0 12px;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.item:hover,
+.item.active {
+  transform: scale(1.02);
+  background-color: rgb(53, 53, 53);
+  color: #fafafa;
+  --start-grad: #353535;
+  --end-grad: rgba(53, 53, 53, 0);
+}
+
+/* Для лучшей читаемости текста при наведении */
+.item:hover .category,
+.item.active .category {
+  color: #fafafa;
 }

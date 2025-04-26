@@ -1,53 +1,68 @@
-import CatalogAside from "../../components/CatalogAside";
-import Products from "../../components/Products";
+import CatalogAside from "../../components/CatalogAside/index";
+import Card from "../../components/ProductCard";
 import s from "./catalog.module.scss";
+import { useEffect } from "react";
 
 import arrow from "../../assets/images/arrow.svg";
 
-import { Link } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilterOpened } from "../../redux/slices/catalogSlice";
 import ChoosingCategories from "../ChoosingCategories";
+import { fetchProducts } from "../../redux/slices/catalogSlice";
+import Products from "../../components/Products";
 
 export default function Catalog() {
   const dispatch = useDispatch();
-
-  const isFiltersOpened = useSelector((state) => state.catalog.isFiltersOpened);
-  const category = useSelector(state=>state.product.category)
+  const { categoryCatalog, isFiltersOpened, products,count, statusCatalog } = useSelector(
+    (state) => state.catalog
+  );
 
   const ToggleFilter = () => {
     dispatch(setFilterOpened());
   };
 
+  useEffect(() => {
+    dispatch(fetchProducts(categoryCatalog));
+  }, [dispatch, categoryCatalog]);
+
   return (
     <>
       <main className={s.main}>
-        {category ? <>
-        <header className={s.header}>
-          <div className='container'>
-            <div className={s.paths}>Home | Catalog</div>
-            <div className={s.bottom}>
-              <div className={s.filter} onClick={ToggleFilter}>
-                <h2 className={s.title}>Filters</h2>
-                <img
-                  className={`${s.arrow} ${isFiltersOpened ? s.rotated : ""}`}
-                  src={arrow}
-                  alt=''
-                />
+        {categoryCatalog ? (
+          <>
+            <header className={s.header}>
+              <div className='container'>
+                <div className={s.paths}>Home | Catalog</div>
+                <div className={s.bottom}>
+                  <div className={s.filter} onClick={ToggleFilter}>
+                    <h2 className={s.title}>Filters</h2>
+                    <img
+                      className={`${s.arrow} ${
+                        isFiltersOpened ? s.rotated : ""
+                      }`}
+                      src={arrow}
+                      alt=''
+                    />
+                  </div>
+                  <div className={s.block}>
+                    <span className={s.count}>{count}</span>
+                    sorting
+                  </div>
+                </div>
               </div>
-              <div className={s.block}>
-                <span className={s.count}>104 товара</span>
-                sorting
+            </header>
+            <section className={s.catalog}>
+              <div className='container'>
+                <div className={s.inner}>
+                  {categoryCatalog &&<CatalogAside />}
+                  <Products className={s.products} products={products} status={statusCatalog}/>
+                </div>
               </div>
-            </div>
-          </div>
-        </header>
-        <div className='container'>
-          <section className={s.catalog}>
-            <CatalogAside />
-            <Products />
-          </section>
-        </div></> : <ChoosingCategories/>}
+            </section>
+          </>
+        ) : (
+          <ChoosingCategories />
+        )}
       </main>
     </>
   );

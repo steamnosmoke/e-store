@@ -43,6 +43,7 @@
   }
 
   .active {
+    transition: all 0.2s ease-in-out;
     color: #000;
     font-weight: 700;
   }
@@ -66,4 +67,10 @@
       stroke: rgb(145, 145, 145);
     }
   }
+}
+
+
+.back{
+  position: relative;
+  height: 88px;
 }

@@ -1,46 +1,50 @@
 import s from "./header.module.scss";
 import logo from "../../assets/images/Logo.svg";
 
-import { Link } from "react-router";
 import Search from "../Search";
+import {chooseCategory} from "../../redux/slices/catalogSlice"
+
+import { NavLink } from "react-router";
 import { useDispatch } from "react-redux";
-import { chooseCategory } from "../../redux/slices/productSlice";
-
-
 
 export default function Header() {
   const dispatch = useDispatch()
-
-  const clearCategory = ()=>{
-    dispatch(chooseCategory(''))
-  }
+  const onClickNav = () => {
+    window.scrollTo(0, 0);
+    dispatch(chooseCategory(""))
+  };
 
   return (
     <>
       <header className={s.header}>
         <div className='container'>
-          <div className={s.inner} >
-            <Link to='/' onClick={clearCategory}>
+          <div className={s.inner}>
+            <NavLink to='/' onClick={onClickNav}>
               <img src={logo} alt='logotype' className={s.logo} />
-            </Link>
+            </NavLink>
             <Search />
             <ul className={s.nav}>
-              <li className={s.items}  onClick={clearCategory}>
-                <Link to='/' className={s.active}>Home</Link>
+              <li className={s.items} onClick={onClickNav}>
+                <NavLink
+                  to='/'
+                  className={({ isActive }) => (isActive ? s.active : "")}
+                >
+                  Home
+                </NavLink>
               </li>
-              <li className={s.item}  onClick={clearCategory}>
-                <Link to='/catalog'>Catalog</Link>
+              <li className={s.item} onClick={onClickNav}>
+                <NavLink to='/catalog' className={({ isActive }) => (isActive ? s.active : "")}>Catalog</NavLink>
               </li>
-              <li className={s.item}  onClick={clearCategory}>
-                <Link to='/contacts'>Contact Us</Link>
+              <li className={s.item} onClick={onClickNav}>
+                <NavLink to='/contacts' className={({ isActive }) => (isActive ? s.active : "")}>Contact Us</NavLink>
               </li>
-              <li className={s.item}  onClick={clearCategory}>
-                <Link to='/blog'>Blog</Link>
+              <li className={s.item} onClick={onClickNav}>
+                <NavLink to='/blog' className={({ isActive }) => (isActive ? s.active : "")}>Blog</NavLink>
               </li>
             </ul>
             <ul className={s.buttons}>
-              <li className={s.button}  onClick={clearCategory}>
-                <Link to='#' >
+              <li className={s.button} onClick={onClickNav}>
+                <NavLink to='#'>
                   <svg
                     width='32.000000'
                     height='32.000000'
@@ -81,10 +85,10 @@ export default function Header() {
                       />
                     </g>
                   </svg>
-                </Link>
+                </NavLink>
               </li>
-              <li className={s.button}  onClick={clearCategory}>
-                <Link to='#'>
+              <li className={s.button} onClick={onClickNav}>
+                <NavLink to='#'>
                   <svg
                     width='32.000000'
                     height='32.000000'
@@ -126,10 +130,10 @@ export default function Header() {
                       />
                     </g>
                   </svg>
-                </Link>
+                </NavLink>
               </li>
-              <li className={s.button}  onClick={clearCategory}>
-                <Link to='#'>
+              <li className={s.button} onClick={onClickNav}>
+                <NavLink to='#'>
                   <svg
                     width='32.000000'
                     height='32.000000'
@@ -171,12 +175,13 @@ export default function Header() {
                       />
                     </g>
                   </svg>
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
         </div>
       </header>
+      <div className={s.back}></div>
     </>
   );
 }

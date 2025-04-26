@@ -4,7 +4,7 @@
   width: 30%;
   padding: 0 24px;
 
-  margin-left: -550px;
+  margin-left: -480px;
   opacity: 0;
   visibility: hidden;
   transition:
@@ -41,7 +41,7 @@
 }
 
 .opened {
-  margin-left: 0;
+  margin: 0;
   opacity: 1;
   visibility: visible;
 }
@@ -66,7 +66,6 @@ input[type="checkbox"] {
 }
 
 .list {
-  // border-bottom: 1px solid #cecece;
   box-shadow: 0 5px 10px -7px #a5a5a59a;
   padding: 20px;
 }

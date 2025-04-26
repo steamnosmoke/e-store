@@ -5,7 +5,6 @@ import ps from "../../assets/images/ps.png";
 import ap from "../../assets/images/ap-max.png";
 import vision from "../../assets/images/vision.png";
 
-import { Link } from "react-router";
 
 export default function Tablets() {
   return (
@@ -36,7 +35,7 @@ export default function Tablets() {
                   Apple
                   <br />
                   AirPods
-                  <br /> <span>Max</span>
+                  <br /> <span className={s.bold}>Max</span>
                 </h2>
                 <p className={s.text}>
                   Computational audio. Listen, it's powerfulf
@@ -51,7 +50,7 @@ export default function Tablets() {
               <div className={s.block}>
                 <h2 className={s.title}>
                   Apple <br />
-                  Vision <span>Pro</span>
+                  Vision <span className={s.bold}>Pro</span>
                 </h2>
                 <p className={s.text}>
                   An immersive way to experience entertainment
@@ -62,7 +61,7 @@ export default function Tablets() {
           <div className={s.right}>
             <div className={s.block}>
               <h2 className={s.title}>
-                Macbook <span>Air</span>
+                Macbook <span className={s.bold}>Air</span>
               </h2>
               <p className={s.text}>
                 The new 15‑inch MacBook Air makes room for more of what you love

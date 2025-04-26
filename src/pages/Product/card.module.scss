@@ -1,6 +1,7 @@
 .card {
+  margin-top: 100px;
   background-color: #f7f7f7;
-  position: relative;
+  // position: relative;
 
   border-radius: 16px;
   transition: all 0.2s ease-in-out;
@@ -58,4 +59,11 @@
 
 .picture {
   width: 100%;
+}
+
+
+
+
+.header{
+  padding: 44px 0;
 }

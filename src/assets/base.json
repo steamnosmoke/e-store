@@ -6,7 +6,7 @@
       "name": "iPhone 16 Pro",
       "brand": "Apple",
       "price": [999, 1099, 1299, 1499],
-      "color": "Titanium Black",
+      "color": ["Black", "Silver", "Gold"],
       "memory": [128, 256, 512, 1],
       "screenSize": "6.1 inches",
       "processor": "A17 Pro",
@@ -14,7 +14,14 @@
       "battery": "3274 mAh",
       "os": "iOS 17",
       "stock": 50,
-      "rating": 4.5,
+      "images": [
+        "/images/products/iphone16pro_1.jpg",
+        "/images/products/iphone16pro_2.jpg",
+        "/images/products/iphone16pro_3.jpg",
+        "/images/products/iphone16pro_4.jpg"
+      ],
+      "cpuCores": 6,
+      "ram": 8,
       "reviews": [
         {
           "userId": 101,
@@ -27,8 +34,21 @@
           "userName": "GadgetFan",
           "rating": 4,
           "comment": "Great performance, but battery could be better."
+        },
+        {
+          "userId": 201,
+          "userName": "SmartUser",
+          "rating": 5,
+          "comment": "Screen is super smooth and bright!"
+        },
+        {
+          "userId": 202,
+          "userName": "iOSLover",
+          "rating": 5,
+          "comment": "Best iPhone so far, very fast and stylish."
         }
-      ]
+      ],
+      "rating": 4.8
     },
     {
       "id": 2,
@@ -36,7 +56,7 @@
       "name": "iPhone 16",
       "brand": "Apple",
       "price": [799, 899, 1099],
-      "color": "Titanium Black",
+      "color": ["Titanium Black", "Silver", "Red"],
       "memory": [128, 256, 512],
       "screenSize": "6.1 inches",
       "processor": "A17 Pro",
@@ -44,15 +64,35 @@
       "battery": "3274 mAh",
       "os": "iOS 17",
       "stock": 50,
-      "rating": 5,
+      "images": [
+        "/images/products/iphone16_1.jpg",
+        "/images/products/iphone16_2.jpg",
+        "/images/products/iphone16_3.jpg",
+        "/images/products/iphone16_4.jpg"
+      ],
+      "cpuCores": 6,
+      "ram": 6,
       "reviews": [
         {
           "userId": 103,
           "userName": "AppleFanatic",
           "rating": 5,
           "comment": "Perfect balance of price and features!"
+        },
+        {
+          "userId": 203,
+          "userName": "BudgetBuyer",
+          "rating": 4,
+          "comment": "Very good phone for the price."
+        },
+        {
+          "userId": 204,
+          "userName": "YoungUser",
+          "rating": 5,
+          "comment": "Amazing for daily use!"
         }
-      ]
+      ],
+      "rating": 4.7
     },
     {
       "id": 3,
@@ -60,7 +100,7 @@
       "name": "Samsung Galaxy S24 Ultra",
       "brand": "Samsung",
       "price": [1199, 1299, 1499],
-      "color": "Phantom Black",
+      "color": ["Phantom Black", "Silver", "Violet"],
       "memory": [256, 512, 1],
       "screenSize": "6.8 inches",
       "processor": "Snapdragon 8 Gen 3",
@@ -68,15 +108,35 @@
       "battery": "5000 mAh",
       "os": "Android 14",
       "stock": 35,
-      "rating": 5,
+      "images": [
+        "/images/products/galaxys24ultra_1.jpg",
+        "/images/products/galaxys24ultra_2.jpg",
+        "/images/products/galaxys24ultra_3.jpg",
+        "/images/products/galaxys24ultra_4.jpg"
+      ],
+      "cpuCores": 8,
+      "ram": 12,
       "reviews": [
         {
           "userId": 104,
           "userName": "AndroidMaster",
           "rating": 5,
           "comment": "The best Android phone ever made!"
+        },
+        {
+          "userId": 301,
+          "userName": "CameraKing",
+          "rating": 5,
+          "comment": "Insane camera and smooth performance!"
+        },
+        {
+          "userId": 302,
+          "userName": "PowerUser",
+          "rating": 4,
+          "comment": "A bit bulky, but unmatched speed."
         }
-      ]
+      ],
+      "rating": 4.7
     },
     {
       "id": 4,
@@ -84,7 +144,7 @@
       "name": "Google Pixel 8 Pro",
       "brand": "Google",
       "price": [999, 1099, 1299],
-      "color": "Obsidian",
+      "color": ["Obsidian", "Porcelain", "Bay Blue"],
       "memory": [128, 256, 512],
       "screenSize": "6.7 inches",
       "processor": "Google Tensor G3",
@@ -92,15 +152,35 @@
       "battery": "5050 mAh",
       "os": "Android 14",
       "stock": 40,
-      "rating": 4,
+      "images": [
+        "/images/products/pixel8pro_1.jpg",
+        "/images/products/pixel8pro_2.jpg",
+        "/images/products/pixel8pro_3.jpg",
+        "/images/products/pixel8pro_4.jpg"
+      ],
+      "cpuCores": 8,
+      "ram": 12,
       "reviews": [
         {
           "userId": 105,
           "userName": "PixelFan",
           "rating": 4,
           "comment": "Love the AI features, but the processor could be faster."
+        },
+        {
+          "userId": 401,
+          "userName": "TechAddict",
+          "rating": 5,
+          "comment": "Camera quality is mind-blowing!"
+        },
+        {
+          "userId": 402,
+          "userName": "AIEnthusiast",
+          "rating": 4,
+          "comment": "AI features are ahead of competition."
         }
-      ]
+      ],
+      "rating": 4.3
     },
     {
       "id": 5,
@@ -108,7 +188,7 @@
       "name": "OnePlus 12",
       "brand": "OnePlus",
       "price": [799, 899, 999],
-      "color": "Emerald Green",
+      "color": ["Emerald Green", "Black", "White"],
       "memory": [128, 256, 512],
       "screenSize": "6.82 inches",
       "processor": "Snapdragon 8 Gen 3",
@@ -116,8 +196,35 @@
       "battery": "5400 mAh",
       "os": "Android 14",
       "stock": 30,
-      "rating": 0,
-      "reviews": []
+      "images": [
+        "/images/products/oneplus12_1.jpg",
+        "/images/products/oneplus12_2.jpg",
+        "/images/products/oneplus12_3.jpg",
+        "/images/products/oneplus12_4.jpg"
+      ],
+      "cpuCores": 8,
+      "ram": 16,
+      "reviews": [
+        {
+          "userId": 501,
+          "userName": "FastCharger",
+          "rating": 5,
+          "comment": "Charges insanely fast and runs smoothly!"
+        },
+        {
+          "userId": 502,
+          "userName": "GamerGuy",
+          "rating": 5,
+          "comment": "Handles heavy gaming with ease."
+        },
+        {
+          "userId": 503,
+          "userName": "BatterySaver",
+          "rating": 5,
+          "comment": "Battery life is fantastic."
+        }
+      ],
+      "rating": 5.0
     },
 
     {
@@ -233,118 +340,126 @@
     },
     {
       "id": 11,
-      "category": "Cameras",
-      "name": "Sony Alpha A7 IV",
+      "category": "Accessories",
+      "name": "Sony 65\" 4K Ultra HD Smart TV X90L",
       "brand": "Sony",
-      "price": [2499, 2799],
+      "price": [1399, 1499],
       "color": "Black",
-      "type": "Mirrorless",
-      "sensor": "Full-frame 33MP",
-      "lensMount": "Sony E-mount",
-      "isoRange": "100-51200 (expandable to 50-204800)",
-      "videoResolution": "4K 60fps",
-      "autofocus": "Real-time Eye AF",
-      "weight": "658g",
+      "type": "Smart TV",
+      "screenSize": "65 inches",
+      "resolution": "3840x2160 (4K)",
+      "hdr": "Dolby Vision, HDR10",
+      "smartPlatform": "Google TV",
+      "refreshRate": "120Hz",
+      "hdmiPorts": 4,
       "stock": 15,
       "rating": 5,
       "reviews": [
         {
           "userId": 301,
-          "userName": "ProPhotographer",
+          "userName": "HomeCinema",
           "rating": 5,
-          "comment": "Идеальный баланс качества и функциональности. Отличный выбор для профессионалов."
+          "comment": "Потрясающее качество изображения и реалистичные цвета!"
         }
       ]
     },
     {
       "id": 12,
-      "category": "Cameras",
-      "name": "Canon EOS R5",
-      "brand": "Canon",
-      "price": [3899],
+      "category": "Accessories",
+      "name": "Apple TV 4K (128GB)",
+      "brand": "Apple",
+      "price": [149],
       "color": "Black",
-      "type": "Mirrorless",
-      "sensor": "Full-frame 45MP",
-      "lensMount": "Canon RF-mount",
-      "isoRange": "100-51200 (expandable to 50-102400)",
-      "videoResolution": "8K 30fps",
-      "autofocus": "Dual Pixel CMOS AF II",
-      "weight": "738g",
-      "stock": 10,
+      "type": "Streaming Device",
+      "resolution": "4K HDR",
+      "storage": "128GB",
+      "processor": "A15 Bionic",
+      "ports": "HDMI 2.1",
+      "remote": "Siri Remote",
+      "os": "tvOS",
+      "stock": 25,
       "rating": 4,
       "reviews": [
         {
           "userId": 302,
-          "userName": "VideoMaker",
+          "userName": "StreamLover",
           "rating": 4,
-          "comment": "Фантастическое качество видео, но сильно греется при съемке 8K."
+          "comment": "Идеально для экосистемы Apple, но дороговат."
         }
       ]
     },
     {
       "id": 13,
-      "category": "Cameras",
-      "name": "Fujifilm X-T5",
-      "brand": "Fujifilm",
-      "price": [1699],
-      "color": "Silver",
-      "type": "Mirrorless",
-      "sensor": "APS-C 40MP",
-      "lensMount": "Fujifilm X-mount",
-      "isoRange": "160-12800 (expandable to 80-51200)",
-      "videoResolution": "6K 30fps",
-      "autofocus": "Intelligent Hybrid AF",
-      "weight": "557g",
-      "stock": 20,
-      "rating": 0,
-      "reviews": []
-    },
-    {
-      "id": 14,
-      "category": "Cameras",
-      "name": "Nikon Z6 II",
-      "brand": "Nikon",
-      "price": [1999],
-      "color": "Black",
-      "type": "Mirrorless",
-      "sensor": "Full-frame 24MP",
-      "lensMount": "Nikon Z-mount",
-      "isoRange": "100-51200 (expandable to 50-204800)",
-      "videoResolution": "4K 60fps",
-      "autofocus": "273-point Hybrid AF",
-      "weight": "705g",
-      "stock": 12,
+      "category": "Accessories",
+      "name": "Anker 737 Power Bank (140W)",
+      "brand": "Anker",
+      "price": [179],
+      "color": "Black/Orange",
+      "type": "Portable Charger",
+      "capacity": "24000mAh",
+      "output": "140W Max",
+      "ports": "2×USB-C, 1×USB-A",
+      "charging": "PD 3.1",
+      "weight": "550g",
+      "features": ["LCD Screen", "Fast Charging"],
+      "stock": 30,
       "rating": 5,
       "reviews": [
         {
           "userId": 303,
-          "userName": "TravelShooter",
+          "userName": "TravelTech",
           "rating": 5,
-          "comment": "Надежная камера для путешествий. Отличная эргономика."
+          "comment": "Заряжает MacBook Pro на 100%! Незаменим в путешествиях."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "category": "Accessories",
+      "name": "Logitech MX Keys Mini",
+      "brand": "Logitech",
+      "price": [99],
+      "color": "Graphite",
+      "type": "Wireless Keyboard",
+      "connectivity": "Bluetooth/Unifying",
+      "batteryLife": "10 days (backlight off)",
+      "backlight": "Yes",
+      "compatibility": ["Windows", "macOS", "iOS", "Android"],
+      "weight": "506g",
+      "features": ["Smart Backlight", "Multi-Device"],
+      "stock": 40,
+      "rating": 5,
+      "reviews": [
+        {
+          "userId": 304,
+          "userName": "RemoteWorker",
+          "rating": 5,
+          "comment": "Лучшая клавиатура для работы. Тихие и приятные клавиши."
         }
       ]
     },
     {
       "id": 15,
-      "category": "Cameras",
-      "name": "GoPro HERO12 Black",
-      "brand": "GoPro",
-      "price": [399],
-      "color": "Black",
-      "type": "Action Camera",
-      "sensor": "1/1.9\" 27MP",
-      "videoResolution": "5.3K 60fps",
-      "waterResistance": "10m (без бокса)",
-      "stabilization": "HyperSmooth 6.0",
-      "weight": "154g",
-      "stock": 25,
+      "category": "Accessories",
+      "name": "Samsung T7 Shield 1TB",
+      "brand": "Samsung",
+      "price": [89],
+      "color": "Blue",
+      "type": "Portable SSD",
+      "capacity": "1TB",
+      "interface": "USB 3.2 Gen 2",
+      "speed": "1050MB/s",
+      "protection": "IP65 (Water/Dust)",
+      "weight": "98g",
+      "dimensions": "85×57×12mm",
+      "stock": 35,
       "rating": 4,
       "reviews": [
         {
-          "userId": 304,
-          "userName": "ExtremeSports",
+          "userId": 305,
+          "userName": "Photographer",
           "rating": 4,
-          "comment": "Лучшая камера для экстремальных съемок, но батарея садится быстро."
+          "comment": "Быстрый и защищенный, но греется при активной работе."
         }
       ]
     },
@@ -633,7 +748,8 @@
       "stock": 14,
       "rating": 0,
       "reviews": []
-    },{
+    },
+    {
       "id": 28,
       "category": "Gaming Consoles",
       "name": "PlayStation 5 (Standard Edition)",
@@ -796,70 +912,141 @@
       "id": 1,
       "name": "Phones",
       "description": "Latest smartphones from top brands",
-      "filters": {
-        "brands": ["Apple", "Samsung", "Google", "OnePlus"],
-        "memory": [128, 256, 512, 1024],
-        "priceRange": {
-          "min": 799,
-          "max": 1499
+      "filters": [
+        {
+          "title": "Brands",
+          "values": ["Apple", "Samsung", "Google", "OnePlus"]
         },
-        "os": ["iOS", "Android"],
-        "screenSizes": ["6.1 inches", "6.7 inches", "6.8 inches"]
-      }
+        {
+          "title": "Memory (GB)",
+          "values": [128, 256, 512, 1024]
+        },
+        {
+          "title": "Price Range",
+          "values": { "min": 799, "max": 1499 }
+        },
+        {
+          "title": "Operating System",
+          "values": ["iOS", "Android"]
+        },
+        {
+          "title": "Screen Size",
+          "values": ["6.1 inches", "6.7 inches", "6.8 inches"]
+        }
+      ]
     },
     {
       "id": 2,
       "name": "SmartWatches",
       "description": "Wearable technology for fitness and communication",
-      "filters": {
-        "brands": ["Apple", "Samsung", "Garmin", "Xiaomi", "Huawei"],
-        "size": ["41mm", "43mm", "45mm", "46mm", "47mm"],
-        "os": ["watchOS", "Wear OS", "Garmin OS", "HarmonyOS"],
-        "features": ["ECG", "GPS", "Blood Oxygen", "Sleep Tracking"]
-      }
+      "filters": [
+        {
+          "title": "Brands",
+          "values": ["Apple", "Samsung", "Garmin", "Xiaomi", "Huawei"]
+        },
+        {
+          "title": "Size",
+          "values": ["41mm", "43mm", "45mm", "46mm", "47mm"]
+        },
+        {
+          "title": "OS",
+          "values": ["watchOS", "Wear OS", "Garmin OS", "HarmonyOS"]
+        },
+        {
+          "title": "Features",
+          "values": ["ECG", "GPS", "Blood Oxygen", "Sleep Tracking"]
+        }
+      ]
     },
     {
       "id": 3,
-      "name": "Cameras",
-      "description": "Professional and amateur photography equipment",
-      "filters": {
-        "brands": ["Sony", "Canon", "Fujifilm", "Nikon", "GoPro"],
-        "type": ["Mirrorless", "Action Camera"],
-        "resolution": ["4K", "6K", "8K", "5.3K"],
-        "sensor": ["Full-frame", "APS-C"]
-      }
+      "name": "Accessories",
+      "description": "Premium accessories for your devices",
+      "filters": [
+        {
+          "title": "Brands",
+          "values": ["Sony", "Apple", "Anker", "Logitech", "Samsung"]
+        },
+        {
+          "title": "Type",
+          "values": [
+            "Smart TV",
+            "Streaming Device",
+            "Portable Charger",
+            "Keyboard",
+            "SSD"
+          ]
+        },
+        {
+          "title": "Price Range",
+          "values": { "min": 89, "max": 1499 }
+        }
+      ]
     },
     {
       "id": 4,
       "name": "Headphones",
       "description": "Audio devices for music and calls",
-      "filters": {
-        "brands": ["Sony", "Apple", "Bose", "Samsung", "JBL", "Beats"],
-        "type": ["Over-ear", "In-ear"],
-        "features": ["Noise Cancelling", "Wireless", "Water Resistant"]
-      }
+      "filters": [
+        {
+          "title": "Brands",
+          "values": ["Sony", "Apple", "Bose", "Samsung", "JBL", "Beats"]
+        },
+        {
+          "title": "Type",
+          "values": ["Over-ear", "In-ear"]
+        },
+        {
+          "title": "Features",
+          "values": ["Noise Cancelling", "Wireless", "Water Resistant"]
+        }
+      ]
     },
     {
       "id": 5,
       "name": "Computers",
       "description": "Laptops and desktops for work and entertainment",
-      "filters": {
-        "brands": ["Apple", "Dell", "HP", "Lenovo", "ASUS"],
-        "type": ["Laptop", "2-in-1", "All-in-One", "Gaming"],
-        "ram": [8, 16, 32, 64, 96],
-        "storage": [256, 512, 1024, 2048]
-      }
+      "filters": [
+        {
+          "title": "Brands",
+          "values": ["Apple", "Dell", "HP", "Lenovo", "ASUS"]
+        },
+        {
+          "title": "Type",
+          "values": ["Laptop", "2-in-1", "All-in-One", "Gaming"]
+        },
+        {
+          "title": "RAM (GB)",
+          "values": [8, 16, 32, 64, 96]
+        },
+        {
+          "title": "Storage (GB)",
+          "values": [256, 512, 1024, 2048]
+        }
+      ]
     },
     {
       "id": 6,
       "name": "Gaming",
       "description": "Consoles and accessories for gamers",
-      "filters": {
-        "brands": ["Sony", "Microsoft", "Nintendo", "Valve"],
-        "type": ["Home Console", "Hybrid", "Handheld"],
-        "storage": ["64GB", "512GB", "825GB", "1TB"],
-        "resolution": ["720p", "1080p", "4K"]
-      }
+      "filters": [
+        {
+          "title": "Brands",
+          "values": ["Sony", "Microsoft", "Nintendo", "Valve"]
+        },
+        {
+          "title": "Type",
+          "values": ["Home Console", "Hybrid", "Handheld"]
+        },
+        {
+          "title": "Storage",
+          "values": ["64GB", "512GB", "825GB", "1TB"]
+        },
+        {
+          "title": "Resolution",
+          "values": ["720p", "1080p", "4K"]
+        }
+      ]
     }
   ],
   "reviewsSchema": {

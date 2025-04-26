@@ -1,12 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import s from "./categories.module.scss";
-
-import { Link } from "react-router";
 import { chooseCategory } from "../../redux/slices/productSlice";
 
 export default function Categories() {
-  const dispatch = useDispatch()
-  const category = useSelector(state => state.product.category)
+  const dispatch = useDispatch();
+  const category = useSelector((state) => state.product.categoryHome);
   return (
     <>
       <section className={s.categories}>
@@ -14,7 +12,33 @@ export default function Categories() {
           <div className={s.inner}>
             <h3 className={s.title}>Browse By Category</h3>
             <ul className={s.list}>
-              <li className={`${s.item} ${category==='phones' && s.active}`} onClick={()=>dispatch(chooseCategory('phones'))}>
+              <li
+                className={`${s.item} ${category === "" && s.active}`}
+                onClick={() => dispatch(chooseCategory(""))}
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  version='1.1'
+                  width='44'
+                  height='44'
+                  x='0'
+                  y='0'
+                  viewBox='0 0 511.999 511.999'
+                  className={s.all}
+                >
+                  <path
+                    d='M437.019 74.981C388.667 26.628 324.38 0 256 0 187.62 0 123.332 26.628 74.981 74.98 26.628 123.332 0 187.62 0 256s26.628 132.667 74.981 181.019c48.351 48.352 112.639 74.98 181.019 74.98 68.381 0 132.667-26.628 181.02-74.981C485.371 388.667 512 324.379 512 255.999s-26.629-132.667-74.981-181.018zM96.216 96.216c22.511-22.511 48.938-39.681 77.742-50.888-7.672 9.578-14.851 20.587-21.43 32.969-7.641 14.38-14.234 30.173-19.725 47.042-19.022-3.157-36.647-7.039-52.393-11.595a230.423 230.423 0 0 1 15.806-17.528zm-33.987 43.369c18.417 5.897 39.479 10.87 62.461 14.809-6.4 27.166-10.167 56.399-11.066 86.591H30.536c2.36-36.233 13.242-70.813 31.693-101.4zm-1.635 230.053c-17.455-29.899-27.769-63.481-30.059-98.623h83.146c.982 29.329 4.674 57.731 10.858 84.186-23.454 3.802-45.045 8.649-63.945 14.437zm35.622 46.146a229.917 229.917 0 0 1-17.831-20.055c16.323-4.526 34.571-8.359 54.214-11.433 5.53 17.103 12.194 33.105 19.928 47.662 7.17 13.493 15.053 25.349 23.51 35.505-29.61-11.183-56.769-28.629-79.821-51.679zm144.768 62.331c-22.808-6.389-44.384-27.217-61.936-60.249-6.139-11.552-11.531-24.155-16.15-37.587 24.73-2.722 51.045-4.331 78.086-4.709v102.545zm0-132.578c-29.988.409-59.217 2.292-86.59 5.507-6.038-24.961-9.671-51.978-10.668-80.028h97.259v74.521zm0-104.553h-97.315c.911-28.834 4.602-56.605 10.828-82.201 27.198 3.4 56.366 5.468 86.487 6.06v76.141zm0-106.176c-27.146-.547-53.403-2.317-77.958-5.205 4.591-13.292 9.941-25.768 16.022-37.215 17.551-33.032 39.128-53.86 61.936-60.249v102.669zm209.733 6.372c17.874 30.193 28.427 64.199 30.749 99.804h-83.088c-.889-29.844-4.584-58.749-10.85-85.647 23.133-3.736 44.456-8.489 63.189-14.157zm-34.934-44.964a230.122 230.122 0 0 1 16.914 18.91c-16.073 4.389-33.972 8.114-53.204 11.112-5.548-17.208-12.243-33.305-20.02-47.941-6.579-12.382-13.758-23.391-21.43-32.969 28.802 11.207 55.23 28.377 77.74 50.888zm-144.767 174.8h97.259c-1.004 28.268-4.686 55.49-10.81 80.612-27.194-3.381-56.349-5.43-86.449-6.006v-74.606zm0-30.032v-76.041c30.005-.394 59.257-2.261 86.656-5.464 6.125 25.403 9.756 52.932 10.659 81.505h-97.315zm-.002-208.845h.001c22.808 6.389 44.384 27.217 61.936 60.249 6.178 11.627 11.601 24.318 16.24 37.848-24.763 2.712-51.108 4.309-78.177 4.674V32.139zm.002 445.976V375.657c27.12.532 53.357 2.286 77.903 5.156-4.579 13.232-9.911 25.654-15.967 37.053-17.552 33.032-39.128 53.86-61.936 60.249zm144.767-62.331c-23.051 23.051-50.21 40.496-79.821 51.678 8.457-10.156 16.34-22.011 23.51-35.504 7.62-14.341 14.198-30.088 19.68-46.906 19.465 3.213 37.473 7.186 53.515 11.859a230.268 230.268 0 0 1-16.884 18.873zm34.823-44.775c-18.635-5.991-40-11.032-63.326-15.01 6.296-26.68 10.048-55.36 11.041-84.983h83.146c-2.328 35.678-12.918 69.753-30.861 99.993z'
+                    fill='#000000'
+                    opacity='1'
+                  ></path>
+                </svg>
+
+                <p className={s.category}>All</p>
+              </li>
+              <li
+                className={`${s.item} ${category === "Phones" && s.active}`}
+                onClick={() => dispatch(chooseCategory("Phones"))}
+              >
                 <svg
                   width='48.000000'
                   height='48.000000'
@@ -77,7 +101,12 @@ export default function Categories() {
 
                 <p className={s.category}>Phones</p>
               </li>
-              <li className={`${s.item} ${category==='smartwatches' && s.active}`}  onClick={()=>dispatch(chooseCategory('smartwatches'))}>
+              <li
+                className={`${s.item} ${
+                  category === "Smartwatches" && s.active
+                }`}
+                onClick={() => dispatch(chooseCategory("Smartwatches"))}
+              >
                 <svg
                   width='48.000000'
                   height='48.000000'
@@ -160,8 +189,13 @@ export default function Categories() {
 
                 <p className={s.category}>Smart Watches</p>
               </li>
-              <li className={`${s.item} ${category==='cameras' && s.active}`}  onClick={()=>dispatch(chooseCategory('cameras'))}>
-                <svg
+              <li
+                className={`${s.item} ${
+                  category === "Accessories" && s.active
+                }`}
+                onClick={() => dispatch(chooseCategory("Accessories"))}
+              >
+                {/* <svg
                   width='48.000000'
                   height='48.000000'
                   viewBox='0 0 48 48'
@@ -171,7 +205,7 @@ export default function Categories() {
                   <defs>
                     <clipPath id='clip2603_1937'>
                       <rect
-                        id='Icon/Cameras'
+                        id='Icon/Accessories'
                         rx='0.000000'
                         width='47.000000'
                         height='47.000000'
@@ -199,11 +233,79 @@ export default function Categories() {
                       strokeLinejoin='round'
                     />
                   </g>
+                </svg> */}
+                {/* <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='#000000'
+                  height='800px'
+                  width='800px'
+                  version='1.1'
+                  id='Capa_1'
+                  viewBox='0 0 418.089 418.089'
+                >
+                  <path
+                    id='XMLID_219_'
+                    d='M209.977,170.466h26.941c3.866,0,7-3.134,7-7v-26.939c0-3.866-3.134-7-7-7h-26.941c-3.866,0-7,3.134-7,7  v26.939C202.977,167.333,206.111,170.466,209.977,170.466z M216.977,143.527h12.941v12.939h-12.941V143.527z M371.268,187.186  h-26.94c-3.866,0-7,3.134-7,7v26.94c0,3.866,3.134,7,7,7h26.94c3.866,0,7-3.134,7-7v-26.94  C378.268,190.32,375.134,187.186,371.268,187.186z M364.268,214.126h-12.94v-12.94h12.94V214.126z M401.224,96.089H16.865  C7.565,96.089,0,103.655,0,112.955v192.18C0,314.434,7.565,322,16.865,322h384.359c9.299,0,16.865-7.565,16.865-16.865v-192.18  C418.089,103.655,410.523,96.089,401.224,96.089z M404.089,305.134c0,1.553-1.312,2.865-2.865,2.865H16.865  c-1.553,0-2.865-1.313-2.865-2.865v-192.18c0-1.553,1.312-2.865,2.865-2.865h384.359c1.553,0,2.865,1.313,2.865,2.865V305.134z   M317.387,170.466h53.88c3.866,0,7-3.134,7-7v-26.939c0-3.866-3.134-7-7-7h-53.88c-3.866,0-7,3.134-7,7v26.939  C310.387,167.333,313.521,170.466,317.387,170.466z M324.387,143.527h39.88v12.939h-39.88V143.527z M263.847,170.466h26.94  c3.866,0,7-3.134,7-7v-26.939c0-3.866-3.134-7-7-7h-26.94c-3.866,0-7,3.134-7,7v26.939  C256.847,167.333,259.98,170.466,263.847,170.466z M270.847,143.527h12.94v12.939h-12.94V143.527z M235.04,187.186  c-3.866,0-7,3.134-7,7v26.94c0,3.866,3.134,7,7,7h26.94c3.866,0,7-3.134,7-7v-26.94c0-3.866-3.134-7-7-7H235.04z M254.98,214.126  h-12.94v-12.94h12.94V214.126z M46.821,187.186c-3.866,0-7,3.134-7,7v26.94c0,3.866,3.134,7,7,7h53.88c3.866,0,7-3.134,7-7v-26.94  c0-3.866-3.134-7-7-7H46.821z M93.701,214.126h-39.88v-12.94h39.88V214.126z M181.17,187.186c-3.866,0-7,3.134-7,7v26.94  c0,3.866,3.134,7,7,7h26.941c3.866,0,7-3.134,7-7v-26.94c0-3.866-3.134-7-7-7H181.17z M201.111,214.126H188.17v-12.94h12.941  V214.126z M315.849,244.844h-213.61c-3.866,0-7,3.134-7,7v26.94c0,3.866,3.134,7,7,7h213.61c3.866,0,7-3.134,7-7v-26.94  C322.849,247.978,319.715,244.844,315.849,244.844z M308.849,271.785h-199.61v-12.94h199.61V271.785z M102.239,170.466h26.939  c3.866,0,7-3.134,7-7v-26.939c0-3.866-3.134-7-7-7h-26.939c-3.866,0-7,3.134-7,7v26.939  C95.239,167.333,98.373,170.466,102.239,170.466z M109.239,143.527h12.939v12.939h-12.939V143.527z M46.82,170.466h26.94  c3.866,0,7-3.134,7-7v-26.939c0-3.866-3.134-7-7-7H46.82c-3.866,0-7,3.134-7,7v26.939C39.82,167.333,42.954,170.466,46.82,170.466z   M53.82,143.527h12.94v12.939H53.82V143.527z M73.761,244.844h-26.94c-3.866,0-7,3.134-7,7v26.94c0,3.866,3.134,7,7,7h26.94  c3.866,0,7-3.134,7-7v-26.94C80.761,247.978,77.627,244.844,73.761,244.844z M66.761,271.785h-12.94v-12.94h12.94V271.785z   M315.849,187.186H288.91c-3.866,0-7,3.134-7,7v26.94c0,3.866,3.134,7,7,7h26.938c3.866,0,7-3.134,7-7v-26.94  C322.849,190.32,319.715,187.186,315.849,187.186z M308.849,214.126H295.91v-12.94h12.938V214.126z M371.268,244.844h-26.94  c-3.866,0-7,3.134-7,7v26.94c0,3.866,3.134,7,7,7h26.94c3.866,0,7-3.134,7-7v-26.94  C378.268,247.978,375.134,244.844,371.268,244.844z M364.268,271.785h-12.94v-12.94h12.94V271.785z M156.108,170.466h26.94  c3.866,0,7-3.134,7-7v-26.939c0-3.866-3.134-7-7-7h-26.94c-3.866,0-7,3.134-7,7v26.939  C149.108,167.333,152.243,170.466,156.108,170.466z M163.108,143.527h12.94v12.939h-12.94V143.527z M127.302,187.186  c-3.866,0-7,3.134-7,7v26.94c0,3.866,3.134,7,7,7h26.94c3.866,0,7-3.134,7-7v-26.94c0-3.866-3.134-7-7-7H127.302z M147.242,214.126  h-12.94v-12.94h12.94V214.126z'
+                  />
+                </svg> */}
+                <svg
+                  width='48.000000'
+                  height='48.000000'
+                  viewBox='0 0 48 48'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <defs />
+                  <rect
+                    id='Прямоугольник 1'
+                    x='12.000000'
+                    y='5.000000'
+                    rx='12.000000'
+                    width='24.000000'
+                    height='37.000000'
+                    fill='none'
+                    fillOpacity='0'
+                  />
+                  <rect
+                    id='Прямоугольник 1'
+                    x='13.000000'
+                    y='6.000000'
+                    rx='11.000000'
+                    width='22.000000'
+                    height='35.000000'
+                    stroke='#000000'
+                    strokeOpacity='1.000000'
+                    strokeWidth='2.000000'
+                  />
+                  <rect
+                    id='Прямоугольник 1'
+                    x='21.000000'
+                    y='10.000000'
+                    rx='3.000000'
+                    width='6.000000'
+                    height='10.000000'
+                    fill='none'
+                    fillOpacity='0'
+                  />
+                  <rect
+                    id='Прямоугольник 1'
+                    x='22.000000'
+                    y='11.000000'
+                    rx='2.000000'
+                    width='4.000000'
+                    height='8.000000'
+                    stroke='#000000'
+                    strokeOpacity='1.000000'
+                    strokeWidth='2.000000'
+                  />
                 </svg>
 
-                <p className={s.category}>Cameras</p>
+                <p className={s.category}>Accessories</p>
               </li>
-              <li className={`${s.item} ${category==='headphones' && s.active}`}  onClick={()=>dispatch(chooseCategory('headphones'))}>
+              <li
+                className={`${s.item} ${category === "Headphones" && s.active}`}
+                onClick={() => dispatch(chooseCategory("Headphones"))}
+              >
                 <svg
                   width='48.000000'
                   height='48.000000'
@@ -224,7 +326,7 @@ export default function Categories() {
                       />
                     </clipPath>
                   </defs>
-                  <rect
+                  {/* <rect
                     id='Icon/Headphones'
                     rx='0.000000'
                     width='47.000000'
@@ -232,7 +334,7 @@ export default function Categories() {
                     transform='translate(0.500000 0.500000)'
                     fill='#FFFFFF'
                     fillOpacity='0'
-                  />
+                  /> */}
                   <g clipPath='url(#clip2603_1943)'>
                     <path
                       id='Vector'
@@ -264,7 +366,10 @@ export default function Categories() {
 
                 <p className={s.category}>Headphones</p>
               </li>
-              <li className={`${s.item} ${category==='computers' && s.active}`} onClick={()=>dispatch(chooseCategory('computers'))}>
+              <li
+                className={`${s.item} ${category === "Computers" && s.active}`}
+                onClick={() => dispatch(chooseCategory("Computers"))}
+              >
                 <svg
                   width='48.000000'
                   height='48.000000'
@@ -285,7 +390,7 @@ export default function Categories() {
                       />
                     </clipPath>
                   </defs>
-                  <rect
+                  {/* <rect
                     id='Icon/Computers'
                     rx='0.000000'
                     width='47.000000'
@@ -293,7 +398,7 @@ export default function Categories() {
                     transform='translate(0.500000 0.500000)'
                     fill='#FFFFFF'
                     fillOpacity='0'
-                  />
+                  /> */}
                   <g clipPath='url(#clip2603_1934)'>
                     <path
                       id='Vector'
@@ -343,7 +448,12 @@ export default function Categories() {
 
                 <p className={s.category}>Computers</p>
               </li>
-              <li className={`${s.item} ${category==='gaming' && s.active}`} onClick={()=>dispatch(chooseCategory('gaming'))}>
+              <li
+                className={`${s.item} ${
+                  category === "Gaming Consoles" && s.active
+                }`}
+                onClick={() => dispatch(chooseCategory("Gaming Consoles"))}
+              >
                 <svg
                   width='48.000000'
                   height='48.000000'
@@ -364,7 +474,7 @@ export default function Categories() {
                       />
                     </clipPath>
                   </defs>
-                  <rect
+                  {/* <rect
                     id='Icon/Gaming'
                     rx='0.000000'
                     width='47.000000'
@@ -372,7 +482,7 @@ export default function Categories() {
                     transform='translate(0.500000 0.500000)'
                     fill='#FFFFFF'
                     fillOpacity='0'
-                  />
+                  /> */}
                   <g clipPath='url(#clip2603_1931)'>
                     <path
                       id='Vector'

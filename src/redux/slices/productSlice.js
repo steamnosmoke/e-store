@@ -1,11 +1,26 @@
-import { createAsyncThunk,createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchProducts = createAsyncThunk(
-  'products/fetchProducts',
-  async (category, { rejectWithValue }) => {
+  "product/fetchProducts",
+  async (categoryHome, { rejectWithValue }) => {
     try {
-      const {data} = await axios.get(`https://6803741a0a99cb7408ec07d0.mockapi.io/products?${category ? `filter=category&category=${category}` : ''}`);
+      const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products.json${
+        categoryHome ? `?orderBy="category"&equalTo="${categoryHome}"` : ""
+      }`;
+      const { data } = await axios.get(url);
+      return Object.values(data);
+    } catch (error) {
+      return rejectWithValue(error.data);
+    }
+  }
+);
+export const fetchProductById = createAsyncThunk(
+  "product/fetchProductById",
+  async (productID, { rejectWithValue }) => {
+    try {
+      const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products/${productID-1}.json`;
+      const { data } = await axios.get(url);
       return data;
     } catch (error) {
       return rejectWithValue(error.data);
@@ -13,38 +28,68 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
+
 export const productSlice = createSlice({
   name: "product",
   initialState: {
-    products:[],
-    filters:[],
-    category: "",
-    status:'loading',
-    error:null,
+    categoryHome: "",
+    products: [],
+    statusHome: "loading",
+    statusProduct: "loading",
+    errorHome: null,
+    errorProduct: null,
+    product: {},
+    productID: "",
+    color: 0,
+    memory: 0,
   },
   reducers: {
-    chooseCategory:(state,action)=>{
-      state.category = action.payload;
-    }
-    
+    chooseCategory: (state, action) => {
+      state.categoryHome =
+        action.payload.charAt(0).toUpperCase() + action.payload.slice(1);
+    },
+    setProductId: (state, action) => {
+      state.productID = action.payload;
+    },
+    setProduct: (state, action) => {
+      state.product = action.payload;
+    },
+    setColor: (state, action) => {
+      state.color = action.payload;
+    },
+    setMemory: (state, action) => {
+      state.memory = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
       // Обработка fetchProducts
       .addCase(fetchProducts.pending, (state) => {
-        state.status = 'loading';
+        state.statusHome = "loading";
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
-        state.status = 'succeeded';
+        state.statusHome = "succeeded";
         state.products = action.payload;
       })
       .addCase(fetchProducts.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.payload;
+        state.statusHome = "failed";
+        state.errorHome = action.payload;
       })
-      
+      // Обработка fetchProductById
+      .addCase(fetchProductById.pending, (state) => {
+        state.statusProduct = "loading";
+      })
+      .addCase(fetchProductById.fulfilled, (state, action) => {
+        state.statusProduct = "succeeded";
+        state.product = action.payload;
+      })
+      .addCase(fetchProductById.rejected, (state, action) => {
+        state.statusProduct = "failed";
+        state.errorProduct = action.payload;
+      });
   },
 });
 
-export const { chooseCategory } = productSlice.actions;
+export const { chooseCategory, setProductId, setProduct, setColor, setMemory } =
+  productSlice.actions;
 export default productSlice.reducer;

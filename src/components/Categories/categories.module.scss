@@ -1,7 +1,6 @@
 .categories {
   padding: 80px 0;
   background-color: #fafafa;
-  cursor: pointer;
 
   margin: 80px 0;
 }
@@ -21,9 +20,10 @@
 }
 
 .item {
-  width: 160px;
+  width: 140px;
   height: 128px;
-  padding: 24px 21px;
+  padding: 24px 0px;
+  cursor: pointer;
   border-radius: 15px;
 
   display: flex;
@@ -33,24 +33,39 @@
 
   background-color: rgb(237, 237, 237);
 
-  transition: all .2s ease-in-out;
-  svg path, svg line{
-    transition: all .2s ease-in-out;
+  text-align: center;
+
+  transition: all 0.2s ease-in-out;
+  svg path,
+  svg line,
+  svg rect {
+    transition: all 0.2s ease-in-out;
   }
 
-
-  &:hover,&.active{
+  &:hover,
+  &.active {
     transform: scale(1.1);
-    background-color: rgb(53,53,53);
-    color:#fafafa;
-    svg{
-      path,line{
+    background-color: rgb(53, 53, 53);
+    color: #fafafa;
+    svg {
+      path,
+      line,
+      rect {
         stroke: #fafafa;
       }
     }
+    .all path {
+      fill: #fff;
+    }
   }
+
+  
 }
 
-.item.active{
+.item.active {
   transform: scale(1);
+}
+
+.all {
+  margin-bottom: 4px;
 }
