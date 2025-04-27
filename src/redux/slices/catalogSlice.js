@@ -5,12 +5,18 @@ export const fetchProducts = createAsyncThunk(
   "catalog/fetchProducts",
   async (categoryCatalog, { rejectWithValue }) => {
     try {
-      const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products.json${
+      const url = `https://experiment-d6e48-default-rtdb.europe-west1.firebasedatabase.app/products.json${
         categoryCatalog
           ? `?orderBy="category"&equalTo="${categoryCatalog}"`
           : ""
       }`;
+      // const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products.json${
+      //   categoryCatalog
+      //     ? `?orderBy="category"&equalTo="${categoryCatalog}"`
+      //     : ""
+      // }`;
       const { data } = await axios.get(url);
+      console.log('cat',data)
       return Object.values(data);
     } catch (error) {
       return rejectWithValue(error.data);
@@ -22,10 +28,14 @@ export const fetchFilters = createAsyncThunk(
   "catalog/fetchFilters",
   async (categoryCatalog, { rejectWithValue }) => {
     try {
-      const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/categories.json${
+      const url = `https://experiment-d6e48-default-rtdb.europe-west1.firebasedatabase.app/categories.json${
         categoryCatalog ? `?orderBy="name"&equalTo="${categoryCatalog}"` : ""
       }`;
+      // const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/categories.json${
+      //   categoryCatalog ? `?orderBy="name"&equalTo="${categoryCatalog}"` : ""
+      // }`;
       const { data } = await axios.get(url);
+      console.log(data)
       return Object.values(data);
     } catch (error) {
       return rejectWithValue(error.data);

@@ -5,10 +5,14 @@ export const fetchProducts = createAsyncThunk(
   "product/fetchProducts",
   async (categoryHome, { rejectWithValue }) => {
     try {
-      const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products.json${
+      const url = `https://experiment-d6e48-default-rtdb.europe-west1.firebasedatabase.app/products.json${
         categoryHome ? `?orderBy="category"&equalTo="${categoryHome}"` : ""
       }`;
+      // const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products.json${
+      //   categoryHome ? `?orderBy="category"&equalTo="${categoryHome}"` : ""
+      // }`;
       const { data } = await axios.get(url);
+      console.log('prod',data)
       return Object.values(data);
     } catch (error) {
       return rejectWithValue(error.data);
@@ -19,8 +23,10 @@ export const fetchProductById = createAsyncThunk(
   "product/fetchProductById",
   async (productID, { rejectWithValue }) => {
     try {
-      const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products/${productID-1}.json`;
+      const url = `https://experiment-d6e48-default-rtdb.europe-west1.firebasedatabase.app/products/${productID-1}.json`;
+      // const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products/${productID-1}.json`;
       const { data } = await axios.get(url);
+      console.log(data)
       return data;
     } catch (error) {
       return rejectWithValue(error.data);
@@ -32,7 +38,7 @@ export const fetchProductById = createAsyncThunk(
 export const productSlice = createSlice({
   name: "product",
   initialState: {
-    categoryHome: "",
+    categoryHome: "Phones",
     products: [],
     statusHome: "loading",
     statusProduct: "loading",
@@ -50,9 +56,6 @@ export const productSlice = createSlice({
     },
     setProductId: (state, action) => {
       state.productID = action.payload;
-    },
-    setProduct: (state, action) => {
-      state.product = action.payload;
     },
     setColor: (state, action) => {
       state.color = action.payload;
@@ -90,6 +93,6 @@ export const productSlice = createSlice({
   },
 });
 
-export const { chooseCategory, setProductId, setProduct, setColor, setMemory } =
+export const { chooseCategory, setProductId, setColor, setMemory } =
   productSlice.actions;
 export default productSlice.reducer;

@@ -6,7 +6,7 @@
       "name": "iPhone 16 Pro",
       "brand": "Apple",
       "price": [999, 1099, 1299, 1499],
-      "color": ["Black", "Silver", "Gold"],
+      "color": ["Titanium Black", "Silver", "Gold"],
       "memory": [128, 256, 512, 1],
       "screenSize": "6.1 inches",
       "processor": "A17 Pro",

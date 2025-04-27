@@ -2,19 +2,15 @@ import s from "./card.module.scss";
 import { Link } from "react-router";
 
 import card from "../../assets/images/card.png";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
 
 export default function Card({ product }) {
-  const dispatch = useDispatch();
-  const onClickCard = (product) => {
-    // dispatch(setProduct(product));
-  };
+  const price = Math.min(
+    ...new Set(product.variants?.map((v) => Number(v.price - v.discount)))
+  );
 
-  useEffect(() => {}, [product]);
   return (
     <>
-      <Link to={`/catalog/${product.id}`} onClick={() => onClickCard(product)}>
+      <Link to={`/catalog/${product.id}`}>
         <section className={s.card}>
           <button className={s.favorite}>
             <svg
@@ -46,13 +42,14 @@ export default function Card({ product }) {
           <div className={s.inner}>
             <img className={s.picture} src={card} alt='product' />
             <h3 className={s.title}>
-              {product.name}, <br />"
+              {product.name}
+              {/* , <br />"
               {typeof product.color !== "string"
                 ? product.color[0]
                 : product.color}
-              "
+              " */}
             </h3>
-            <p className={s.price}>from {product.price[0]}$</p>
+            <p className={s.price}>from {price}$</p>
             <button className='black-btn'>Add to cart</button>
           </div>
         </section>

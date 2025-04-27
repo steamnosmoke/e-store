@@ -4,64 +4,74 @@ import { useSelector, useDispatch } from "react-redux";
 import { setColor, setMemory } from "../../../../redux/slices/productSlice";
 
 import img from "../../../../assets/images/card.png";
-import screen from "../../images/screen.svg";
-import cpu from "../../images/cpu.svg";
-import cores from "../../images/cores.svg";
-import camera from "../../images/camera.svg";
-import battery from "../../images/battery.svg";
-import front from "../../images/front.svg";
-import Delivery from "../../images/Delivery.svg";
-import Stock from "../../images/Stock.svg";
-import Guaranteed from "../../images/Guaranteed.svg";
+import screen from "./images/screen.svg";
+import cpu from "./images/cpu.svg";
+import cores from "./images/cores.svg";
+import camera from "./images/camera.svg";
+import battery from "./images/battery.svg";
+import front from "./images/front.svg";
+import Delivery from "./images/Delivery.svg";
+import Stock from "./images/Stock.svg";
+import Guaranteed from "./images/Guaranteed.svg";
 
 const ProductParams = () => {
   const dispatch = useDispatch();
   const { product, color, memory } = useSelector((state) => state.product);
+  const colors = [...new Set(product.variants?.map((v) => v.color))];
+  const colorHexs = [...new Set(product.variants?.map((v) => v.colorHex))];
+  const memories = [...new Set(product.variants?.map((v) => v.memory))];
+
+  const currentVariant = product.variants?.find(
+    (v) => v.color === colors[color] && v.memory === memories[memory]
+  );
+
+  const price = currentVariant.price - currentVariant.discount;
   useEffect(() => {}, []);
+
+  if (!currentVariant) return <div>Loading variant...</div>;
+
   return (
     <section className={s.params}>
       <div className={s.images}>
         <ul className={s.img_list}>
-          <li className={s.img_item}>
-            <img src={img} alt='' />
-          </li>
-          <li className={s.img_item}>
-            <img src={img} alt='' />
-          </li>
-          <li className={s.img_item}>
-            <img src={img} alt='' />
-          </li>
-          <li className={s.img_item}>
-            <img src={img} alt='' />
-          </li>
+          {currentVariant.images.map((imgUrl, index) => (
+            <li className={s.img_item} key={index}>
+              <img src={imgUrl} alt='' />
+            </li>
+          ))}
         </ul>
-        <img className={s.big_img} src={img} alt='' />
+        <img className={s.big_img} src={currentVariant.images[0]} alt='' />
       </div>
 
       <div className={s.block}>
         <h1 className={s.title}>
           {product.name},<br />
-          {product.color[color]}
+          {currentVariant.color}
         </h1>
         <div className={s.price}>
-          <p className={s.actualy_price}>{product.price[0]}$</p>
+          <p className={s.actualy_price}>{price}$</p>
           <p className={s.old_price}></p>
         </div>
         <div className={s.select_color}>
           <p className={s.color_label}>Select color:</p>
           <ul className={s.color_list}>
-            {product.color.map((col, colIndex) => (
+            {colors.map((col, colIndex) => (
               <li
-                className={s.color_item}
+                className={`${s.color_item} ${
+                  currentVariant.color === col && s.color_active
+                }`}
                 key={colIndex}
-                style={{ background: col }}
+                style={{
+                  background: colorHexs[colIndex],
+                  outlineColor: colorHexs[colIndex],
+                }}
                 onClick={() => dispatch(setColor(colIndex))}
               ></li>
             ))}
           </ul>
         </div>
         <ul className={s.memory_list}>
-          {product.memory.map((mem, memIndex) => (
+          {memories.map((mem, memIndex) => (
             <li
               className={`${s.memory_item} ${
                 memory === memIndex && s.memory_active
