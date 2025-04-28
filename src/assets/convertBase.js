@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require("fs");
 
 // Функция для получения случайного числа
 function getRandomInt(min, max) {
@@ -20,7 +20,7 @@ const colorHexMap = {
   purple: "#800080",
   spacegray: "#1C1C1E",
   midnight: "#191970",
-  starlight: "#EEE8AA"
+  starlight: "#EEE8AA",
 };
 
 // Функция для поиска HEX по цвету товара
@@ -44,10 +44,14 @@ function findHexByColorName(colorName) {
 }
 
 // Загружаем базу
-const base = JSON.parse(fs.readFileSync('./base.json', 'utf-8'));
+const base = JSON.parse(fs.readFileSync("./base.json", "utf-8"));
 
 const newProducts = base.products.map((product) => {
-  if (!Array.isArray(product.color) || !Array.isArray(product.memory) || !Array.isArray(product.price)) {
+  if (
+    !Array.isArray(product.color) ||
+    !Array.isArray(product.memory) ||
+    !Array.isArray(product.price)
+  ) {
     return product; // оставляем товар как есть
   }
 
@@ -69,14 +73,39 @@ const newProducts = base.products.map((product) => {
         discount: discountValue,
         stock: getRandomInt(3, 20),
         images: [
-          `/images/products/${product.name.toLowerCase().replace(/ /g, '')}/${color.toLowerCase().replace(/\s/g, '')}/1.jpg`,
-          `/images/products/${product.name.toLowerCase().replace(/ /g, '')}/${color.toLowerCase().replace(/\s/g, '')}/2.jpg`,
-          `/images/products/${product.name.toLowerCase().replace(/ /g, '')}/${color.toLowerCase().replace(/\s/g, '')}/3.jpg`,
-          `/images/products/${product.name.toLowerCase().replace(/ /g, '')}/${color.toLowerCase().replace(/\s/g, '')}/4.jpg`
-        ]
+          `/images/products/${product.name
+            .toLowerCase()
+            .replace(/ /g, "")}/${color
+            .toLowerCase()
+            .replace(/\s/g, "")}/1.png`,
+          `/images/products/${product.name
+            .toLowerCase()
+            .replace(/ /g, "")}/${color
+            .toLowerCase()
+            .replace(/\s/g, "")}/2.png`,
+          `/images/products/${product.name
+            .toLowerCase()
+            .replace(/ /g, "")}/${color
+            .toLowerCase()
+            .replace(/\s/g, "")}/3.png`,
+          `/images/products/${product.name
+            .toLowerCase()
+            .replace(/ /g, "")}/${color
+            .toLowerCase()
+            .replace(/\s/g, "")}/4.png`,
+        ],
       });
     });
   });
+
+  if (product.camera) {
+    product.camera = product.camera
+      .replaceAll("MP", "")
+      .replaceAll("+", "-")
+      .replace("Triple", "")
+      .replace("Quad", "")
+      .trim(); // на всякий случай убираем пробелы по краям
+  }
 
   return {
     ...product,
@@ -84,7 +113,7 @@ const newProducts = base.products.map((product) => {
     color: undefined,
     memory: undefined,
     price: undefined,
-    images: undefined
+    images: undefined,
   };
 });
 
@@ -92,10 +121,10 @@ const newProducts = base.products.map((product) => {
 const result = {
   products: newProducts,
   categories: base.categories,
-  reviewsSchema: base.reviewsSchema
+  reviewsSchema: base.reviewsSchema,
 };
 
 // Сохраняем
-fs.writeFileSync('./newBase.json', JSON.stringify(result, null, 2), 'utf-8');
+fs.writeFileSync("./newBase.json", JSON.stringify(result, null, 2), "utf-8");
 
-console.log('✅ База переработана с умным определением HEX цветов!');
+console.log("✅ База переработана с умным определением HEX цветов!");
