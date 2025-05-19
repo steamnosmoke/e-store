@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <main className={s.main}>
-        <MainBanner />
+        <MainBanner product={products[0]}/>
         <Tablets />
         <Categories />
         <section className={s.products}>

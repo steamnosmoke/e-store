@@ -3,7 +3,10 @@
     ".read": true,
     ".write": true,
       "products": {
-      ".indexOn": ["category", "price", "memory", "brand","rating"]
-    }
+      ".indexOn": ["category", "price", "memory", "brand","rating", "name", "id"]
+    },
+      "categories":{
+        ".indexOn":["name"]
+      }
   }
 }

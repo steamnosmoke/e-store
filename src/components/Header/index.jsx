@@ -2,16 +2,28 @@ import s from "./header.module.scss";
 import logo from "../../assets/images/Logo.svg";
 
 import Search from "../Search";
-import {chooseCategory} from "../../redux/slices/catalogSlice"
+import { chooseCategory } from "../../redux/slices/catalogSlice";
 
-import { NavLink } from "react-router";
-import { useDispatch } from "react-redux";
+import { NavLink, useNavigate } from "react-router";
+import { useDispatch,useSelector } from "react-redux";
+import { openAuthModal } from "../../redux/slices/modalSlice";
 
 export default function Header() {
-  const dispatch = useDispatch()
+  const {user} = useSelector(state=>state.auth)
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const onClickNav = () => {
     window.scrollTo(0, 0);
-    dispatch(chooseCategory(""))
+    dispatch(chooseCategory(""));
+  };
+
+  const onClickProfile = () => {
+    if (Object.values(user).length !== 0) {
+      onClickNav()
+      navigate("/profile");
+    } else {
+      dispatch(openAuthModal());
+    }
   };
 
   return (
@@ -33,18 +45,33 @@ export default function Header() {
                 </NavLink>
               </li>
               <li className={s.item} onClick={onClickNav}>
-                <NavLink to='/catalog' className={({ isActive }) => (isActive ? s.active : "")}>Catalog</NavLink>
+                <NavLink
+                  to='/catalog'
+                  className={({ isActive }) => (isActive ? s.active : "")}
+                >
+                  Catalog
+                </NavLink>
               </li>
               <li className={s.item} onClick={onClickNav}>
-                <NavLink to='/contacts' className={({ isActive }) => (isActive ? s.active : "")}>Contact Us</NavLink>
+                <NavLink
+                  to='/contacts'
+                  className={({ isActive }) => (isActive ? s.active : "")}
+                >
+                  Contact Us
+                </NavLink>
               </li>
               <li className={s.item} onClick={onClickNav}>
-                <NavLink to='/blog' className={({ isActive }) => (isActive ? s.active : "")}>Blog</NavLink>
+                <NavLink
+                  to='/blog'
+                  className={({ isActive }) => (isActive ? s.active : "")}
+                >
+                  Blog
+                </NavLink>
               </li>
             </ul>
             <ul className={s.buttons}>
               <li className={s.button} onClick={onClickNav}>
-                <NavLink to='#'>
+                <NavLink to='/wishlist'>
                   <svg
                     width='32.000000'
                     height='32.000000'
@@ -88,7 +115,7 @@ export default function Header() {
                 </NavLink>
               </li>
               <li className={s.button} onClick={onClickNav}>
-                <NavLink to='#'>
+                <NavLink to='/cart'>
                   <svg
                     width='32.000000'
                     height='32.000000'
@@ -132,50 +159,48 @@ export default function Header() {
                   </svg>
                 </NavLink>
               </li>
-              <li className={s.button} onClick={onClickNav}>
-                <NavLink to='#'>
-                  <svg
-                    width='32.000000'
-                    height='32.000000'
-                    viewBox='0 0 32 32'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <defs>
-                      <clipPath id='clip156_1340'>
-                        <rect
-                          id='Icon/32px/User'
-                          rx='0.000000'
-                          width='31.000000'
-                          height='31.000000'
-                          transform='translate(0.500000 0.500000)'
-                          fill='white'
-                          fillOpacity='0'
-                        />
-                      </clipPath>
-                    </defs>
-                    <rect
-                      id='Icon/32px/User'
-                      rx='0.000000'
-                      width='31.000000'
-                      height='31.000000'
-                      transform='translate(0.500000 0.500000)'
-                      fill='#FFFFFF'
-                      fillOpacity='0'
-                    />
-                    <g clipPath='url(#clip156_1340)'>
-                      <path
-                        id='Vector'
-                        d='M24 27L24 24.33C24 22.91 23.52 21.56 22.67 20.56C21.82 19.56 20.66 19 19.46 19L11.53 19C10.33 19 9.17 19.56 8.32 20.56C7.47 21.56 7 22.91 7 24.33L7 27M16.5 14C14.01 14 12 11.98 12 9.5C12 7.01 14.01 5 16.5 5C18.98 5 21 7.01 21 9.5C21 11.98 18.98 14 16.5 14Z'
-                        stroke='#191919'
-                        strokeOpacity='1.000000'
-                        strokeWidth='1.500000'
-                        strokeLinejoin='round'
-                        strokeLinecap='round'
+              <li className={s.button} onClick={onClickProfile}>
+                <svg
+                  width='32.000000'
+                  height='32.000000'
+                  viewBox='0 0 32 32'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <defs>
+                    <clipPath id='clip156_1340'>
+                      <rect
+                        id='Icon/32px/User'
+                        rx='0.000000'
+                        width='31.000000'
+                        height='31.000000'
+                        transform='translate(0.500000 0.500000)'
+                        fill='white'
+                        fillOpacity='0'
                       />
-                    </g>
-                  </svg>
-                </NavLink>
+                    </clipPath>
+                  </defs>
+                  <rect
+                    id='Icon/32px/User'
+                    rx='0.000000'
+                    width='31.000000'
+                    height='31.000000'
+                    transform='translate(0.500000 0.500000)'
+                    fill='#FFFFFF'
+                    fillOpacity='0'
+                  />
+                  <g clipPath='url(#clip156_1340)'>
+                    <path
+                      id='Vector'
+                      d='M24 27L24 24.33C24 22.91 23.52 21.56 22.67 20.56C21.82 19.56 20.66 19 19.46 19L11.53 19C10.33 19 9.17 19.56 8.32 20.56C7.47 21.56 7 22.91 7 24.33L7 27M16.5 14C14.01 14 12 11.98 12 9.5C12 7.01 14.01 5 16.5 5C18.98 5 21 7.01 21 9.5C21 11.98 18.98 14 16.5 14Z'
+                      stroke='#191919'
+                      strokeOpacity='1.000000'
+                      strokeWidth='1.500000'
+                      strokeLinejoin='round'
+                      strokeLinecap='round'
+                    />
+                  </g>
+                </svg>
               </li>
             </ul>
           </div>

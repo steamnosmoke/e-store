@@ -5,35 +5,28 @@ export const fetchProducts = createAsyncThunk(
   "product/fetchProducts",
   async (categoryHome, { rejectWithValue }) => {
     try {
-      const url = `https://experiment-d6e48-default-rtdb.europe-west1.firebasedatabase.app/products.json${
+      const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products.json${
         categoryHome ? `?orderBy="category"&equalTo="${categoryHome}"` : ""
       }`;
-      // const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products.json${
-      //   categoryHome ? `?orderBy="category"&equalTo="${categoryHome}"` : ""
-      // }`;
       const { data } = await axios.get(url);
-      console.log('prod',data)
-      return Object.values(data);
+      const productsData = Object.values(data);
+      let newProducts = [];
+      productsData.map((product, prodId) =>
+        product.variants.map((variant, varId) => {
+          newProducts.push({
+            ...product,
+            ...variant,
+            objectId: String(prodId) + "x" + String(varId),
+            variantId: varId,
+          });
+        })
+      );
+      return newProducts;
     } catch (error) {
       return rejectWithValue(error.data);
     }
   }
 );
-export const fetchProductById = createAsyncThunk(
-  "product/fetchProductById",
-  async (productID, { rejectWithValue }) => {
-    try {
-      const url = `https://experiment-d6e48-default-rtdb.europe-west1.firebasedatabase.app/products/${productID-1}.json`;
-      // const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products/${productID-1}.json`;
-      const { data } = await axios.get(url);
-      console.log(data)
-      return data;
-    } catch (error) {
-      return rejectWithValue(error.data);
-    }
-  }
-);
-
 
 export const productSlice = createSlice({
   name: "product",
@@ -46,8 +39,8 @@ export const productSlice = createSlice({
     errorProduct: null,
     product: {},
     productID: "",
-    color: 0,
-    memory: 0,
+    color: "",
+    memory: "",
   },
   reducers: {
     chooseCategory: (state, action) => {
@@ -63,6 +56,11 @@ export const productSlice = createSlice({
     setMemory: (state, action) => {
       state.memory = action.payload;
     },
+    setProduct: (state, action) => {
+      state.product = action.payload;
+      state.color = action.payload.color;
+      state.memory = action.payload.memory;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -77,22 +75,10 @@ export const productSlice = createSlice({
       .addCase(fetchProducts.rejected, (state, action) => {
         state.statusHome = "failed";
         state.errorHome = action.payload;
-      })
-      // Обработка fetchProductById
-      .addCase(fetchProductById.pending, (state) => {
-        state.statusProduct = "loading";
-      })
-      .addCase(fetchProductById.fulfilled, (state, action) => {
-        state.statusProduct = "succeeded";
-        state.product = action.payload;
-      })
-      .addCase(fetchProductById.rejected, (state, action) => {
-        state.statusProduct = "failed";
-        state.errorProduct = action.payload;
       });
   },
 });
 
-export const { chooseCategory, setProductId, setColor, setMemory } =
+export const { chooseCategory, setProductId, setColor, setMemory, setProduct } =
   productSlice.actions;
 export default productSlice.reducer;

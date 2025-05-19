@@ -51,6 +51,25 @@
   &:hover {
     background-color: transparent;
     transform: scale(1.1);
-    color:#000;
+    color: #000;
+  }
+}
+
+.white-line-btn:disabled,
+.black-line-btn:disabled {
+  border: 1px solid #cacaca;
+  color: #cacaca;
+  cursor:default;
+  &:hover {
+    transform: scale(1);
+    background-color: transparent;
+  }
+}
+
+.black-btn:disabled{
+  background-color: #cacaca;
+  &:hover {
+    transform: scale(1);
+    background-color: #000;
   }
 }

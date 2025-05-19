@@ -1,130 +1,51 @@
-const fs = require("fs");
+const fs = require('fs');
+const bcrypt = require('bcryptjs');
+const crypto = require('crypto');
 
-// Функция для получения случайного числа
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+// Функция для генерации случайного пароля
+function generateRandomPassword(length = 12) {
+  return crypto.randomBytes(length).toString('hex').slice(0, length); // Генерирует строку из 12 символов
 }
 
-// Соответствие цветов к HEX кодам
-const colorHexMap = {
-  black: "#000000",
-  white: "#FFFFFF",
-  silver: "#C0C0C0",
-  gold: "#FFD700",
-  blue: "#0000FF",
-  red: "#FF0000",
-  green: "#00FF00",
-  yellow: "#FFFF00",
-  gray: "#808080",
-  pink: "#FFC0CB",
-  purple: "#800080",
-  spacegray: "#1C1C1E",
-  midnight: "#191970",
-  starlight: "#EEE8AA",
-};
-
-// Функция для поиска HEX по цвету товара
-function findHexByColorName(colorName) {
-  const lowerColor = colorName.toLowerCase().replace(/\s/g, ""); // убрать пробелы
-
-  // Сначала ищем полное совпадение
-  if (colorHexMap[lowerColor]) {
-    return colorHexMap[lowerColor];
+// Загрузите файл JSON
+fs.readFile('output.json', 'utf8', (err, data) => {
+  if (err) {
+    console.error('Ошибка при чтении файла:', err);
+    return;
   }
 
-  // Потом ищем если цвет товара содержит ключ из colorHexMap
-  for (const key in colorHexMap) {
-    if (lowerColor.includes(key)) {
-      return colorHexMap[key];
-    }
-  }
+  // Преобразуем JSON в объект
+  let jsonData = JSON.parse(data);
 
-  // Если ничего не найдено — дефолтный серый
-  return "#CCCCCC";
-}
+  // Проверьте, есть ли массив пользователей в данных
+  if (jsonData.users && Array.isArray(jsonData.users)) {
+    // Обрабатываем каждого пользователя
+    jsonData.users = jsonData.users.map(user => {
+      // Генерируем случайный пароль для пользователя
+      const password = generateRandomPassword();
+      
+      // Хешируем пароль с использованием bcrypt
+      const passwordHash = bcrypt.hashSync(password, 10);
+      
+      // Добавляем новый хеш пароля
+      user.passwordHash = passwordHash;
+      user.password = password;  // Добавляем оригинальный пароль (если нужно)
 
-// Загружаем базу
-const base = JSON.parse(fs.readFileSync("./base.json", "utf-8"));
+      console.log(`User: ${user.username}, Password: ${password}, Hash: ${passwordHash}`);
 
-const newProducts = base.products.map((product) => {
-  if (
-    !Array.isArray(product.color) ||
-    !Array.isArray(product.memory) ||
-    !Array.isArray(product.price)
-  ) {
-    return product; // оставляем товар как есть
-  }
-
-  const variants = [];
-
-  product.color.forEach((color) => {
-    product.memory.forEach((memory, index) => {
-      const basePrice = product.price[index] || product.price[0];
-      const discountPercent = getRandomInt(0, 15); // скидка от 0% до 15%
-      const discountValue = Math.round((basePrice * discountPercent) / 100);
-
-      const hexColor = findHexByColorName(color);
-
-      variants.push({
-        color,
-        colorHex: hexColor,
-        memory,
-        price: basePrice,
-        discount: discountValue,
-        stock: getRandomInt(3, 20),
-        images: [
-          `/images/products/${product.name
-            .toLowerCase()
-            .replace(/ /g, "")}/${color
-            .toLowerCase()
-            .replace(/\s/g, "")}/1.png`,
-          `/images/products/${product.name
-            .toLowerCase()
-            .replace(/ /g, "")}/${color
-            .toLowerCase()
-            .replace(/\s/g, "")}/2.png`,
-          `/images/products/${product.name
-            .toLowerCase()
-            .replace(/ /g, "")}/${color
-            .toLowerCase()
-            .replace(/\s/g, "")}/3.png`,
-          `/images/products/${product.name
-            .toLowerCase()
-            .replace(/ /g, "")}/${color
-            .toLowerCase()
-            .replace(/\s/g, "")}/4.png`,
-        ],
-      });
+      return user;
     });
-  });
-
-  if (product.camera) {
-    product.camera = product.camera
-      .replaceAll("MP", "")
-      .replaceAll("+", "-")
-      .replace("Triple", "")
-      .replace("Quad", "")
-      .trim(); // на всякий случай убираем пробелы по краям
+  } else {
+    console.error('Массив пользователей не найден в данных!');
+    return;
   }
 
-  return {
-    ...product,
-    variants,
-    color: undefined,
-    memory: undefined,
-    price: undefined,
-    images: undefined,
-  };
+  // Сохраняем обновленные данные обратно в файл JSON
+  fs.writeFile('data.json', JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+    if (err) {
+      console.error('Ошибка при записи в файл:', err);
+    } else {
+      console.log('Данные пользователей обновлены успешно!');
+    }
+  });
 });
-
-// Собираем итоговый результат
-const result = {
-  products: newProducts,
-  categories: base.categories,
-  reviewsSchema: base.reviewsSchema,
-};
-
-// Сохраняем
-fs.writeFileSync("./newBase.json", JSON.stringify(result, null, 2), "utf-8");
-
-console.log("✅ База переработана с умным определением HEX цветов!");

@@ -43,9 +43,15 @@
     width: 100px !important;
     transition: all .1s ease-in-out;
 
+    opacity: 0.5;
+
     &:hover{
       transform: scale(1.15);
     }
+  }
+  li.slick-active{
+    transition: all .1s ease-in-out;
+    opacity: 1;
   }
 }
 

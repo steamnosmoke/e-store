@@ -1,0 +1,1961 @@
+[
+  {
+    "id": 1,
+    "category": "Phones",
+    "name": "iPhone 16 Pro",
+    "brand": "Apple",
+    "screenSize": "6.1 inches",
+    "processor": "A17 Pro",
+    "camera": "48-12-12",
+    "battery": "3274 mAh",
+    "os": "iOS 17",
+    "stock": 50,
+    "cpuCores": 6,
+    "ram": 8,
+    "reviews": [
+      {
+        "userId": 101,
+        "userName": "TechLover22",
+        "rating": 5,
+        "comment": "Amazing phone! The camera quality is unreal."
+      },
+      {
+        "userId": 102,
+        "userName": "GadgetFan",
+        "rating": 4,
+        "comment": "Great performance, but battery could be better."
+      },
+      {
+        "userId": 201,
+        "userName": "SmartUser",
+        "rating": 5,
+        "comment": "Screen is super smooth and bright!"
+      },
+      {
+        "userId": 202,
+        "userName": "iOSLover",
+        "rating": 5,
+        "comment": "Best iPhone so far, very fast and stylish."
+      }
+    ],
+    "rating": 4.8,
+    "variants": [
+      {
+        "color": "Titanium Black",
+        "colorHex": "#000000",
+        "memory": 128,
+        "price": 999,
+        "discount": 110,
+        "stock": 15,
+        "images": [
+          "/images/products/iphone16pro/titaniumblack/1.png",
+          "/images/products/iphone16pro/titaniumblack/2.png",
+          "/images/products/iphone16pro/titaniumblack/3.png",
+          "/images/products/iphone16pro/titaniumblack/4.png"
+        ]
+      },
+      {
+        "color": "Titanium Black",
+        "colorHex": "#000000",
+        "memory": 256,
+        "price": 1099,
+        "discount": 44,
+        "stock": 19,
+        "images": [
+          "/images/products/iphone16pro/titaniumblack/1.png",
+          "/images/products/iphone16pro/titaniumblack/2.png",
+          "/images/products/iphone16pro/titaniumblack/3.png",
+          "/images/products/iphone16pro/titaniumblack/4.png"
+        ]
+      },
+      {
+        "color": "Titanium Black",
+        "colorHex": "#000000",
+        "memory": 512,
+        "price": 1299,
+        "discount": 0,
+        "stock": 15,
+        "images": [
+          "/images/products/iphone16pro/titaniumblack/1.png",
+          "/images/products/iphone16pro/titaniumblack/2.png",
+          "/images/products/iphone16pro/titaniumblack/3.png",
+          "/images/products/iphone16pro/titaniumblack/4.png"
+        ]
+      },
+      {
+        "color": "Titanium Black",
+        "colorHex": "#000000",
+        "memory": 1,
+        "price": 1499,
+        "discount": 165,
+        "stock": 14,
+        "images": [
+          "/images/products/iphone16pro/titaniumblack/1.png",
+          "/images/products/iphone16pro/titaniumblack/2.png",
+          "/images/products/iphone16pro/titaniumblack/3.png",
+          "/images/products/iphone16pro/titaniumblack/4.png"
+        ]
+      },
+      {
+        "color": "Silver",
+        "colorHex": "#C0C0C0",
+        "memory": 128,
+        "price": 999,
+        "discount": 30,
+        "stock": 12,
+        "images": [
+          "/images/products/iphone16pro/silver/1.png",
+          "/images/products/iphone16pro/silver/2.png",
+          "/images/products/iphone16pro/silver/3.png",
+          "/images/products/iphone16pro/silver/4.png"
+        ]
+      },
+      {
+        "color": "Silver",
+        "colorHex": "#C0C0C0",
+        "memory": 256,
+        "price": 1099,
+        "discount": 88,
+        "stock": 8,
+        "images": [
+          "/images/products/iphone16pro/silver/1.png",
+          "/images/products/iphone16pro/silver/2.png",
+          "/images/products/iphone16pro/silver/3.png",
+          "/images/products/iphone16pro/silver/4.png"
+        ]
+      },
+      {
+        "color": "Silver",
+        "colorHex": "#C0C0C0",
+        "memory": 512,
+        "price": 1299,
+        "discount": 91,
+        "stock": 9,
+        "images": [
+          "/images/products/iphone16pro/silver/1.png",
+          "/images/products/iphone16pro/silver/2.png",
+          "/images/products/iphone16pro/silver/3.png",
+          "/images/products/iphone16pro/silver/4.png"
+        ]
+      },
+      {
+        "color": "Silver",
+        "colorHex": "#C0C0C0",
+        "memory": 1,
+        "price": 1499,
+        "discount": 180,
+        "stock": 5,
+        "images": [
+          "/images/products/iphone16pro/silver/1.png",
+          "/images/products/iphone16pro/silver/2.png",
+          "/images/products/iphone16pro/silver/3.png",
+          "/images/products/iphone16pro/silver/4.png"
+        ]
+      },
+      {
+        "color": "Gold",
+        "colorHex": "#FFD700",
+        "memory": 128,
+        "price": 999,
+        "discount": 70,
+        "stock": 17,
+        "images": [
+          "/images/products/iphone16pro/gold/1.png",
+          "/images/products/iphone16pro/gold/2.png",
+          "/images/products/iphone16pro/gold/3.png",
+          "/images/products/iphone16pro/gold/4.png"
+        ]
+      },
+      {
+        "color": "Gold",
+        "colorHex": "#FFD700",
+        "memory": 256,
+        "price": 1099,
+        "discount": 165,
+        "stock": 10,
+        "images": [
+          "/images/products/iphone16pro/gold/1.png",
+          "/images/products/iphone16pro/gold/2.png",
+          "/images/products/iphone16pro/gold/3.png",
+          "/images/products/iphone16pro/gold/4.png"
+        ]
+      },
+      {
+        "color": "Gold",
+        "colorHex": "#FFD700",
+        "memory": 512,
+        "price": 1299,
+        "discount": 143,
+        "stock": 16,
+        "images": [
+          "/images/products/iphone16pro/gold/1.png",
+          "/images/products/iphone16pro/gold/2.png",
+          "/images/products/iphone16pro/gold/3.png",
+          "/images/products/iphone16pro/gold/4.png"
+        ]
+      },
+      {
+        "color": "Gold",
+        "colorHex": "#FFD700",
+        "memory": 1,
+        "price": 1499,
+        "discount": 195,
+        "stock": 13,
+        "images": [
+          "/images/products/iphone16pro/gold/1.png",
+          "/images/products/iphone16pro/gold/2.png",
+          "/images/products/iphone16pro/gold/3.png",
+          "/images/products/iphone16pro/gold/4.png"
+        ]
+      }
+    ],
+    "specs": {
+      "description": "The iPhone 16 Pro features an advanced Super Retina XDR OLED display with ProMotion, Always-On technology, and Dynamic Island. It delivers stunning visuals with high brightness, color accuracy, and ultra-smooth refresh rates for a next-gen experience.",
+      "screen": {
+        "diagonal": "6.1″",
+        "resolution": "2556×1179",
+        "refreshRate": "120 Hz",
+        "pixelDensity": "460 ppi",
+        "type": "OLED",
+        "features": [
+          "Dynamic Island",
+          "Always-On display",
+          "HDR display",
+          "True Tone",
+          "Wide color (P3)",
+          "ProMotion"
+        ]
+      },
+      "cpu": {
+        "name": "Apple A17 Pro",
+        "cores": 6
+      },
+      "gpu": {
+        "model": "Apple-designed 6-core GPU",
+        "supportsRayTracing": true
+      },
+      "memory": {
+        "ram": "8 GB",
+        "storageTypes": [
+          "128 GB NVMe",
+          "256 GB NVMe",
+          "512 GB NVMe",
+          "1 TB NVMe"
+        ]
+      },
+      "battery": {
+        "capacity": "3274 mAh",
+        "charging": {
+          "wired": "20W fast charging",
+          "wireless": "15W MagSafe, 7.5W Qi"
+        },
+        "batteryLife": "Up to 23 hours video playback"
+      },
+      "camera": {
+        "main": "48 MP (wide), 12 MP (ultrawide), 12 MP (telephoto)",
+        "front": "12 MP TrueDepth",
+        "features": [
+          "Night mode",
+          "ProRAW",
+          "ProRes video",
+          "Portrait mode with advanced bokeh",
+          "Optical zoom: 3x",
+          "Digital zoom: up to 15x"
+        ]
+      },
+      "materials": {
+        "frame": "Titanium",
+        "back": "Textured matte glass"
+      },
+      "dimensions": {
+        "height": "146.6 mm",
+        "width": "70.6 mm",
+        "thickness": "8.25 mm",
+        "weight": "187 g"
+      },
+      "connectivity": {
+        "wifi": "Wi‑Fi 6E",
+        "bluetooth": "Bluetooth 5.3",
+        "nfc": true,
+        "usb": "USB-C 3.0"
+      },
+      "sensors": [
+        "Face ID",
+        "LiDAR Scanner",
+        "Accelerometer",
+        "Gyroscope",
+        "Barometer",
+        "Proximity sensor",
+        "Ambient light sensor"
+      ],
+      "resistance": {
+        "water": "IP68 (up to 6 meters for 30 minutes)",
+        "dust": "Yes"
+      },
+      "os": "iOS 17",
+      "launchYear": 2024,
+      "guarantee": "12 months official warranty"
+    }
+  },
+  {
+    "id": 2,
+    "category": "Phones",
+    "name": "iPhone 16",
+    "brand": "Apple",
+    "screenSize": "6.1 inches",
+    "processor": "A17 Pro",
+    "camera": "48-12-12",
+    "battery": "3274 mAh",
+    "os": "iOS 17",
+    "stock": 50,
+    "cpuCores": 6,
+    "ram": 6,
+    "reviews": [
+      {
+        "userId": 103,
+        "userName": "AppleFanatic",
+        "rating": 5,
+        "comment": "Perfect balance of price and features!"
+      },
+      {
+        "userId": 203,
+        "userName": "BudgetBuyer",
+        "rating": 4,
+        "comment": "Very good phone for the price."
+      },
+      {
+        "userId": 204,
+        "userName": "YoungUser",
+        "rating": 5,
+        "comment": "Amazing for daily use!"
+      }
+    ],
+    "rating": 4.7,
+    "variants": [
+      {
+        "color": "Titanium Black",
+        "colorHex": "#000000",
+        "memory": 128,
+        "price": 799,
+        "discount": 64,
+        "stock": 9,
+        "images": [
+          "/images/products/iphone16/titaniumblack/1.png",
+          "/images/products/iphone16/titaniumblack/2.png",
+          "/images/products/iphone16/titaniumblack/3.png",
+          "/images/products/iphone16/titaniumblack/4.png"
+        ]
+      },
+      {
+        "color": "Titanium Black",
+        "colorHex": "#000000",
+        "memory": 256,
+        "price": 899,
+        "discount": 117,
+        "stock": 13,
+        "images": [
+          "/images/products/iphone16/titaniumblack/1.png",
+          "/images/products/iphone16/titaniumblack/2.png",
+          "/images/products/iphone16/titaniumblack/3.png",
+          "/images/products/iphone16/titaniumblack/4.png"
+        ]
+      },
+      {
+        "color": "Titanium Black",
+        "colorHex": "#000000",
+        "memory": 512,
+        "price": 1099,
+        "discount": 33,
+        "stock": 7,
+        "images": [
+          "/images/products/iphone16/titaniumblack/1.png",
+          "/images/products/iphone16/titaniumblack/2.png",
+          "/images/products/iphone16/titaniumblack/3.png",
+          "/images/products/iphone16/titaniumblack/4.png"
+        ]
+      },
+      {
+        "color": "Silver",
+        "colorHex": "#C0C0C0",
+        "memory": 128,
+        "price": 799,
+        "discount": 56,
+        "stock": 8,
+        "images": [
+          "/images/products/iphone16/silver/1.png",
+          "/images/products/iphone16/silver/2.png",
+          "/images/products/iphone16/silver/3.png",
+          "/images/products/iphone16/silver/4.png"
+        ]
+      },
+      {
+        "color": "Silver",
+        "colorHex": "#C0C0C0",
+        "memory": 256,
+        "price": 899,
+        "discount": 27,
+        "stock": 9,
+        "images": [
+          "/images/products/iphone16/silver/1.png",
+          "/images/products/iphone16/silver/2.png",
+          "/images/products/iphone16/silver/3.png",
+          "/images/products/iphone16/silver/4.png"
+        ]
+      },
+      {
+        "color": "Silver",
+        "colorHex": "#C0C0C0",
+        "memory": 512,
+        "price": 1099,
+        "discount": 132,
+        "stock": 18,
+        "images": [
+          "/images/products/iphone16/silver/1.png",
+          "/images/products/iphone16/silver/2.png",
+          "/images/products/iphone16/silver/3.png",
+          "/images/products/iphone16/silver/4.png"
+        ]
+      },
+      {
+        "color": "Red",
+        "colorHex": "#FF0000",
+        "memory": 128,
+        "price": 799,
+        "discount": 24,
+        "stock": 7,
+        "images": [
+          "/images/products/iphone16/red/1.png",
+          "/images/products/iphone16/red/2.png",
+          "/images/products/iphone16/red/3.png",
+          "/images/products/iphone16/red/4.png"
+        ]
+      },
+      {
+        "color": "Red",
+        "colorHex": "#FF0000",
+        "memory": 256,
+        "price": 899,
+        "discount": 108,
+        "stock": 7,
+        "images": [
+          "/images/products/iphone16/red/1.png",
+          "/images/products/iphone16/red/2.png",
+          "/images/products/iphone16/red/3.png",
+          "/images/products/iphone16/red/4.png"
+        ]
+      },
+      {
+        "color": "Red",
+        "colorHex": "#FF0000",
+        "memory": 512,
+        "price": 1099,
+        "discount": 154,
+        "stock": 12,
+        "images": [
+          "/images/products/iphone16/red/1.png",
+          "/images/products/iphone16/red/2.png",
+          "/images/products/iphone16/red/3.png",
+          "/images/products/iphone16/red/4.png"
+        ]
+      }
+    ],
+    "specs": {
+      "description": "iPhone 16 brings high-end features to a wider audience with its Super Retina XDR OLED display, A17 Pro chip, and improved energy efficiency. Enjoy smooth performance, excellent camera quality, and the iOS ecosystem in a lightweight body.",
+      "screen": {
+        "diagonal": "6.1″",
+        "resolution": "2556×1179",
+        "refreshRate": "60 Hz",
+        "pixelDensity": "460 ppi",
+        "type": "OLED",
+        "features": [
+          "HDR display",
+          "True Tone",
+          "Wide color (P3)",
+          "Haptic Touch"
+        ]
+      },
+      "cpu": {
+        "name": "Apple A17 Pro",
+        "cores": 6
+      },
+      "gpu": {
+        "model": "Apple-designed 5-core GPU",
+        "supportsRayTracing": false
+      },
+      "memory": {
+        "ram": "6 GB",
+        "storageTypes": ["128 GB NVMe", "256 GB NVMe", "512 GB NVMe"]
+      },
+      "battery": {
+        "capacity": "3274 mAh",
+        "charging": {
+          "wired": "20W fast charging",
+          "wireless": "15W MagSafe, 7.5W Qi"
+        },
+        "batteryLife": "Up to 20 hours video playback"
+      },
+      "camera": {
+        "main": "48 MP (wide), 12 MP (ultrawide)",
+        "front": "12 MP TrueDepth",
+        "features": [
+          "Night mode",
+          "Portrait mode",
+          "4K video recording",
+          "Smart HDR 5",
+          "Cinematic mode"
+        ]
+      },
+      "materials": {
+        "frame": "Aluminum",
+        "back": "Glass"
+      },
+      "dimensions": {
+        "height": "146.7 mm",
+        "width": "71.6 mm",
+        "thickness": "7.8 mm",
+        "weight": "171 g"
+      },
+      "connectivity": {
+        "wifi": "Wi‑Fi 6",
+        "bluetooth": "Bluetooth 5.3",
+        "nfc": true,
+        "usb": "USB-C 2.0"
+      },
+      "sensors": [
+        "Face ID",
+        "Accelerometer",
+        "Gyroscope",
+        "Barometer",
+        "Proximity sensor",
+        "Ambient light sensor"
+      ],
+      "resistance": {
+        "water": "IP68 (up to 6 meters for 30 minutes)",
+        "dust": "Yes"
+      },
+      "os": "iOS 17",
+      "launchYear": 2024,
+      "guarantee": "12 months official warranty"
+    }
+  },
+  {
+    "id": 3,
+    "category": "Phones",
+    "name": "Samsung Galaxy S24 Ultra",
+    "brand": "Samsung",
+    "screenSize": "6.8 inches",
+    "processor": "Snapdragon 8 Gen 3",
+    "camera": "200-50-12-10",
+    "battery": "5000 mAh",
+    "os": "Android 14",
+    "stock": 35,
+    "cpuCores": 8,
+    "ram": 12,
+    "reviews": [
+      {
+        "userId": 104,
+        "userName": "AndroidMaster",
+        "rating": 5,
+        "comment": "The best Android phone ever made!"
+      },
+      {
+        "userId": 301,
+        "userName": "CameraKing",
+        "rating": 5,
+        "comment": "Insane camera and smooth performance!"
+      },
+      {
+        "userId": 302,
+        "userName": "PowerUser",
+        "rating": 4,
+        "comment": "A bit bulky, but unmatched speed."
+      }
+    ],
+    "rating": 4.7,
+    "variants": [
+      {
+        "color": "Phantom Black",
+        "colorHex": "#000000",
+        "memory": 256,
+        "price": 1199,
+        "discount": 60,
+        "stock": 9,
+        "images": [
+          "/images/products/samsunggalaxys24ultra/phantomblack/1.png",
+          "/images/products/samsunggalaxys24ultra/phantomblack/2.png",
+          "/images/products/samsunggalaxys24ultra/phantomblack/3.png",
+          "/images/products/samsunggalaxys24ultra/phantomblack/4.png"
+        ]
+      },
+      {
+        "color": "Phantom Black",
+        "colorHex": "#000000",
+        "memory": 512,
+        "price": 1299,
+        "discount": 39,
+        "stock": 8,
+        "images": [
+          "/images/products/samsunggalaxys24ultra/phantomblack/1.png",
+          "/images/products/samsunggalaxys24ultra/phantomblack/2.png",
+          "/images/products/samsunggalaxys24ultra/phantomblack/3.png",
+          "/images/products/samsunggalaxys24ultra/phantomblack/4.png"
+        ]
+      },
+      {
+        "color": "Phantom Black",
+        "colorHex": "#000000",
+        "memory": 1,
+        "price": 1499,
+        "discount": 225,
+        "stock": 10,
+        "images": [
+          "/images/products/samsunggalaxys24ultra/phantomblack/1.png",
+          "/images/products/samsunggalaxys24ultra/phantomblack/2.png",
+          "/images/products/samsunggalaxys24ultra/phantomblack/3.png",
+          "/images/products/samsunggalaxys24ultra/phantomblack/4.png"
+        ]
+      },
+      {
+        "color": "Silver",
+        "colorHex": "#C0C0C0",
+        "memory": 256,
+        "price": 1199,
+        "discount": 132,
+        "stock": 4,
+        "images": [
+          "/images/products/samsunggalaxys24ultra/silver/1.png",
+          "/images/products/samsunggalaxys24ultra/silver/2.png",
+          "/images/products/samsunggalaxys24ultra/silver/3.png",
+          "/images/products/samsunggalaxys24ultra/silver/4.png"
+        ]
+      },
+      {
+        "color": "Silver",
+        "colorHex": "#C0C0C0",
+        "memory": 512,
+        "price": 1299,
+        "discount": 130,
+        "stock": 13,
+        "images": [
+          "/images/products/samsunggalaxys24ultra/silver/1.png",
+          "/images/products/samsunggalaxys24ultra/silver/2.png",
+          "/images/products/samsunggalaxys24ultra/silver/3.png",
+          "/images/products/samsunggalaxys24ultra/silver/4.png"
+        ]
+      },
+      {
+        "color": "Silver",
+        "colorHex": "#C0C0C0",
+        "memory": 1,
+        "price": 1499,
+        "discount": 120,
+        "stock": 9,
+        "images": [
+          "/images/products/samsunggalaxys24ultra/silver/1.png",
+          "/images/products/samsunggalaxys24ultra/silver/2.png",
+          "/images/products/samsunggalaxys24ultra/silver/3.png",
+          "/images/products/samsunggalaxys24ultra/silver/4.png"
+        ]
+      },
+      {
+        "color": "Violet",
+        "colorHex": "#CCCCCC",
+        "memory": 256,
+        "price": 1199,
+        "discount": 144,
+        "stock": 20,
+        "images": [
+          "/images/products/samsunggalaxys24ultra/violet/1.png",
+          "/images/products/samsunggalaxys24ultra/violet/2.png",
+          "/images/products/samsunggalaxys24ultra/violet/3.png",
+          "/images/products/samsunggalaxys24ultra/violet/4.png"
+        ]
+      },
+      {
+        "color": "Violet",
+        "colorHex": "#CCCCCC",
+        "memory": 512,
+        "price": 1299,
+        "discount": 39,
+        "stock": 17,
+        "images": [
+          "/images/products/samsunggalaxys24ultra/violet/1.png",
+          "/images/products/samsunggalaxys24ultra/violet/2.png",
+          "/images/products/samsunggalaxys24ultra/violet/3.png",
+          "/images/products/samsunggalaxys24ultra/violet/4.png"
+        ]
+      },
+      {
+        "color": "Violet",
+        "colorHex": "#CCCCCC",
+        "memory": 1,
+        "price": 1499,
+        "discount": 60,
+        "stock": 16,
+        "images": [
+          "/images/products/samsunggalaxys24ultra/violet/1.png",
+          "/images/products/samsunggalaxys24ultra/violet/2.png",
+          "/images/products/samsunggalaxys24ultra/violet/3.png",
+          "/images/products/samsunggalaxys24ultra/violet/4.png"
+        ]
+      }
+    ],
+    "specs": {
+      "description": "Samsung Galaxy S24 Ultra combines cutting-edge AI, a 200MP quad-camera system, and a massive Dynamic AMOLED 2X display. Designed for professionals and power users, it delivers top-tier performance and long battery life in a durable titanium body.",
+      "screen": {
+        "diagonal": "6.8″",
+        "resolution": "3120×1440",
+        "refreshRate": "120 Hz (adaptive)",
+        "pixelDensity": "505 ppi",
+        "type": "Dynamic AMOLED 2X",
+        "features": [
+          "HDR10+",
+          "120Hz adaptive refresh rate",
+          "Vision Booster",
+          "Always-On Display",
+          "Corning Gorilla Glass Armor"
+        ]
+      },
+      "cpu": {
+        "name": "Qualcomm Snapdragon 8 Gen 3 for Galaxy",
+        "cores": 8
+      },
+      "gpu": {
+        "model": "Adreno 750",
+        "supportsRayTracing": true
+      },
+      "memory": {
+        "ram": "12 GB",
+        "storageTypes": ["256 GB UFS 4.0", "512 GB UFS 4.0", "1 TB UFS 4.0"]
+      },
+      "battery": {
+        "capacity": "5000 mAh",
+        "charging": {
+          "wired": "45W fast charging",
+          "wireless": "15W wireless, 4.5W reverse wireless"
+        },
+        "batteryLife": "Up to 26 hours video playback"
+      },
+      "camera": {
+        "main": "200 MP (wide), 50 MP (periscope telephoto), 12 MP (ultrawide), 10 MP (telephoto)",
+        "front": "12 MP",
+        "features": [
+          "Super HDR",
+          "AI Zoom",
+          "100x Space Zoom",
+          "Expert RAW",
+          "8K video recording",
+          "OIS",
+          "Nightography"
+        ]
+      },
+      "materials": {
+        "frame": "Titanium",
+        "back": "Corning Gorilla Glass Victus 2"
+      },
+      "dimensions": {
+        "height": "162.3 mm",
+        "width": "79.0 mm",
+        "thickness": "8.6 mm",
+        "weight": "232 g"
+      },
+      "connectivity": {
+        "wifi": "Wi‑Fi 7",
+        "bluetooth": "Bluetooth 5.3",
+        "nfc": true,
+        "usb": "USB-C 3.2"
+      },
+      "sensors": [
+        "Ultrasonic Fingerprint Sensor",
+        "Accelerometer",
+        "Gyroscope",
+        "Proximity sensor",
+        "Barometer",
+        "Ambient light sensor",
+        "Compass"
+      ],
+      "resistance": {
+        "water": "IP68 (up to 1.5 meters for 30 minutes)",
+        "dust": "Yes"
+      },
+      "stylus": {
+        "included": true,
+        "features": ["Bluetooth S Pen", "Air Actions", "Screen Off Memo"]
+      },
+      "os": "Android 14",
+      "launchYear": 2024,
+      "guarantee": "12 months official warranty"
+    }
+  },
+  {
+    "id": 4,
+    "category": "Phones",
+    "name": "Google Pixel 8 Pro",
+    "brand": "Google",
+    "screenSize": "6.7 inches",
+    "processor": "Google Tensor G3",
+    "camera": "50-48-48",
+    "battery": "5050 mAh",
+    "os": "Android 14",
+    "stock": 40,
+    "cpuCores": 8,
+    "ram": 12,
+    "reviews": [
+      {
+        "userId": 105,
+        "userName": "PixelFan",
+        "rating": 4,
+        "comment": "Love the AI features, but the processor could be faster."
+      },
+      {
+        "userId": 401,
+        "userName": "TechAddict",
+        "rating": 5,
+        "comment": "Camera quality is mind-blowing!"
+      },
+      {
+        "userId": 402,
+        "userName": "AIEnthusiast",
+        "rating": 4,
+        "comment": "AI features are ahead of competition."
+      }
+    ],
+    "rating": 4.3,
+    "variants": [
+      {
+        "color": "Obsidian",
+        "colorHex": "#CCCCCC",
+        "memory": 128,
+        "price": 999,
+        "discount": 100,
+        "stock": 8,
+        "images": [
+          "/images/products/googlepixel8pro/obsidian/1.png",
+          "/images/products/googlepixel8pro/obsidian/2.png",
+          "/images/products/googlepixel8pro/obsidian/3.png",
+          "/images/products/googlepixel8pro/obsidian/4.png"
+        ]
+      },
+      {
+        "color": "Obsidian",
+        "colorHex": "#CCCCCC",
+        "memory": 256,
+        "price": 1099,
+        "discount": 55,
+        "stock": 7,
+        "images": [
+          "/images/products/googlepixel8pro/obsidian/1.png",
+          "/images/products/googlepixel8pro/obsidian/2.png",
+          "/images/products/googlepixel8pro/obsidian/3.png",
+          "/images/products/googlepixel8pro/obsidian/4.png"
+        ]
+      },
+      {
+        "color": "Obsidian",
+        "colorHex": "#CCCCCC",
+        "memory": 512,
+        "price": 1299,
+        "discount": 130,
+        "stock": 10,
+        "images": [
+          "/images/products/googlepixel8pro/obsidian/1.png",
+          "/images/products/googlepixel8pro/obsidian/2.png",
+          "/images/products/googlepixel8pro/obsidian/3.png",
+          "/images/products/googlepixel8pro/obsidian/4.png"
+        ]
+      },
+      {
+        "color": "Porcelain",
+        "colorHex": "#CCCCCC",
+        "memory": 128,
+        "price": 999,
+        "discount": 90,
+        "stock": 8,
+        "images": [
+          "/images/products/googlepixel8pro/porcelain/1.png",
+          "/images/products/googlepixel8pro/porcelain/2.png",
+          "/images/products/googlepixel8pro/porcelain/3.png",
+          "/images/products/googlepixel8pro/porcelain/4.png"
+        ]
+      },
+      {
+        "color": "Porcelain",
+        "colorHex": "#CCCCCC",
+        "memory": 256,
+        "price": 1099,
+        "discount": 110,
+        "stock": 12,
+        "images": [
+          "/images/products/googlepixel8pro/porcelain/1.png",
+          "/images/products/googlepixel8pro/porcelain/2.png",
+          "/images/products/googlepixel8pro/porcelain/3.png",
+          "/images/products/googlepixel8pro/porcelain/4.png"
+        ]
+      },
+      {
+        "color": "Porcelain",
+        "colorHex": "#CCCCCC",
+        "memory": 512,
+        "price": 1299,
+        "discount": 91,
+        "stock": 5,
+        "images": [
+          "/images/products/googlepixel8pro/porcelain/1.png",
+          "/images/products/googlepixel8pro/porcelain/2.png",
+          "/images/products/googlepixel8pro/porcelain/3.png",
+          "/images/products/googlepixel8pro/porcelain/4.png"
+        ]
+      },
+      {
+        "color": "Bay Blue",
+        "colorHex": "#0000FF",
+        "memory": 128,
+        "price": 999,
+        "discount": 70,
+        "stock": 13,
+        "images": [
+          "/images/products/googlepixel8pro/bayblue/1.png",
+          "/images/products/googlepixel8pro/bayblue/2.png",
+          "/images/products/googlepixel8pro/bayblue/3.png",
+          "/images/products/googlepixel8pro/bayblue/4.png"
+        ]
+      },
+      {
+        "color": "Bay Blue",
+        "colorHex": "#0000FF",
+        "memory": 256,
+        "price": 1099,
+        "discount": 132,
+        "stock": 4,
+        "images": [
+          "/images/products/googlepixel8pro/bayblue/1.png",
+          "/images/products/googlepixel8pro/bayblue/2.png",
+          "/images/products/googlepixel8pro/bayblue/3.png",
+          "/images/products/googlepixel8pro/bayblue/4.png"
+        ]
+      },
+      {
+        "color": "Bay Blue",
+        "colorHex": "#0000FF",
+        "memory": 512,
+        "price": 1299,
+        "discount": 39,
+        "stock": 7,
+        "images": [
+          "/images/products/googlepixel8pro/bayblue/1.png",
+          "/images/products/googlepixel8pro/bayblue/2.png",
+          "/images/products/googlepixel8pro/bayblue/3.png",
+          "/images/products/googlepixel8pro/bayblue/4.png"
+        ]
+      }
+    ],
+    "specs": {
+      "description": "The Google Pixel 8 Pro is Google's most advanced phone yet, featuring the new Tensor G3 chip, stunning Super Actua display, and powerful AI capabilities. It delivers elite performance, premium build quality, and best-in-class computational photography.",
+      "screen": {
+        "diagonal": "6.7″",
+        "resolution": "2992×1344",
+        "refreshRate": "120 Hz (adaptive)",
+        "pixelDensity": "489 ppi",
+        "type": "Super Actua LTPO OLED",
+        "features": [
+          "HDR support",
+          "1–120Hz adaptive refresh rate",
+          "Corning Gorilla Glass Victus 2",
+          "Always-On Display",
+          "Now Playing ambient recognition"
+        ]
+      },
+      "cpu": {
+        "name": "Google Tensor G3",
+        "cores": 8
+      },
+      "gpu": {
+        "model": "Arm Mali-G715 MP7",
+        "supportsRayTracing": false
+      },
+      "memory": {
+        "ram": "12 GB",
+        "storageTypes": ["128 GB UFS 3.1", "256 GB UFS 3.1", "512 GB UFS 3.1"]
+      },
+      "battery": {
+        "capacity": "5050 mAh",
+        "charging": {
+          "wired": "30W USB-C PD",
+          "wireless": "23W (Pixel Stand 2), 12W Qi"
+        },
+        "batteryLife": "Up to 24 hours (Extreme Battery Saver: up to 72 hours)"
+      },
+      "camera": {
+        "main": "50 MP (wide), 48 MP (ultrawide), 48 MP (5x telephoto)",
+        "front": "10.5 MP",
+        "features": [
+          "Magic Editor (AI)",
+          "Best Take (AI)",
+          "10-bit HDR video",
+          "Night Sight",
+          "Real Tone",
+          "5x optical zoom",
+          "Super Res Zoom (up to 30x)"
+        ]
+      },
+      "materials": {
+        "frame": "Polished aluminum",
+        "back": "Corning Gorilla Glass Victus 2"
+      },
+      "dimensions": {
+        "height": "162.6 mm",
+        "width": "76.5 mm",
+        "thickness": "8.8 mm",
+        "weight": "213 g"
+      },
+      "connectivity": {
+        "wifi": "Wi‑Fi 7",
+        "bluetooth": "Bluetooth 5.3",
+        "nfc": true,
+        "usb": "USB-C 3.2 Gen 2"
+      },
+      "sensors": [
+        "Under-display fingerprint sensor",
+        "Face Unlock",
+        "Barometer",
+        "Accelerometer",
+        "Gyroscope",
+        "Proximity sensor",
+        "Ambient light sensor"
+      ],
+      "resistance": {
+        "water": "IP68 (up to 1.5 meters for 30 minutes)",
+        "dust": "Yes"
+      },
+      "os": "Android 14",
+      "launchYear": 2023,
+      "guarantee": "12 months official warranty"
+    }
+  },
+  {
+    "id": 5,
+    "category": "Phones",
+    "name": "OnePlus 12",
+    "brand": "OnePlus",
+    "screenSize": "6.82 inches",
+    "processor": "Snapdragon 8 Gen 3",
+    "camera": "50-64-48",
+    "battery": "5400 mAh",
+    "os": "Android 14",
+    "stock": 30,
+    "cpuCores": 8,
+    "ram": 16,
+    "reviews": [
+      {
+        "userId": 501,
+        "userName": "FastCharger",
+        "rating": 5,
+        "comment": "Charges insanely fast and runs smoothly!"
+      },
+      {
+        "userId": 502,
+        "userName": "GamerGuy",
+        "rating": 5,
+        "comment": "Handles heavy gaming with ease."
+      },
+      {
+        "userId": 503,
+        "userName": "BatterySaver",
+        "rating": 5,
+        "comment": "Battery life is fantastic."
+      }
+    ],
+    "rating": 5,
+    "variants": [
+      {
+        "color": "Emerald Green",
+        "colorHex": "#00FF00",
+        "memory": 128,
+        "price": 799,
+        "discount": 112,
+        "stock": 11,
+        "images": [
+          "/images/products/oneplus12/emeraldgreen/1.png",
+          "/images/products/oneplus12/emeraldgreen/2.png",
+          "/images/products/oneplus12/emeraldgreen/3.png",
+          "/images/products/oneplus12/emeraldgreen/4.png"
+        ]
+      },
+      {
+        "color": "Emerald Green",
+        "colorHex": "#00FF00",
+        "memory": 256,
+        "price": 899,
+        "discount": 0,
+        "stock": 20,
+        "images": [
+          "/images/products/oneplus12/emeraldgreen/1.png",
+          "/images/products/oneplus12/emeraldgreen/2.png",
+          "/images/products/oneplus12/emeraldgreen/3.png",
+          "/images/products/oneplus12/emeraldgreen/4.png"
+        ]
+      },
+      {
+        "color": "Emerald Green",
+        "colorHex": "#00FF00",
+        "memory": 512,
+        "price": 999,
+        "discount": 0,
+        "stock": 14,
+        "images": [
+          "/images/products/oneplus12/emeraldgreen/1.png",
+          "/images/products/oneplus12/emeraldgreen/2.png",
+          "/images/products/oneplus12/emeraldgreen/3.png",
+          "/images/products/oneplus12/emeraldgreen/4.png"
+        ]
+      },
+      {
+        "color": "Black",
+        "colorHex": "#000000",
+        "memory": 128,
+        "price": 799,
+        "discount": 40,
+        "stock": 11,
+        "images": [
+          "/images/products/oneplus12/black/1.png",
+          "/images/products/oneplus12/black/2.png",
+          "/images/products/oneplus12/black/3.png",
+          "/images/products/oneplus12/black/4.png"
+        ]
+      },
+      {
+        "color": "Black",
+        "colorHex": "#000000",
+        "memory": 256,
+        "price": 899,
+        "discount": 45,
+        "stock": 5,
+        "images": [
+          "/images/products/oneplus12/black/1.png",
+          "/images/products/oneplus12/black/2.png",
+          "/images/products/oneplus12/black/3.png",
+          "/images/products/oneplus12/black/4.png"
+        ]
+      },
+      {
+        "color": "Black",
+        "colorHex": "#000000",
+        "memory": 512,
+        "price": 999,
+        "discount": 140,
+        "stock": 11,
+        "images": [
+          "/images/products/oneplus12/black/1.png",
+          "/images/products/oneplus12/black/2.png",
+          "/images/products/oneplus12/black/3.png",
+          "/images/products/oneplus12/black/4.png"
+        ]
+      },
+      {
+        "color": "White",
+        "colorHex": "#FFFFFF",
+        "memory": 128,
+        "price": 799,
+        "discount": 88,
+        "stock": 3,
+        "images": [
+          "/images/products/oneplus12/white/1.png",
+          "/images/products/oneplus12/white/2.png",
+          "/images/products/oneplus12/white/3.png",
+          "/images/products/oneplus12/white/4.png"
+        ]
+      },
+      {
+        "color": "White",
+        "colorHex": "#FFFFFF",
+        "memory": 256,
+        "price": 899,
+        "discount": 126,
+        "stock": 10,
+        "images": [
+          "/images/products/oneplus12/white/1.png",
+          "/images/products/oneplus12/white/2.png",
+          "/images/products/oneplus12/white/3.png",
+          "/images/products/oneplus12/white/4.png"
+        ]
+      },
+      {
+        "color": "White",
+        "colorHex": "#FFFFFF",
+        "memory": 512,
+        "price": 999,
+        "discount": 20,
+        "stock": 13,
+        "images": [
+          "/images/products/oneplus12/white/1.png",
+          "/images/products/oneplus12/white/2.png",
+          "/images/products/oneplus12/white/3.png",
+          "/images/products/oneplus12/white/4.png"
+        ]
+      }
+    ],
+    "specs": {
+      "description": "The OnePlus 12 combines extreme performance, flagship-level camera capabilities, and a massive battery with record-breaking charging speeds. Designed for power users and gamers, it offers an ultra-smooth experience and premium build.",
+      "screen": {
+        "diagonal": "6.82″",
+        "resolution": "3168×1440",
+        "refreshRate": "120 Hz (adaptive)",
+        "pixelDensity": "510 ppi",
+        "type": "LTPO AMOLED",
+        "features": [
+          "HDR10+",
+          "Dolby Vision",
+          "1–120Hz adaptive refresh",
+          "Corning Gorilla Glass Victus 2",
+          "Always-On Display",
+          "Peak brightness 4500 nits"
+        ]
+      },
+      "cpu": {
+        "name": "Snapdragon 8 Gen 3",
+        "cores": 8
+      },
+      "gpu": {
+        "model": "Adreno 750",
+        "supportsRayTracing": true
+      },
+      "memory": {
+        "ram": "16 GB LPDDR5X",
+        "storageTypes": ["128 GB UFS 4.0", "256 GB UFS 4.0", "512 GB UFS 4.0"]
+      },
+      "battery": {
+        "capacity": "5400 mAh",
+        "charging": {
+          "wired": "100W SuperVOOC",
+          "wireless": "50W AirVOOC",
+          "reverse": "10W"
+        },
+        "batteryLife": "Up to 2 days with moderate use"
+      },
+      "camera": {
+        "main": "50 MP (Sony LYT-808, wide), 64 MP (3x telephoto), 48 MP (ultrawide)",
+        "front": "32 MP",
+        "features": [
+          "OIS",
+          "Hasselblad color calibration",
+          "4K 60fps video",
+          "8K video recording",
+          "Nightscape 2.0",
+          "RAW HDR",
+          "Ultra HDR"
+        ]
+      },
+      "materials": {
+        "frame": "Aluminum",
+        "back": "Glass (matte or glossy depending on color)"
+      },
+      "dimensions": {
+        "height": "164.3 mm",
+        "width": "75.8 mm",
+        "thickness": "9.2 mm",
+        "weight": "220 g"
+      },
+      "connectivity": {
+        "wifi": "Wi‑Fi 7",
+        "bluetooth": "Bluetooth 5.4",
+        "nfc": true,
+        "usb": "USB-C 3.1 Gen 1"
+      },
+      "sensors": [
+        "Under-display fingerprint sensor",
+        "Face unlock",
+        "Gyroscope",
+        "Accelerometer",
+        "Proximity sensor",
+        "Ambient light sensor",
+        "Compass"
+      ],
+      "resistance": {
+        "water": "IP65 water resistant",
+        "dust": "Yes"
+      },
+      "os": "Android 14 (OxygenOS 14)",
+      "launchYear": 2024,
+      "guarantee": "12 months official warranty"
+    }
+  },
+  {
+    "id": 6,
+    "category": "Smartwatches",
+    "name": "Apple Watch Series 9",
+    "brand": "Apple",
+    "price": [399, 499, 799],
+    "color": "Midnight",
+    "size": ["41mm", "45mm"],
+    "material": "Aluminum",
+    "screenType": "Retina LTPO OLED",
+    "waterResistance": "50m",
+    "batteryLife": "18 hours",
+    "os": "watchOS 10",
+    "features": ["ECG", "Blood Oxygen", "GPS", "Fall Detection"],
+    "stock": 30,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 201,
+        "userName": "FitnessPro",
+        "rating": 5,
+        "comment": "Лучшие часы для тренировок! Датчики очень точные."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Smartwatches",
+    "name": "Samsung Galaxy Watch 6 Classic",
+    "brand": "Samsung",
+    "price": [349, 429],
+    "color": "Black",
+    "size": ["43mm", "47mm"],
+    "material": "Stainless Steel",
+    "screenType": "Super AMOLED",
+    "waterResistance": "50m",
+    "batteryLife": "40 hours",
+    "os": "Wear OS",
+    "features": ["ECG", "Blood Pressure", "Rotating Bezel", "Sleep Tracking"],
+    "stock": 25,
+    "rating": 4,
+    "reviews": [
+      {
+        "userId": 202,
+        "userName": "AndroidUser",
+        "rating": 4,
+        "comment": "Отличная альтернатива Apple Watch для Android."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "category": "Smartwatches",
+    "name": "Garmin Venu 3",
+    "brand": "Garmin",
+    "price": [449, 499],
+    "color": "Slate Gray",
+    "size": ["45mm"],
+    "material": "Fiber-Reinforced Polymer",
+    "screenType": "AMOLED",
+    "waterResistance": "50m",
+    "batteryLife": "14 days",
+    "os": "Garmin OS",
+    "features": ["Advanced Sleep Coaching", "HRV Status", "Offline Music"],
+    "stock": 20,
+    "rating": 0,
+    "reviews": []
+  },
+  {
+    "id": 9,
+    "category": "Smartwatches",
+    "name": "Xiaomi Watch 2 Pro",
+    "brand": "Xiaomi",
+    "price": [199, 249],
+    "color": "Silver",
+    "size": ["46mm"],
+    "material": "Stainless Steel",
+    "screenType": "AMOLED",
+    "waterResistance": "50m",
+    "batteryLife": "65 hours",
+    "os": "Wear OS",
+    "features": ["Dual-Band GPS", "NFC", "Bluetooth Calls"],
+    "stock": 35,
+    "rating": 4,
+    "reviews": [
+      {
+        "userId": 203,
+        "userName": "BudgetTech",
+        "rating": 4,
+        "comment": "Идеальное соотношение цены и качества."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "category": "Smartwatches",
+    "name": "Huawei Watch GT 4",
+    "brand": "Huawei",
+    "price": [249, 299],
+    "color": "Brown Leather",
+    "size": ["41mm", "46mm"],
+    "material": "Stainless Steel + Leather",
+    "screenType": "AMOLED",
+    "waterResistance": "50m",
+    "batteryLife": "14 days",
+    "os": "HarmonyOS",
+    "features": ["TruSeen 5.5+", "Stay Fit App", "Wireless Charging"],
+    "stock": 18,
+    "rating": 0,
+    "reviews": []
+  },
+  {
+    "id": 11,
+    "category": "Accessories",
+    "name": "Sony 65\" 4K Ultra HD Smart TV X90L",
+    "brand": "Sony",
+    "price": [1399, 1499],
+    "color": "Black",
+    "type": "Smart TV",
+    "screenSize": "65 inches",
+    "resolution": "3840x2160 (4K)",
+    "hdr": "Dolby Vision, HDR10",
+    "smartPlatform": "Google TV",
+    "refreshRate": "120Hz",
+    "hdmiPorts": 4,
+    "stock": 15,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 301,
+        "userName": "HomeCinema",
+        "rating": 5,
+        "comment": "Потрясающее качество изображения и реалистичные цвета!"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "category": "Accessories",
+    "name": "Apple TV 4K (128GB)",
+    "brand": "Apple",
+    "price": [149],
+    "color": "Black",
+    "type": "Streaming Device",
+    "resolution": "4K HDR",
+    "storage": "128GB",
+    "processor": "A15 Bionic",
+    "ports": "HDMI 2.1",
+    "remote": "Siri Remote",
+    "os": "tvOS",
+    "stock": 25,
+    "rating": 4,
+    "reviews": [
+      {
+        "userId": 302,
+        "userName": "StreamLover",
+        "rating": 4,
+        "comment": "Идеально для экосистемы Apple, но дороговат."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "category": "Accessories",
+    "name": "Anker 737 Power Bank (140W)",
+    "brand": "Anker",
+    "price": [179],
+    "color": "Black/Orange",
+    "type": "Portable Charger",
+    "capacity": "24000mAh",
+    "output": "140W Max",
+    "ports": "2×USB-C, 1×USB-A",
+    "charging": "PD 3.1",
+    "weight": "550g",
+    "features": ["LCD Screen", "Fast Charging"],
+    "stock": 30,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 303,
+        "userName": "TravelTech",
+        "rating": 5,
+        "comment": "Заряжает MacBook Pro на 100%! Незаменим в путешествиях."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "category": "Accessories",
+    "name": "Logitech MX Keys Mini",
+    "brand": "Logitech",
+    "price": [99],
+    "color": "Graphite",
+    "type": "Wireless Keyboard",
+    "connectivity": "Bluetooth/Unifying",
+    "batteryLife": "10 days (backlight off)",
+    "backlight": "Yes",
+    "compatibility": ["Windows", "macOS", "iOS", "Android"],
+    "weight": "506g",
+    "features": ["Smart Backlight", "Multi-Device"],
+    "stock": 40,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 304,
+        "userName": "RemoteWorker",
+        "rating": 5,
+        "comment": "Лучшая клавиатура для работы. Тихие и приятные клавиши."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "category": "Accessories",
+    "name": "Samsung T7 Shield 1TB",
+    "brand": "Samsung",
+    "price": [89],
+    "color": "Blue",
+    "type": "Portable SSD",
+    "capacity": "1TB",
+    "interface": "USB 3.2 Gen 2",
+    "speed": "1050MB/s",
+    "protection": "IP65 (Water/Dust)",
+    "weight": "98g",
+    "dimensions": "85×57×12mm",
+    "stock": 35,
+    "rating": 4,
+    "reviews": [
+      {
+        "userId": 305,
+        "userName": "Photographer",
+        "rating": 4,
+        "comment": "Быстрый и защищенный, но греется при активной работе."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "category": "Headphones",
+    "name": "Sony WH-1000XM5",
+    "brand": "Sony",
+    "price": [399, 449],
+    "color": "Black",
+    "type": "Over-ear",
+    "wireless": true,
+    "noiseCancellation": "Active Noise Cancelling (ANC)",
+    "batteryLife": "30 hours (ANC on)",
+    "bluetoothVersion": "5.2",
+    "weight": "250g",
+    "features": ["Touch controls", "Speak-to-Chat", "Hi-Res Audio"],
+    "stock": 25,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 401,
+        "userName": "Audiophile",
+        "rating": 5,
+        "comment": "Лучшие шумодавы на рынке. Звук просто потрясающий!"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "category": "Headphones",
+    "name": "Apple AirPods Max",
+    "brand": "Apple",
+    "price": [549],
+    "color": "Space Gray",
+    "type": "Over-ear",
+    "wireless": true,
+    "noiseCancellation": "Active Noise Cancelling (ANC)",
+    "batteryLife": "20 hours (ANC on)",
+    "bluetoothVersion": "5.0",
+    "weight": "385g",
+    "features": ["Spatial Audio", "H1 Chip", "Digital Crown"],
+    "stock": 18,
+    "rating": 4,
+    "reviews": [
+      {
+        "userId": 402,
+        "userName": "AppleLover",
+        "rating": 4,
+        "comment": "Отличное качество звука, но тяжеловаты для длительного ношения."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "category": "Headphones",
+    "name": "Bose QuietComfort 45",
+    "brand": "Bose",
+    "price": [329],
+    "color": "Black",
+    "type": "Over-ear",
+    "wireless": true,
+    "noiseCancellation": "Active Noise Cancelling (ANC)",
+    "batteryLife": "24 hours (ANC on)",
+    "bluetoothVersion": "5.1",
+    "weight": "238g",
+    "features": ["Triple-mode ANC", "Built-in mic", "Bose AR"],
+    "stock": 20,
+    "rating": 0,
+    "reviews": []
+  },
+  {
+    "id": 19,
+    "category": "Headphones",
+    "name": "Samsung Galaxy Buds2 Pro",
+    "brand": "Samsung",
+    "price": [229],
+    "color": "White",
+    "type": "In-ear",
+    "wireless": true,
+    "noiseCancellation": "Active Noise Cancelling (ANC)",
+    "batteryLife": "18 hours (with case)",
+    "bluetoothVersion": "5.3",
+    "weight": "5.5g (each bud)",
+    "features": ["24-bit Hi-Fi", "360 Audio", "IPX7 water resistance"],
+    "stock": 30,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 403,
+        "userName": "AndroidUser",
+        "rating": 5,
+        "comment": "Идеально сочетаются с Galaxy смартфонами. Шумодав на уровне!"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "category": "Headphones",
+    "name": "JBL Tune 760NC",
+    "brand": "JBL",
+    "price": [129],
+    "color": "Blue",
+    "type": "Over-ear",
+    "wireless": true,
+    "noiseCancellation": "Active Noise Cancelling (ANC)",
+    "batteryLife": "35 hours (ANC on)",
+    "bluetoothVersion": "5.0",
+    "weight": "220g",
+    "features": ["JBL Pure Bass", "Ambient Aware", "Fast Charge"],
+    "stock": 35,
+    "rating": 4,
+    "reviews": [
+      {
+        "userId": 404,
+        "userName": "BassLover",
+        "rating": 4,
+        "comment": "Отличные наушники за свои деньги. Басс мощный, но ANC слабее топовых моделей."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "category": "Headphones",
+    "name": "Beats Studio Pro",
+    "brand": "Beats",
+    "price": [349],
+    "color": "Sandstone",
+    "type": "Over-ear",
+    "wireless": true,
+    "noiseCancellation": "Active Noise Cancelling (ANC)",
+    "batteryLife": "40 hours (ANC off)",
+    "bluetoothVersion": "5.3",
+    "weight": "260g",
+    "features": ["Spatial Audio", "USB-C Lossless", "Transparency Mode"],
+    "stock": 15,
+    "rating": 0,
+    "reviews": []
+  },
+  {
+    "id": 22,
+    "category": "Computers",
+    "name": "MacBook Pro 16\" M3 Max",
+    "brand": "Apple",
+    "price": [3499, 3999, 4599],
+    "color": "Space Gray",
+    "type": "Laptop",
+    "screenSize": "16.2 inches",
+    "resolution": "3456x2234 (Retina)",
+    "processor": "Apple M3 Max (12-core CPU, 38-core GPU)",
+    "ram": [32, 64, 96],
+    "storage": [512, 1024, 2048],
+    "batteryLife": "22 hours",
+    "weight": "2.16 kg",
+    "os": "macOS Sonoma",
+    "stock": 12,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 501,
+        "userName": "ProDesigner",
+        "rating": 5,
+        "comment": "Идеально для 3D-рендеринга. Аккумулятор держит невероятно долго!"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "category": "Computers",
+    "name": "Dell XPS 15 (2024)",
+    "brand": "Dell",
+    "price": [2299, 2799, 3299],
+    "color": "Platinum",
+    "type": "Laptop",
+    "screenSize": "15.6 inches",
+    "resolution": "3840x2400 (4K OLED)",
+    "processor": "Intel Core i9-13900H",
+    "ram": [16, 32, 64],
+    "storage": [512, 1024, 2048],
+    "graphics": "NVIDIA RTX 4070 (8GB)",
+    "batteryLife": "14 hours",
+    "weight": "1.8 kg",
+    "os": "Windows 11 Pro",
+    "stock": 18,
+    "rating": 4,
+    "reviews": [
+      {
+        "userId": 502,
+        "userName": "TechEnthusiast",
+        "rating": 4,
+        "comment": "Лучший Windows-ноутбук, но греется под нагрузкой."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "category": "Computers",
+    "name": "HP Spectre x360 14",
+    "brand": "HP",
+    "price": [1599, 1899],
+    "color": "Nightfall Black",
+    "type": "2-in-1 Laptop",
+    "screenSize": "14 inches",
+    "resolution": "3000x2000 (OLED)",
+    "processor": "Intel Core i7-1360P",
+    "ram": [16, 32],
+    "storage": [512, 1024],
+    "batteryLife": "16 hours",
+    "weight": "1.37 kg",
+    "os": "Windows 11 Home",
+    "stock": 15,
+    "rating": 0,
+    "reviews": []
+  },
+  {
+    "id": 25,
+    "category": "Computers",
+    "name": "Apple iMac 24\" M3",
+    "brand": "Apple",
+    "price": [1499, 1699, 1999],
+    "color": "Blue",
+    "type": "All-in-One",
+    "screenSize": "24 inches",
+    "resolution": "4480x2520 (4.5K Retina)",
+    "processor": "Apple M3 (8-core CPU, 10-core GPU)",
+    "ram": [8, 16, 24],
+    "storage": [256, 512, 1024],
+    "weight": "4.48 kg",
+    "os": "macOS Sonoma",
+    "stock": 10,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 503,
+        "userName": "CreativePro",
+        "rating": 5,
+        "comment": "Яркий дизайн и отличная производительность для работы с фото."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "category": "Computers",
+    "name": "Lenovo Legion Pro 7i",
+    "brand": "Lenovo",
+    "price": [2499, 2999],
+    "color": "Storm Gray",
+    "type": "Gaming Laptop",
+    "screenSize": "16 inches",
+    "resolution": "2560x1600 (240Hz)",
+    "processor": "Intel Core i9-13900HX",
+    "ram": [32, 64],
+    "storage": [1024, 2048],
+    "graphics": "NVIDIA RTX 4090 (16GB)",
+    "batteryLife": "5 hours (gaming)",
+    "weight": "2.8 kg",
+    "os": "Windows 11 Home",
+    "stock": 8,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 504,
+        "userName": "HardcoreGamer",
+        "rating": 5,
+        "comment": "Тянет все новинки на ультра-настройках. Мечта геймера!"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "category": "Computers",
+    "name": "ASUS ROG Strix G16",
+    "brand": "ASUS",
+    "price": [1799, 2199],
+    "color": "Eclipse Gray",
+    "type": "Gaming Laptop",
+    "screenSize": "16 inches",
+    "resolution": "1920x1200 (165Hz)",
+    "processor": "Intel Core i7-13650HX",
+    "ram": [16, 32],
+    "storage": [512, 1024],
+    "graphics": "NVIDIA RTX 4060 (8GB)",
+    "batteryLife": "6 hours",
+    "weight": "2.5 kg",
+    "os": "Windows 11 Home",
+    "stock": 14,
+    "rating": 0,
+    "reviews": []
+  },
+  {
+    "id": 28,
+    "category": "Gaming Consoles",
+    "name": "PlayStation 5 (Standard Edition)",
+    "brand": "Sony",
+    "price": [499],
+    "color": "White",
+    "type": "Home Console",
+    "releaseYear": 2020,
+    "storage": "825GB SSD",
+    "resolution": "4K UHD",
+    "fps": "Up to 120Hz",
+    "features": ["Ray Tracing", "3D Audio", "Backward Compatibility"],
+    "exclusiveGames": ["Spider-Man 2", "God of War: Ragnarök"],
+    "controller": "DualSense",
+    "onlineService": "PlayStation Plus",
+    "stock": 20,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 601,
+        "userName": "ConsoleMaster",
+        "rating": 5,
+        "comment": "Невероятная графика и тактильная отдача в геймпаде. PS5 — это новый уровень!"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "category": "Gaming Consoles",
+    "name": "Xbox Series X",
+    "brand": "Microsoft",
+    "price": [499],
+    "color": "Black",
+    "type": "Home Console",
+    "releaseYear": 2020,
+    "storage": "1TB SSD",
+    "resolution": "4K UHD",
+    "fps": "Up to 120Hz",
+    "features": ["Quick Resume", "Smart Delivery", "Game Pass"],
+    "exclusiveGames": ["Halo Infinite", "Forza Horizon 5"],
+    "controller": "Xbox Wireless",
+    "onlineService": "Xbox Game Pass Ultimate",
+    "stock": 18,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 602,
+        "userName": "GamePassFan",
+        "rating": 5,
+        "comment": "Game Pass — лучшая подписка в мире. Доступ к сотням игр с первого дня."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "category": "Gaming Consoles",
+    "name": "Nintendo Switch OLED",
+    "brand": "Nintendo",
+    "price": [349],
+    "color": "White",
+    "type": "Hybrid Console",
+    "releaseYear": 2021,
+    "storage": "64GB (expandable)",
+    "resolution": "720p (Handheld) / 1080p (Docked)",
+    "fps": "60Hz",
+    "features": ["Tabletop Mode", "Local Multiplayer", "HD Rumble"],
+    "exclusiveGames": ["Zelda: Tears of the Kingdom", "Super Mario Odyssey"],
+    "controller": "Joy-Con",
+    "onlineService": "Nintendo Switch Online",
+    "stock": 25,
+    "rating": 4,
+    "reviews": [
+      {
+        "userId": 603,
+        "userName": "FamilyGamer",
+        "rating": 4,
+        "comment": "Идеально для семейных игр. Уникальные эксклюзивы Nintendo!"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "category": "Gaming Consoles",
+    "name": "Steam Deck OLED (512GB)",
+    "brand": "Valve",
+    "price": [549],
+    "color": "Black",
+    "type": "Handheld PC",
+    "releaseYear": 2023,
+    "storage": "512GB SSD",
+    "resolution": "1280x800 (OLED)",
+    "fps": "90Hz",
+    "features": ["PC Game Library", "Trackpads", "Linux-based OS"],
+    "controller": "Built-in Controls",
+    "os": "SteamOS",
+    "stock": 12,
+    "rating": 5,
+    "reviews": [
+      {
+        "userId": 604,
+        "userName": "PCTraveler",
+        "rating": 5,
+        "comment": "Моя Steam-библиотека в кармане. Экран OLED — просто огонь!"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "category": "Gaming Consoles",
+    "name": "PlayStation Portal",
+    "brand": "Sony",
+    "price": [199],
+    "color": "White",
+    "type": "Streaming Device",
+    "releaseYear": 2023,
+    "resolution": "1080p (60Hz)",
+    "features": ["Remote Play for PS5", "DualSense Integration"],
+    "controller": "Built-in",
+    "requirements": "Requires PS5 Console",
+    "stock": 15,
+    "rating": 4,
+    "reviews": [
+      {
+        "userId": 605,
+        "userName": "RemotePlayer",
+        "rating": 4,
+        "comment": "Удобно играть в PS5 в другой комнате, но зависимость от Wi-Fi раздражает."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "category": "Gaming Consoles",
+    "name": "Xbox Series S",
+    "brand": "Microsoft",
+    "price": [299],
+    "color": "White",
+    "type": "Home Console",
+    "releaseYear": 2020,
+    "storage": "512GB SSD",
+    "resolution": "1440p (Up to 4K upscaling)",
+    "fps": "120Hz",
+    "features": ["All-Digital", "Game Pass", "Quick Resume"],
+    "controller": "Xbox Wireless",
+    "onlineService": "Xbox Game Pass",
+    "stock": 22,
+    "rating": 4,
+    "reviews": [
+      {
+        "userId": 606,
+        "userName": "BudgetGamer",
+        "rating": 4,
+        "comment": "Лучшая консоль за свои деньги. Нет дисковода, но Game Pass компенсирует."
+      }
+    ]
+  }
+]

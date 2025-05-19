@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+
 import s from "./params.module.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { setColor, setMemory } from "../../../../redux/slices/productSlice";
+import { setProduct } from "../../../../redux/slices/productSlice";
 
-import img from "../../../../assets/images/card.png";
 import screen from "./images/screen.svg";
 import cpu from "./images/cpu.svg";
 import cores from "./images/cores.svg";
@@ -14,33 +13,62 @@ import Delivery from "./images/Delivery.svg";
 import Stock from "./images/Stock.svg";
 import Guaranteed from "./images/Guaranteed.svg";
 import ProductGallery from "../SwiperPhoto";
+import { addToCart } from "../../../../redux/slices/cartSlice";
+import { addToWishlist } from "../../../../redux/slices/wishlistSlice";
 
-const ProductParams = () => {
+const ProductParams = ({ product }) => {
   const dispatch = useDispatch();
-  const { product, color, memory } = useSelector((state) => state.product);
+  const { color, memory } = useSelector((state) => state.product);
+  const { cart, activeItem } = useSelector((state) => state.cart);
+
   const colors = [...new Set(product.variants?.map((v) => v.color))];
   const colorHexs = [...new Set(product.variants?.map((v) => v.colorHex))];
   const memories = [...new Set(product.variants?.map((v) => v.memory))];
 
-  const currentVariant = product.variants?.find(
-    (v) => v.color === colors[color] && v.memory === memories[memory]
+  const currentVariant = product.variants.find(
+    (item) => item.color === color && item.memory === memory
   );
 
-  const price = currentVariant.price - currentVariant.discount;
-  useEffect(() => {}, []);
+  const price =
+    currentVariant && currentVariant.price - currentVariant.discount;
+
+  const onAddToCart = () => {
+    const cartItem = {
+      total: price,
+      productId: product.id,
+      variantId: product.variants.indexOf(currentVariant),
+      objectId: product.objectId,
+      variant: currentVariant, 
+      name: product.name,
+      category: product.category,
+    };
+    dispatch(addToCart(cartItem));
+  };
+
+  const onChangeColor = (color)=>{
+    const updatedItem = {...product, color}
+    localStorage.removeItem("product")
+    dispatch(setProduct(updatedItem))
+    localStorage.setItem("product", JSON.stringify(updatedItem))
+  }
+  const onChangeMemory = (memory)=>{
+    const updatedItem = {...product, memory}
+    localStorage.removeItem("product")
+    dispatch(setProduct(updatedItem))
+    localStorage.setItem("product", JSON.stringify(updatedItem))
+  }
 
   if (!currentVariant) return <div>Loading variant...</div>;
 
   return (
     <>
       <section className={s.params}>
-
-          <ProductGallery images={currentVariant.images}/>
+        <ProductGallery images={currentVariant.images} />
 
         <div className={s.block}>
           <h1 className={s.title}>
             {product.name},<br />
-            {currentVariant.color}
+            {product.color}
           </h1>
           <div className={s.price}>
             <p className={s.actualy_price}>{price}$</p>
@@ -52,14 +80,14 @@ const ProductParams = () => {
               {colors.map((col, colIndex) => (
                 <li
                   className={`${s.color_item} ${
-                    currentVariant.color === col && s.color_active
+                    color === col && s.color_active
                   }`}
                   key={colIndex}
                   style={{
                     background: colorHexs[colIndex],
                     outlineColor: colorHexs[colIndex],
                   }}
-                  onClick={() => dispatch(setColor(colIndex))}
+                  onClick={()=>onChangeColor(col)}
                 ></li>
               ))}
             </ul>
@@ -68,10 +96,10 @@ const ProductParams = () => {
             {memories.map((mem, memIndex) => (
               <li
                 className={`${s.memory_item} ${
-                  memory === memIndex && s.memory_active
+                  memory === mem && s.memory_active
                 }`}
                 key={memIndex}
-                onClick={() => dispatch(setMemory(memIndex))}
+                onClick={()=>onChangeMemory(mem)}
               >
                 {mem}
                 {mem !== 1 ? "GB" : "TB"}
@@ -131,17 +159,18 @@ const ProductParams = () => {
             </li>
           </ul>
           <div className={s.info}>
-            <p className={s.text}>
-              Enhanced capabilities thanks toan enlarged display of 6.7
-              inchesand work without rechargingthroughout the day. Incredible
-              photosas in weak, yesand in bright lightusing the new systemwith
-              two cameras <span className={s.more}>more...</span>
-            </p>
+            <p className={s.text}>{product.specs.description}</p>
             <button></button>
           </div>
           <div className={s.buttons}>
-            <button className='black-line-btn'>Add to Wishlist</button>
-            <button className='black-line-btn'>Add to Cart</button>
+            <button className='black-line-btn' onClick={()=>dispatch(addToWishlist(product))}>Add to Wishlist</button>
+            <button
+              disabled={activeItem?.count === currentVariant.stock}
+              className='black-line-btn'
+              onClick={() => onAddToCart()}
+            >
+              Add to Cart
+            </button>
           </div>
           <ul className={s.tablets}>
             <li className={s.tablet}>
@@ -157,7 +186,9 @@ const ProductParams = () => {
               <p className={s.naming}>
                 in Stock
                 <br />
-                <span className={s.tablet_text}>Today</span>
+                <span className={s.tablet_text}>
+                  {product.stock > 0 ? "Today" : "For order"}
+                </span>
               </p>
             </li>
             <li className={s.tablet}>
@@ -165,13 +196,16 @@ const ProductParams = () => {
               <p className={s.naming}>
                 Guaranteed
                 <br />
-                <span className={s.tablet_text}>1 year</span>
+                <span className={s.tablet_text}>
+                  {product.specs.guarantee.split(" ")[0] +
+                    " " +
+                    product.specs.guarantee.split(" ")[1]}
+                </span>
               </p>
             </li>
           </ul>
         </div>
       </section>
-      {/* <ProductGallery images={currentVariant.images} /> */}
     </>
   );
 };

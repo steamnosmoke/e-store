@@ -1,12 +1,22 @@
 import { configureStore } from "@reduxjs/toolkit";
-import searchReducer from "./slices/searchSlice";
-import catalogReducer from "./slices/catalogSlice";
-import productReducer from "./slices/productSlice";
+import search from "./slices/searchSlice";
+import catalog from "./slices/catalogSlice";
+import product from "./slices/productSlice";
+import auth from "./slices/authSlice";
+import modal from "./slices//modalSlice";
+import review from "./slices/reviewSlice";
+import cart from "./slices/cartSlice";
+import wishlist from "./slices/wishlistSlice"
 
 export default configureStore({
   reducer: {
-    search: searchReducer,
-    catalog: catalogReducer,
-    product: productReducer,
+    search,
+    catalog,
+    product,
+    auth,
+    modal,
+    review,
+    cart,
+    wishlist
   },
 });

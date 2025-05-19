@@ -1,0 +1,39 @@
+.comment {
+  padding: 24px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.date {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: right;
+}
+
+.text {
+  color: rgb(126, 126, 126);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+}
