@@ -7,8 +7,6 @@ import { useEffect } from "react";
 import { fetchProducts } from "../../redux/slices/productSlice";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Link } from "react-router";
-
 export default function Home() {
   const dispatch = useDispatch();
   const { categoryHome, products, statusHome } = useSelector((state) => state.product);

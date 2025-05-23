@@ -2,11 +2,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import bcrypt from "bcryptjs";
 
-// 📦 Firebase URL
+
 const DB_URL =
   "https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/users.json";
 
-// 📥 Получаем user из localStorage при старте
+
 const getUserFromStorage = () => {
   try {
     const user = localStorage.getItem("user");
@@ -16,7 +16,7 @@ const getUserFromStorage = () => {
   }
 };
 
-// 🔐 Регистрация
+
 export const registerUser = createAsyncThunk(
   "auth/registerUser",
   async (userData, { rejectWithValue }) => {
@@ -34,7 +34,6 @@ export const registerUser = createAsyncThunk(
   }
 );
 
-// 🔍 Авторизация
 export const fetchUser = createAsyncThunk(
   "auth/fetchUser",
   async ({ email, password }, { rejectWithValue }) => {
@@ -63,7 +62,7 @@ export const fetchUser = createAsyncThunk(
   }
 );
 
-// 🔧 State
+
 const initialState = {
   user: getUserFromStorage(),
   email: "",
@@ -92,7 +91,7 @@ const authSlice = createSlice({
       state.password = "";
       state.status = "idle";
       state.error = null;
-      localStorage.removeItem("user"); // 🧹 Очистка
+      localStorage.removeItem("user");
     },
     setUser: (state, action) => {
       state.user = action.payload;
@@ -103,12 +102,12 @@ const authSlice = createSlice({
       .addCase(registerUser.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.user = action.payload;
-        localStorage.setItem("user", JSON.stringify(action.payload)); // 💾 Сохраняем
+        localStorage.setItem("user", JSON.stringify(action.payload)); 
       })
       .addCase(fetchUser.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.user = action.payload;
-        localStorage.setItem("user", JSON.stringify(action.payload)); // 💾 Сохраняем
+        localStorage.setItem("user", JSON.stringify(action.payload));
       })
       .addMatcher(
         (action) => action.type.endsWith("/pending"),

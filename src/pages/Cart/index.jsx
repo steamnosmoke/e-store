@@ -9,6 +9,7 @@ import {
   selectDiscount,
   selectTotal,
 } from "../../redux/selectors/cartSelectors";
+import { addToOrders } from "../../redux/slices/orderSlice";
 
 export default function Cart() {
   const dispatch = useDispatch();
@@ -63,7 +64,12 @@ export default function Cart() {
                 <p className={s.number}>{totalCount} units</p>
               </li>
             </ul>
-            <button className={s.button}>Checkout</button>
+            <button
+              className={s.button}
+              onClick={() => dispatch(addToOrders(cart))}
+            >
+              Checkout
+            </button>
           </section>
         </div>
       </div>

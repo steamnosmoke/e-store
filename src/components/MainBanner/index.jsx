@@ -27,7 +27,6 @@ export default function MainBanner({product}) {
                 Created to change everything for the better. For everyone
               </p>
               <Link to={"/catalog/Phones/1"} 
-              // onClick={()=>console.log(product)}>
               onClick={()=>onClickLink()}>
                 <button className='white-line-btn'>View</button>
               </Link>

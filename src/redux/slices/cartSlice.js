@@ -23,7 +23,6 @@ export const addToCart = createAsyncThunk(
   "cart/addToCart",
   async (item, { rejectWithValue }) => {
     try {
-    console.log(item)
       const userId = await getUserId();
       const response = await getCart(userId);
       const cartData = response.data ? response.data : {};
@@ -162,7 +161,6 @@ export const fetchCart = createAsyncThunk(
             ...response.data[key],
           }))
         : [];
-        console.log(cart)
       return cart;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);

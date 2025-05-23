@@ -52,7 +52,7 @@ export default function Header() {
                   Catalog
                 </NavLink>
               </li>
-              <li className={s.item} onClick={onClickNav}>
+              {/* <li className={s.item} onClick={onClickNav}>
                 <NavLink
                   to='/contacts'
                   className={({ isActive }) => (isActive ? s.active : "")}
@@ -67,7 +67,7 @@ export default function Header() {
                 >
                   Blog
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
             <ul className={s.buttons}>
               <li className={s.button} onClick={onClickNav}>

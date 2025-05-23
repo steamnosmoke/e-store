@@ -11,13 +11,13 @@ export default function ProductGallery({ images }) {
   const settings = {
     customPaging: function (i) {
       return (
-        <a className='img_item'>
+        <button className='img_item'>
           <img
             src={images[i]}
             alt={`thumb-${i}`}
             style={{ width: "100px", height: "100px", objectFit: "contain" }}
           />
-        </a>
+        </button>
       );
     },
     dots: true,
@@ -30,7 +30,6 @@ export default function ProductGallery({ images }) {
     fade: true,
   };
 
-  // Сброс на первый слайд при смене изображений
   useEffect(() => {
     if (sliderRef.current) {
       sliderRef.current.slickGoTo(0);

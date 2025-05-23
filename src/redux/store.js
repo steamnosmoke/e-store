@@ -6,7 +6,8 @@ import auth from "./slices/authSlice";
 import modal from "./slices//modalSlice";
 import review from "./slices/reviewSlice";
 import cart from "./slices/cartSlice";
-import wishlist from "./slices/wishlistSlice"
+import wishlist from "./slices/wishlistSlice";
+import order from "./slices/orderSlice";
 
 export default configureStore({
   reducer: {
@@ -17,6 +18,7 @@ export default configureStore({
     modal,
     review,
     cart,
-    wishlist
+    wishlist,
+    order,
   },
 });

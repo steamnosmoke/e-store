@@ -1,5 +1,5 @@
 .cart {
-  padding: 112px 0;
+  padding: 40px 0;
 
   h1 {
     font-size: 24px;
@@ -10,7 +10,7 @@
 .inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .left,
@@ -35,6 +35,9 @@
   align-items: flex-start;
   justify-content: center;
   gap: 40px;
+
+  position: sticky;
+  top:100px;
 
   .title {
     font-size: 20px;

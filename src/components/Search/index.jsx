@@ -12,7 +12,6 @@ export default function Search() {
 
   const [iconColor, setIconColor] = useState("%23989898");
   const [isFocus, setFocus] = useState(false);
-  // const [placeholder, setPlaceholder] = useState("");
 
   const onMauseIn = () => {
     setIconColor("rgb(53, 53, 53)");

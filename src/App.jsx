@@ -20,6 +20,8 @@ import { setUser } from "./redux/slices/authSlice";
 import { useEffect } from "react";
 import Cart from "./pages/Cart";
 import Wishlist from "./pages/Wishlist";
+import { fetchProducts } from "./redux/slices/catalogSlice";
+import { fetchWishlist } from "./redux/slices/wishlistSlice";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,19 +33,20 @@ function App() {
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
-      dispatch(setUser(JSON.parse(storedUser))); // загружаем в Redux
+      dispatch(setUser(JSON.parse(storedUser)));
+      dispatch(fetchWishlist());
     }
+    dispatch(fetchProducts("Phones"));
   }, [dispatch]);
 
+  useEffect(() => {}, [dispatch]);
 
   return (
     <>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        {/* <Route path='/catalog' element={<Catalog />} /> */}
         <Route path='/catalog' element={<ChoosingCategories />} />
-
         {/* <Route path='/contacts' element={<Contacts />} />
         <Route path='/blog' element={<Blog />} /> */}
         <Route path='/catalog/:category' element={<Catalog />} />

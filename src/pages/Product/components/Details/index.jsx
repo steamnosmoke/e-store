@@ -1,6 +1,4 @@
 import s from "./details.module.scss";
-
-import arrow from "../../../../assets/images/arrow.svg";
 import { useEffect, useState } from "react";
 const Details = ({ product }) => {
   const [isDetailsOpened, setDetailsOpened] = useState(false);

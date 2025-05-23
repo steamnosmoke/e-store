@@ -1,7 +1,7 @@
 import s from "./card.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchProducts, setProduct } from "../../redux/slices/productSlice";
+import { setProduct } from "../../redux/slices/productSlice";
 import { useParams } from "react-router";
 import ProductParams from "./components/ProductParams";
 import Details from "./components/Details";
@@ -9,7 +9,7 @@ import Reviews from "./components/Reviews";
 import { Link } from "react-router";
 
 export default function Product() {
-  const { category, id } = useParams();
+  const { id } = useParams();
   const dispatch = useDispatch();
   const { product } = useSelector((state) => state.product);
 
@@ -17,12 +17,6 @@ export default function Product() {
     const saved = localStorage.getItem("product");
    
       dispatch(setProduct(JSON.parse(saved)));
-    // } else {
-    //   const cart = dispatch(fetchProducts(category));
-    //   const product = cart.find((item) => item.id === id);
-    //   dispatch(setProduct(product))
-    //   localStorage.setItem("product", JSON.stringify(product))
-    // }
   }, [dispatch, id]);
 
   if (Object.values(product).length === 0) {

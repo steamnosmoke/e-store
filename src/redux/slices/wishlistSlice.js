@@ -10,7 +10,6 @@ const getUserId = () => {
 const getWishlist = async (userId) => {
   const url = `${DB_URL}/users/${userId}/wishlist.json`;
   const response = await axios.get(url);
-  console.log(response.data);
   return response;
 };
 
@@ -18,9 +17,7 @@ export const addToWishlist = createAsyncThunk(
   "wishlist/addToWishlist",
   async (item, { rejectWithValue }) => {
     try {
-      console.log(item);
       const userId = await getUserId();
-      console.log(userId);
 
       const response = await getWishlist(userId);
       const wishlistData = response.data ? response.data : {};
@@ -30,10 +27,9 @@ export const addToWishlist = createAsyncThunk(
           (value.variantId || null) === (item.variantId || null)
       );
       if (existingEntry) {
-        const [key, _] = existingEntry;
-        console.log(key);
+        const [key] = existingEntry;
         await axios.delete(`${DB_URL}/users/${userId}/wishlist/${key}.json`);
-        return item;
+        return { ...item, id: key };
       } else {
         const postRes = await axios.post(
           `${DB_URL}/users/${userId}/wishlist.json`,
@@ -52,8 +48,9 @@ export const addToWishlist = createAsyncThunk(
 
 export const fetchWishlist = createAsyncThunk(
   "wishlist/fetch",
-  async (userId, { rejectWithValue }) => {
+  async (_, { rejectWithValue }) => {
     try {
+      const userId = getUserId();
       const response = await getWishlist(userId);
       const wishlist = response.data
         ? Object.keys(response.data).map((key) => ({
@@ -61,7 +58,6 @@ export const fetchWishlist = createAsyncThunk(
             ...response.data[key],
           }))
         : [];
-      console.log(wishlist);
       return wishlist;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);
@@ -95,10 +91,8 @@ const wishlistSlice = createSlice({
         );
 
         if (index !== -1) {
-          // Если товар уже есть — удаляем его из локального состояния
           state.wishlist.splice(index, 1);
         } else {
-          // Если товара нет — добавляем его
           state.wishlist.push(action.payload);
         }
       })
@@ -124,5 +118,4 @@ const wishlistSlice = createSlice({
   },
 });
 
-export const {} = wishlistSlice.actions;
 export default wishlistSlice.reducer;

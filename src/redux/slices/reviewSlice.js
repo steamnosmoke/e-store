@@ -4,7 +4,6 @@ import axios from "axios";
 const DB_URL =
   "https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products";
 
-// Отправка отзыва (оставляем как есть)
 export const postComment = createAsyncThunk(
   "review/postComment",
   async (review, { rejectWithValue }) => {
@@ -14,14 +13,13 @@ export const postComment = createAsyncThunk(
         `${DB_URL}/${productId - 1}/reviews.json`,
         comment
       );
-      return { id: response.data.name, ...comment }; // Firebase возвращает ID в response.data.name
+      return { id: response.data.name, ...comment };
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);
     }
   }
 );
 
-// Получение отзывов
 export const fetchReviews = createAsyncThunk(
   "review/fetchReviews",
   async (productId, { rejectWithValue }) => {

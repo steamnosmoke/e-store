@@ -3,7 +3,6 @@ import Card from "../ProductCard";
 import s from "./products.module.scss";
 
 export default function Products({ products, status }) {
-  console.log(products)
   return (
     <>
       <div className={s.inner}>

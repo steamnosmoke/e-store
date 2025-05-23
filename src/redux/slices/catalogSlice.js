@@ -5,19 +5,25 @@ export const fetchProducts = createAsyncThunk(
   "catalog/fetchProducts",
   async (categoryCatalog, { rejectWithValue }) => {
     try {
-      // const url = `https://experiment-d6e48-default-rtdb.europe-west1.firebasedatabase.app/products.json${
-      //   categoryCatalog
-      //     ? `?orderBy="category"&equalTo="${categoryCatalog}"`
-      //     : ""
-      // }`;
       const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products.json${
         categoryCatalog
           ? `?orderBy="category"&equalTo="${categoryCatalog}"`
           : ""
       }`;
       const { data } = await axios.get(url);
-      console.log('cat',data)
-      return Object.values(data);
+      const productsData = Object.values(data);
+      let newProducts = [];
+      productsData.map((product, prodId) =>
+        product.variants.map((variant, varId) => {
+          return newProducts.push({
+            ...product,
+            ...variant,
+            objectId: String(prodId) + "x" + String(varId),
+            variantId: varId,
+          });
+        })
+      );
+      return newProducts || [];
     } catch (error) {
       return rejectWithValue(error.data);
     }
@@ -28,15 +34,40 @@ export const fetchFilters = createAsyncThunk(
   "catalog/fetchFilters",
   async (categoryCatalog, { rejectWithValue }) => {
     try {
-      // const url = `https://experiment-d6e48-default-rtdb.europe-west1.firebasedatabase.app/categories.json${
-      //   categoryCatalog ? `?orderBy="name"&equalTo="${categoryCatalog}"` : ""
-      // }`;
       const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/categories.json${
         categoryCatalog ? `?orderBy="name"&equalTo="${categoryCatalog}"` : ""
       }`;
       const { data } = await axios.get(url);
-      // console.log(data)
-      return Object.values(data);
+      console.log(data[0].filters);
+      return Object.values(data[0].filters);
+    } catch (error) {
+      return rejectWithValue(error.data);
+    }
+  }
+);
+export const fetchProductsByFilters = createAsyncThunk(
+  "catalog/fetchProductsByFilters",
+  async (filters, { rejectWithValue }) => {
+    try {
+      const url = `https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app/products.json${
+        filters.categoryCatalog
+          ? `?orderBy="category"&equalTo="${filters.categoryCatalog}"`
+          : ""
+      }`;
+      const { data } = await axios.get(url);
+      const productsData = Object.values(data);
+      let newProducts = [];
+      productsData.map((product, prodId) =>
+        product.variants.map((variant, varId) => {
+          return newProducts.push({
+            ...product,
+            ...variant,
+            objectId: String(prodId) + "x" + String(varId),
+            variantId: varId,
+          });
+        })
+      );
+      return newProducts || [];
     } catch (error) {
       return rejectWithValue(error.data);
     }
@@ -47,13 +78,12 @@ export const catalogSlice = createSlice({
   name: "catalog",
   initialState: {
     isFiltersOpened: true,
-    categoryCatalog: "",
+    categoryCatalog: localStorage.getItem("categoryCatalog") || "",
     categories: [],
     products: [],
+    filters: [],
     statusCatalog: "loading",
-    statusHome: "loading",
     errorCatalog: null,
-    errorHome: null,
     count: 0,
   },
   reducers: {
@@ -63,6 +93,27 @@ export const catalogSlice = createSlice({
     chooseCategory: (state, action) => {
       state.categoryCatalog =
         action.payload.charAt(0).toUpperCase() + action.payload.slice(1);
+      action.payload ? localStorage.setItem("categoryCatalog", action.payload) : localStorage.removeItem("categoryCatalog")
+    },
+    chooseFilter: (state, action) => {
+      const filter = action.payload;
+      const title = filter.title;
+      const value = filter.value;
+      const filterItem = state.filters.find((fil) => fil.title === title);
+      if (filterItem) {
+        const filterIndex = state.filters.findIndex(
+          (fil) => fil.title === title
+        );
+        const mas = state.filters[filterIndex].values;
+        const finded = mas.find((val) => val === value);
+        if (finded) {
+          mas.splice(mas.indexOf(finded), 1);
+        } else {
+          mas.push(value);
+        }
+      } else {
+        state.filters.push({ title, values: [value] });
+      }
     },
   },
   extraReducers: (builder) => {
@@ -75,21 +126,6 @@ export const catalogSlice = createSlice({
         state.statusHome = "succeeded";
         state.products = action.payload;
         state.count = state.products.length;
-
-      // if (len === 0) {
-      //   state.count = "Ничего не найдено";
-      // } else {
-      //   const lastDigit = len % 10;
-      //   const lastTwoDigits = len % 100;
-        
-      //   if (lastDigit === 1 && lastTwoDigits !== 11) {
-      //     state.count = `${len} товар`;
-      //   } else if ([2, 3, 4].includes(lastDigit) && ![12, 13, 14].includes(lastTwoDigits)) {
-      //     state.count = `${len} товара`;
-      //   } else {
-      //     state.count = `${len} товаров`;
-      //   }
-      // }
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.statusHome = "failed";
@@ -110,5 +146,6 @@ export const catalogSlice = createSlice({
   },
 });
 
-export const { setFilterOpened, chooseCategory, calcCount } = catalogSlice.actions;
+export const { setFilterOpened, chooseCategory, calcCount, chooseFilter } =
+  catalogSlice.actions;
 export default catalogSlice.reducer;

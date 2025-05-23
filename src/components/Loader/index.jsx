@@ -1,6 +1,4 @@
-import React from "react";
 import ContentLoader from "react-content-loader";
-import s from "../ProductCard/card.module.scss";
 
 const MyLoader = (props) => (
   <ContentLoader

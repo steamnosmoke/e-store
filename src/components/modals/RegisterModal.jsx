@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import s from "./modals.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -11,9 +11,8 @@ import { useNavigate } from "react-router";
 
 export default function RegisterModal({ onClose, onSwitchToLogin }) {
   const dispatch = useDispatch();
-  const [error, setError] = useState("");
-  const [status, setStatus] = useState("");
-  const { user, email, password, confirm } = useSelector((state) => state.auth);
+  const [setError] = useState("");
+  const { email, password, confirm } = useSelector((state) => state.auth);
   const navigate = useNavigate()
   const onRegister = () => {
     const correct = () => {

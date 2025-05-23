@@ -17,7 +17,7 @@ export default function AuthModal({ onClose, onSwitchToRegister }) {
 
   useEffect(() => {
     if (user.email) {
-      onClose(); // Закрываем при успешном входе
+      onClose();
     }
   }, [user, onClose]);
 
