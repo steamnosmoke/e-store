@@ -1,25 +1,31 @@
-import { useEffect } from "react";
+import { useAuthStore } from "../../zustand/authStore";
+import { useLogin } from "../../hooks/useAuth";
 import s from "./modals.module.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchUser, setEmail, setPassword } from "../../redux/slices/authSlice";
 
 export default function AuthModal({ onClose, onSwitchToRegister }) {
-  const dispatch = useDispatch();
-  const { user, email, password, error, status } = useSelector(
-    (state) => state.auth
-  );
+  const { mutate } = useLogin();
+  const setEmail = useAuthStore((state) => state.setEmail);
+  const setPassword = useAuthStore((state) => state.setPassword);
+  const setUser = useAuthStore((state) => state.setUser);
+  const setError = useAuthStore((state) => state.setError);
+  const email = useAuthStore((state) => state.email);
+  const password = useAuthStore((state) => state.password);
+  const error = useAuthStore((state) => state.error);
 
   const onLogin = () => {
-    if (email && password) {
-      dispatch(fetchUser({ email, password }));
-    }
+    mutate(
+      { email, password },
+      {
+        onSuccess: (userData) => {
+          setUser(userData);
+          onClose();
+        },
+        onError: (err) => {
+          setError(err.message);
+        },
+      }
+    );
   };
-
-  useEffect(() => {
-    if (user.email) {
-      onClose();
-    }
-  }, [user, onClose]);
 
   return (
     <div className={s.modalOverlay} onClick={onClose}>
@@ -30,7 +36,7 @@ export default function AuthModal({ onClose, onSwitchToRegister }) {
           className={s.input}
           type='email'
           value={email}
-          onChange={(e) => dispatch(setEmail(e.target.value))}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder='Email'
         />
 
@@ -38,16 +44,16 @@ export default function AuthModal({ onClose, onSwitchToRegister }) {
           className={s.input}
           type='password'
           value={password}
-          onChange={(e) => dispatch(setPassword(e.target.value))}
+          onChange={(e) => setPassword(e.target.value)}
           placeholder='Password'
         />
 
-        {status === "failed" && error && <p className={s.error}>{error}</p>}
+        {error && <p className={s.error}>{error}</p>}
 
         <button
           className='black-line-btn'
           style={{ padding: "12px 40px" }}
-          onClick={onLogin}
+          onClick={() => onLogin()}
         >
           Log in
         </button>

@@ -7,7 +7,7 @@ export default function Order({ order }) {
       <h3 className={s.title}>Order by {order.date}</h3>
       <ul className={s.list}>
         {order.items.map((product) => (
-          <OrderCard product={product} />
+          <OrderCard product={product} key={product.objectId}/>
         ))}
       </ul>
       <div className={s.info}>

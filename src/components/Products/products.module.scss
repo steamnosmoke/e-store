@@ -1,9 +1,13 @@
 
 
 .inner{
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: inherit;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 40px 20px;
   justify-items: center;
+  align-items: center;
+  justify-content: center;
 }

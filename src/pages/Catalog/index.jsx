@@ -1,77 +1,46 @@
-import CatalogAside from "../../components/CatalogAside/index";
+import CatalogAside from "./components/CatalogAside";
 import s from "./catalog.module.scss";
-import { useEffect } from "react";
-import { Link } from "react-router";
-
-import arrow from "../../assets/images/arrow.svg";
-
-import { useDispatch, useSelector } from "react-redux";
-import { setFilterOpened } from "../../redux/slices/catalogSlice";
-import { fetchProducts } from "../../redux/slices/catalogSlice";
 import Products from "../../components/Products";
+import { useProducts } from "../../hooks/useProducts";
+import { useProductsStore } from "../../zustand/productsStore";
+import { useEffect } from "react";
+import CatalogHeader from "./components/CatalogHeader";
 
 export default function Catalog() {
-  const dispatch = useDispatch();
-  const { categoryCatalog, isFiltersOpened, products, count, statusCatalog } =
-    useSelector((state) => state.catalog);
+  const category = useProductsStore((state) => state.category);
+  const { products, status } = useProducts(category);
+  const confirmedFilters = useProductsStore((state) => state.confirmedFilters);
+  const setFilteredProducts = useProductsStore(
+    (state) => state.setFilteredProducts
+  );
+  const filteredProducts = useProductsStore((state) => state.filteredProducts);
+  const param = useProductsStore((state) => state.sortingParams.param);
+  const mod = useProductsStore((state) => state.sortingParams.mod);
+  const sortProducts = useProductsStore((state) => state.sortProducts);
 
-  const ToggleFilter = () => {
-    dispatch(setFilterOpened());
-  };
 
   useEffect(() => {
-    dispatch(fetchProducts(categoryCatalog));
-  }, [dispatch, categoryCatalog]);
+    setFilteredProducts(products);
+    // sortProducts(filteredProducts, { param, mod });
+  }, [confirmedFilters, status, mod, param, setFilteredProducts, sortProducts]);
 
   return (
     <>
       <main className={s.main}>
         <>
-          <header className={s.header}>
-            <div className='container'>
-              <div className={s.paths}>
-                <Link to={"/"}>Home</Link>
-                <p>{`>`}</p>
-                <Link to={"/catalog"}>Catalog</Link>
-                <p>{`>`}</p>
-                <Link to={`/catalog/${categoryCatalog}`}>
-                  {categoryCatalog}
-                </Link>
-              </div>
-              {categoryCatalog === "Phones" && (
-                <div className={s.bottom}>
-                  <div className={s.filter} onClick={ToggleFilter}>
-                    <h2 className={s.title}>Filters</h2>
-                    <img
-                      className={`${s.arrow} ${
-                        isFiltersOpened ? s.rotated : ""
-                      }`}
-                      src={arrow}
-                      alt=''
-                    />
-                  </div>
-                  <div className={s.block}>
-                    <span className={s.count}>
-                      <span className={s.count_desc}>Selected Products: </span>
-                      {count}
-                    </span>
-                    sorting
-                  </div>
-                </div>
-              )}
-            </div>
-          </header>
+          <CatalogHeader />
           <section className={s.catalog}>
-            <div className={`container ${s.catalog_container}`}>
-              {categoryCatalog === "Phones" ? (
-                <div className={s.inner}>
+            <div
+              className='container'
+              style={{ display: "flex", position: "relative" }}
+            >
+              {category === "Phones" ? (
+                <>
                   <CatalogAside />
-                  <Products
-                    className={s.products}
-                    products={products}
-                    status={statusCatalog}
-                  />
-                </div>
+                  <div className={s.inner}>
+                    <Products products={filteredProducts} status={status} />
+                  </div>
+                </>
               ) : (
                 <h1 className={s.empty}>No products</h1>
               )}

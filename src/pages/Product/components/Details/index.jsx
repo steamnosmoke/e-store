@@ -34,8 +34,8 @@ const Details = ({ product }) => {
                 >
                   <h3 className={s.item_title}>{formatKey(key)}</h3>
                   <div>
-                    {value.map((el) => (
-                      <p className={s.value}>{el}</p>
+                    {value.map((el, i) => (
+                      <p className={s.value} key={i}>{el}</p>
                     ))}
                   </div>
                 </li>
@@ -58,7 +58,7 @@ const Details = ({ product }) => {
                             </div>
                           </li>
                         ) : typeof v === "object" && Array.isArray(v) ? (
-                          <li key={index} className={s.spec}>
+                          <li key={i} className={s.spec}>
                             <h4 className={s.name}>{formatKey(k)}</h4>
                             <div>
                               {v.map((el, j) => (

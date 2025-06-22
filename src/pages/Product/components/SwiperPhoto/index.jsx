@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { useEffect, useRef } from "react";
 
 import "./swiper.scss";
+import MyLoader from "./Loader";
 
 export default function ProductGallery({ images }) {
   const sliderRef = useRef(null);
@@ -21,7 +22,7 @@ export default function ProductGallery({ images }) {
       );
     },
     dots: true,
-    dotsClass: "slick-dots slick-thumb",
+    dotsClass: "slick-dots ",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -36,8 +37,8 @@ export default function ProductGallery({ images }) {
     }
   }, [images]);
 
-  return (
-    <Slider {...settings} ref={sliderRef} className="popop">
+  return (<>
+    {images ? <Slider {...settings} ref={sliderRef} className='popop'>
       {images.map((src, index) => (
         <div key={index}>
           <img
@@ -47,6 +48,6 @@ export default function ProductGallery({ images }) {
           />
         </div>
       ))}
-    </Slider>
+    </Slider> : <MyLoader/>}</>
   );
 }

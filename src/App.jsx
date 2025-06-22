@@ -7,39 +7,25 @@ import Catalog from "./pages/Catalog";
 import Product from "./pages/Product";
 import ChoosingCategories from "./pages/ChoosingCategories";
 import Profile from "./pages/Profile";
-import { useSelector, useDispatch } from "react-redux";
-import {
-  openAuthModal,
-  closeModals,
-  openRegisterModal,
-} from "./redux/slices/modalSlice";
+
 import RegisterModal from "./components/modals/RegisterModal";
 import AuthModal from "./components/modals/AuthModal";
-import { setUser } from "./redux/slices/authSlice";
 
-import { useEffect } from "react";
 import Cart from "./pages/Cart";
 import Wishlist from "./pages/Wishlist";
-import { fetchProducts } from "./redux/slices/catalogSlice";
-import { fetchWishlist } from "./redux/slices/wishlistSlice";
+import { useModalStore } from "./zustand/modalStore";
 
 function App() {
-  const dispatch = useDispatch();
 
-  const { isAuthModalOpen, isRegisterModalOpen } = useSelector(
-    (state) => state.modal
+  const openAuthModal = useModalStore((state) => state.openAuthModal);
+  const openRegisterModal = useModalStore((state) => state.openRegisterModal);
+  const closeModals = useModalStore((state) => state.closeModals);
+  const isAuthModalOpen = useModalStore((state) => state.isAuthModalOpen);
+  const isRegisterModalOpen = useModalStore(
+    (state) => state.isRegisterModalOpen
   );
 
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      dispatch(setUser(JSON.parse(storedUser)));
-      dispatch(fetchWishlist());
-    }
-    dispatch(fetchProducts("Phones"));
-  }, [dispatch]);
 
-  useEffect(() => {}, [dispatch]);
 
   return (
     <>
@@ -58,14 +44,14 @@ function App() {
 
       {isAuthModalOpen && (
         <AuthModal
-          onClose={() => dispatch(closeModals())}
-          onSwitchToRegister={() => dispatch(openRegisterModal())}
+          onClose={() => closeModals()}
+          onSwitchToRegister={() => openRegisterModal()}
         />
       )}
       {isRegisterModalOpen && (
         <RegisterModal
-          onClose={() => dispatch(closeModals())}
-          onSwitchToLogin={() => dispatch(openAuthModal())}
+          onClose={() => closeModals()}
+          onSwitchToLogin={() => openAuthModal()}
         />
       )}
 

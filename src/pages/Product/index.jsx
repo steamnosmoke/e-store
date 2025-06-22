@@ -1,23 +1,18 @@
 import s from "./card.module.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { setProduct } from "../../redux/slices/productSlice";
 import { useParams } from "react-router";
 import ProductParams from "./components/ProductParams";
 import Details from "./components/Details";
 import Reviews from "./components/Reviews";
 import { Link } from "react-router";
+import { useProductsStore } from "../../zustand/productsStore";
 
 export default function Product() {
   const { id } = useParams();
-  const dispatch = useDispatch();
-  const { product } = useSelector((state) => state.product);
+  const setCategory = useProductsStore(state=>state.setCategory)
+  const product = useProductsStore(state=>state.product)
 
-  useEffect(() => {
-    const saved = localStorage.getItem("product");
-   
-      dispatch(setProduct(JSON.parse(saved)));
-  }, [dispatch, id]);
+
+
 
   if (Object.values(product).length === 0) {
     return <>loading...</>;
@@ -32,7 +27,7 @@ export default function Product() {
             <p>{`>`}</p>
             <Link to={"/catalog"}>Catalog</Link>
             <p>{`>`}</p>
-            <Link to={`/catalog/${product.category}`}>{product.category}</Link>
+            <Link to={`/catalog/${product.category}`} onClick={()=>setCategory(product.category)}>{product.category}</Link>
             <p>{`>`}</p>
             <Link to={`/catalog/${id}`}>{product.name}</Link>
           </header>

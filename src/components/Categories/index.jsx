@@ -1,10 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
 import s from "./categories.module.scss";
-import { chooseCategory } from "../../redux/slices/productSlice";
+import { useProductsStore } from "../../zustand/productsStore";
 
 export default function Categories() {
-  const dispatch = useDispatch();
-  const category = useSelector((state) => state.product.categoryHome);
+  const category = useProductsStore((state) => state.category);
+  const setCategory = useProductsStore((state) => state.setCategory);
   return (
     <>
       <section className={s.categories}>
@@ -14,7 +13,7 @@ export default function Categories() {
             <ul className={s.list}>
               <li
                 className={`${s.item} ${category === "" && s.active}`}
-                onClick={() => dispatch(chooseCategory(""))}
+                onClick={() => setCategory("")}
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -37,7 +36,7 @@ export default function Categories() {
               </li>
               <li
                 className={`${s.item} ${category === "Phones" && s.active}`}
-                onClick={() => dispatch(chooseCategory("Phones"))}
+                onClick={() => setCategory("Phones")}
               >
                 <svg
                   width='48.000000'
@@ -105,7 +104,7 @@ export default function Categories() {
                 className={`${s.item} ${
                   category === "Smartwatches" && s.active
                 }`}
-                onClick={() => dispatch(chooseCategory("Smartwatches"))}
+                onClick={() => setCategory("Smartwatches")}
               >
                 <svg
                   width='48.000000'
@@ -193,7 +192,7 @@ export default function Categories() {
                 className={`${s.item} ${
                   category === "Accessories" && s.active
                 }`}
-                onClick={() => dispatch(chooseCategory("Accessories"))}
+                onClick={() => setCategory("Accessories")}
               >
                 <svg
                   width='48.000000'
@@ -251,7 +250,7 @@ export default function Categories() {
               </li>
               <li
                 className={`${s.item} ${category === "Headphones" && s.active}`}
-                onClick={() => dispatch(chooseCategory("Headphones"))}
+                onClick={() => setCategory("Headphones")}
               >
                 <svg
                   width='48.000000'
@@ -306,7 +305,7 @@ export default function Categories() {
               </li>
               <li
                 className={`${s.item} ${category === "Computers" && s.active}`}
-                onClick={() => dispatch(chooseCategory("Computers"))}
+                onClick={() => setCategory("Computers")}
               >
                 <svg
                   width='48.000000'
@@ -381,7 +380,7 @@ export default function Categories() {
                 className={`${s.item} ${
                   category === "Gaming Consoles" && s.active
                 }`}
-                onClick={() => dispatch(chooseCategory("Gaming Consoles"))}
+                onClick={() => setCategory("Gaming Consoles")}
               >
                 <svg
                   width='48.000000'

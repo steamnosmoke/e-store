@@ -1,23 +1,20 @@
-import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
 import s from "./orders.module.scss";
 import Order from "./Order";
-import { fetchOrders } from "../../../../redux/slices/orderSlice";
+import { usePage } from "../../../../hooks/usePage";
+import { useAuthStore } from "../../../../zustand/authStore";
 
 export default function Orders() {
-  const dispatch = useDispatch();
-  const { orders } = useSelector((state) => state.order);
-
-  useEffect(() => {
-    dispatch(fetchOrders());
-  }, [dispatch]);
+  const user = useAuthStore((state) => state.user);
+  const { products, status, error } = usePage(user.firebaseId, "orders");
 
   return (
     <section className={s.orders}>
       <h2 className={s.title}>Orders List</h2>
-      {orders.length > 0
-        ? orders.map((order) => <Order key={order.id} order={order} />)
-        : <p>Заказов пока нет.</p>}
+      {products.length > 0 ? (
+        products.map((order) => <Order key={order.id} order={order} />)
+      ) : (
+        <p>Заказов пока нет.</p>
+      )}
     </section>
   );
 }

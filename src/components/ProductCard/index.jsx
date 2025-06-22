@@ -1,60 +1,41 @@
 import s from "./card.module.scss";
 import { Link } from "react-router";
-
-import { useDispatch, useSelector } from "react-redux";
-import { setProduct } from "../../redux/slices/productSlice";
-import { addToWishlist} from "../../redux/slices/wishlistSlice";
-import { addToCart } from "../../redux/slices/cartSlice";
+import { useProductsStore } from "../../zustand/productsStore";
+import { usePage } from "../../hooks/usePage";
+import { useAddToCart } from "../../hooks/useCart";
+import { useToggleProduct } from "../../hooks/useWihlist";
+import { useAuthStore } from "../../zustand/authStore";
 
 export default function Card({ product }) {
-  const dispatch = useDispatch();
-  const { wishlist } = useSelector((state) => state.wishlist);
-  const isLiked = wishlist?.some(
-  (item) =>
-    item.productId === product.productId &&
-    item.objectId === product.objectId &&
-    item.variantId === product.variantId
-);
-
-  const currentVariant = product?.variants?.find(
-    (item) => item.color === product.color && item.memory === product.memory
+  const setProduct = useProductsStore((state) => state.setProduct);
+  const user = useAuthStore((state) => state.user);
+  const addToWishlist = useToggleProduct();
+  const addToCart = useAddToCart();
+  const { products } = usePage(user.firebaseId, "wishlist");
+  const isLiked = products?.some(
+    (item) =>
+      item.productId === product.productId &&
+      item.objectId === product.objectId &&
+      item.variantId === product.variantId
   );
 
-  const price =
-    currentVariant && currentVariant.price - currentVariant.discount;
-
   const onClickCard = () => {
-    localStorage.setItem("product", JSON.stringify(product));
-    dispatch(setProduct(product));
+    setProduct(product);
     window.scrollTo(0, 0);
   };
 
-  const OnClickHeart = () => {
-    dispatch(addToWishlist(product));
-  };
-
   const onAddToCart = () => {
-    const varId = product.variants.indexOf(currentVariant);
-    const cartItem = {
-      total: price,
-      productId: product.id,
-      variantId: varId,
-      objectId: product.objectId,
-      variant: product.variants[varId],
-      name: product.name,
-      category: product.category,
-    };
-    dispatch(addToCart(cartItem));
+    addToCart.mutate(product);
   };
-
-
 
   return (
     <>
       <section className={s.card}>
-        <button className={s.favorite} onClick={() => OnClickHeart()}>
-          {
-          isLiked ? (
+        <button
+          className={s.favorite}
+          onClick={() => addToWishlist.mutate(product)}
+        >
+          {isLiked ? (
             <svg
               className={s.liked}
               width='32.000000'

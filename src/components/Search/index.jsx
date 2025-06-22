@@ -1,17 +1,17 @@
 import s from "./search.module.scss";
 import { useEffect, useState, useRef } from "react";
-
-import { useSelector, useDispatch } from "react-redux";
-import { ClearValue, Searching } from "../../redux/slices/searchSlice";
+import {useSearchStore} from "../../zustand/searchStore";
 
 export default function Search() {
-  const inputValue = useSelector((state) => state.search.value);
-  const dispatch = useDispatch();
+  const inputValue = useSearchStore(state=>state.value)
+  const Searching = useSearchStore(state=>state.Searching)
+  const ClearValue = useSearchStore(state=>state.ClearValue)
   const ref = useRef(null);
   const placeholder = "Search";
 
   const [iconColor, setIconColor] = useState("%23989898");
   const [isFocus, setFocus] = useState(false);
+
 
   const onMauseIn = () => {
     setIconColor("rgb(53, 53, 53)");
@@ -56,11 +56,11 @@ export default function Search() {
           onMouseLeave={onMauseOut}
           onClick={changeSvgStroke}
           value={inputValue}
-          onChange={(e) => dispatch(Searching(e.target.value))}
+          onChange={(e) => Searching(e.target.value)}
         />
         <button
           className={`${s.clear} ${!inputValue && "display-none"}`}
-          onClick={() => dispatch(ClearValue())}
+          onClick={() => ClearValue()}
         ></button>
       </div>
     </>

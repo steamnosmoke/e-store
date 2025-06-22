@@ -2,27 +2,29 @@ import s from "./header.module.scss";
 import logo from "../../assets/images/Logo.svg";
 
 import Search from "../Search";
-import { chooseCategory } from "../../redux/slices/catalogSlice";
+import { useProductsStore } from "../../zustand/productsStore";
 
 import { NavLink, useNavigate } from "react-router";
-import { useDispatch,useSelector } from "react-redux";
-import { openAuthModal } from "../../redux/slices/modalSlice";
+import { useModalStore } from "../../zustand/modalStore";
+import { useAuthStore } from "../../zustand/authStore";
 
 export default function Header() {
-  const {user} = useSelector(state=>state.auth)
+  const user = useAuthStore((state) => state.user);
+  const openAuthModal = useModalStore((state) => state.openAuthModal);
+
+  const setCategory = useProductsStore((state) => state.setCategory);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const onClickNav = () => {
     window.scrollTo(0, 0);
-    dispatch(chooseCategory(""));
+    setCategory("Phones");
   };
 
   const onClickProfile = () => {
-    if (Object.values(user).length !== 0) {
-      onClickNav()
+    if (user) {
+      onClickNav();
       navigate("/profile");
     } else {
-      dispatch(openAuthModal());
+      openAuthModal();
     }
   };
 
@@ -52,7 +54,7 @@ export default function Header() {
                   Catalog
                 </NavLink>
               </li>
-              {/* <li className={s.item} onClick={onClickNav}>
+              <li className={s.item} onClick={onClickNav}>
                 <NavLink
                   to='/contacts'
                   className={({ isActive }) => (isActive ? s.active : "")}
@@ -67,7 +69,7 @@ export default function Header() {
                 >
                   Blog
                 </NavLink>
-              </li> */}
+              </li>
             </ul>
             <ul className={s.buttons}>
               <li className={s.button} onClick={onClickNav}>

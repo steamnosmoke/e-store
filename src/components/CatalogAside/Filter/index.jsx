@@ -1,23 +1,22 @@
 import s from "./filter.module.scss";
-import { useSelector, useDispatch } from "react-redux";
 import arrow from "../../../assets/images/arrow.svg";
 import { useState } from "react";
-import { chooseFilter } from "../../../redux/slices/catalogSlice";
-import checkbox from "../images/checkbox.svg"
+import checkbox from "../images/checkbox.svg";
+import { useProductsStore } from "../../../zustand/productsStore";
 
 export default function Filter({ filter }) {
-  const dispatch = useDispatch();
-  const [isOpened, setOpened] = useState(false);
-  const { filters } = useSelector((state) => state.catalog);
-
+  const [isOpened, setOpened] = useState(true);
+  const filters = useProductsStore((state) => state.filters);
+  const setFilters = useProductsStore((state) => state.setFilters);
+  
   const onClickFilter = (filter) => {
-    dispatch(chooseFilter(filter));
+    setFilters(filter);
   };
   return (
     <>
       <li className={s.item}>
         <div className={s.filter} onClick={() => setOpened(!isOpened)}>
-          <h2 className={s.title}>{filter.title}</h2>
+          <h2 className={s.title}>{filter?.title}</h2>
           <img
             className={`${s.arrow} ${isOpened && s.rotated}`}
             src={arrow}
@@ -32,7 +31,7 @@ export default function Filter({ filter }) {
                 key={elIndex}
                 onClick={() =>
                   onClickFilter({
-                    title: filter.title,
+                    title: filter.title.split().join(""),
                     value: el,
                     index: elIndex,
                   })
@@ -47,7 +46,6 @@ export default function Filter({ filter }) {
                           item.title === filter.title &&
                           item.values.includes(el)
                       )
-                        
                         ? `url(${checkbox})`
                         : "none"
                     }`,

@@ -714,11 +714,7 @@
         },
         "memory": {
           "ram": "6 GB",
-          "storageTypes": [
-            "128 GB NVMe",
-            "256 GB NVMe",
-            "512 GB NVMe"
-          ]
+          "storageTypes": ["128 GB NVMe", "256 GB NVMe", "512 GB NVMe"]
         },
         "battery": {
           "capacity": "3274 mAh",
@@ -1082,11 +1078,7 @@
         },
         "memory": {
           "ram": "12 GB",
-          "storageTypes": [
-            "256 GB UFS 4.0",
-            "512 GB UFS 4.0",
-            "1 TB UFS 4.0"
-          ]
+          "storageTypes": ["256 GB UFS 4.0", "512 GB UFS 4.0", "1 TB UFS 4.0"]
         },
         "battery": {
           "capacity": "5000 mAh",
@@ -1140,11 +1132,7 @@
         },
         "stylus": {
           "included": true,
-          "features": [
-            "Bluetooth S Pen",
-            "Air Actions",
-            "Screen Off Memo"
-          ]
+          "features": ["Bluetooth S Pen", "Air Actions", "Screen Off Memo"]
         },
         "os": "Android 14",
         "launchYear": 2024,
@@ -1419,11 +1407,7 @@
         },
         "memory": {
           "ram": "12 GB",
-          "storageTypes": [
-            "128 GB UFS 3.1",
-            "256 GB UFS 3.1",
-            "512 GB UFS 3.1"
-          ]
+          "storageTypes": ["128 GB UFS 3.1", "256 GB UFS 3.1", "512 GB UFS 3.1"]
         },
         "battery": {
           "capacity": "5050 mAh",
@@ -1791,11 +1775,7 @@
         },
         "memory": {
           "ram": "16 GB LPDDR5X",
-          "storageTypes": [
-            "128 GB UFS 4.0",
-            "256 GB UFS 4.0",
-            "512 GB UFS 4.0"
-          ]
+          "storageTypes": ["128 GB UFS 4.0", "256 GB UFS 4.0", "512 GB UFS 4.0"]
         },
         "battery": {
           "capacity": "5400 mAh",
@@ -1858,27 +1838,15 @@
       "category": "Smartwatches",
       "name": "Apple Watch Series 9",
       "brand": "Apple",
-      "price": [
-        399,
-        499,
-        799
-      ],
+      "price": [399, 499, 799],
       "color": "Midnight",
-      "size": [
-        "41mm",
-        "45mm"
-      ],
+      "size": ["41mm", "45mm"],
       "material": "Aluminum",
       "screenType": "Retina LTPO OLED",
       "waterResistance": "50m",
       "batteryLife": "18 hours",
       "os": "watchOS 10",
-      "features": [
-        "ECG",
-        "Blood Oxygen",
-        "GPS",
-        "Fall Detection"
-      ],
+      "features": ["ECG", "Blood Oxygen", "GPS", "Fall Detection"],
       "stock": 30,
       "rating": 4.7,
       "reviews": [
@@ -2029,26 +1997,15 @@
       "category": "Smartwatches",
       "name": "Samsung Galaxy Watch 6 Classic",
       "brand": "Samsung",
-      "price": [
-        349,
-        429
-      ],
+      "price": [349, 429],
       "color": "Black",
-      "size": [
-        "43mm",
-        "47mm"
-      ],
+      "size": ["43mm", "47mm"],
       "material": "Stainless Steel",
       "screenType": "Super AMOLED",
       "waterResistance": "50m",
       "batteryLife": "40 hours",
       "os": "Wear OS",
-      "features": [
-        "ECG",
-        "Blood Pressure",
-        "Rotating Bezel",
-        "Sleep Tracking"
-      ],
+      "features": ["ECG", "Blood Pressure", "Rotating Bezel", "Sleep Tracking"],
       "stock": 25,
       "rating": 4.4,
       "reviews": [
@@ -2199,24 +2156,15 @@
       "category": "Smartwatches",
       "name": "Garmin Venu 3",
       "brand": "Garmin",
-      "price": [
-        449,
-        499
-      ],
+      "price": [449, 499],
       "color": "Slate Gray",
-      "size": [
-        "45mm"
-      ],
+      "size": ["45mm"],
       "material": "Fiber-Reinforced Polymer",
       "screenType": "AMOLED",
       "waterResistance": "50m",
       "batteryLife": "14 days",
       "os": "Garmin OS",
-      "features": [
-        "Advanced Sleep Coaching",
-        "HRV Status",
-        "Offline Music"
-      ],
+      "features": ["Advanced Sleep Coaching", "HRV Status", "Offline Music"],
       "stock": 20,
       "rating": 4.3,
       "reviews": [
@@ -2367,24 +2315,15 @@
       "category": "Smartwatches",
       "name": "Xiaomi Watch 2 Pro",
       "brand": "Xiaomi",
-      "price": [
-        199,
-        249
-      ],
+      "price": [199, 249],
       "color": "Silver",
-      "size": [
-        "46mm"
-      ],
+      "size": ["46mm"],
       "material": "Stainless Steel",
       "screenType": "AMOLED",
       "waterResistance": "50m",
       "batteryLife": "65 hours",
       "os": "Wear OS",
-      "features": [
-        "Dual-Band GPS",
-        "NFC",
-        "Bluetooth Calls"
-      ],
+      "features": ["Dual-Band GPS", "NFC", "Bluetooth Calls"],
       "stock": 35,
       "rating": 4.2,
       "reviews": [
@@ -2535,25 +2474,15 @@
       "category": "Smartwatches",
       "name": "Huawei Watch GT 4",
       "brand": "Huawei",
-      "price": [
-        249,
-        299
-      ],
+      "price": [249, 299],
       "color": "Brown Leather",
-      "size": [
-        "41mm",
-        "46mm"
-      ],
+      "size": ["41mm", "46mm"],
       "material": "Stainless Steel + Leather",
       "screenType": "AMOLED",
       "waterResistance": "50m",
       "batteryLife": "14 days",
       "os": "HarmonyOS",
-      "features": [
-        "TruSeen 5.5+",
-        "Stay Fit App",
-        "Wireless Charging"
-      ],
+      "features": ["TruSeen 5.5+", "Stay Fit App", "Wireless Charging"],
       "stock": 18,
       "rating": 4.2,
       "reviews": [
@@ -2704,10 +2633,7 @@
       "category": "Accessories",
       "name": "Sony 65\" 4K Ultra HD Smart TV X90L",
       "brand": "Sony",
-      "price": [
-        1399,
-        1499
-      ],
+      "price": [1399, 1499],
       "color": "Black",
       "type": "Smart TV",
       "screenSize": "65 inches",
@@ -2866,9 +2792,7 @@
       "category": "Accessories",
       "name": "Apple TV 4K (128GB)",
       "brand": "Apple",
-      "price": [
-        149
-      ],
+      "price": [149],
       "color": "Black",
       "type": "Streaming Device",
       "resolution": "4K HDR",
@@ -3027,9 +2951,7 @@
       "category": "Accessories",
       "name": "Anker 737 Power Bank (140W)",
       "brand": "Anker",
-      "price": [
-        179
-      ],
+      "price": [179],
       "color": "Black/Orange",
       "type": "Portable Charger",
       "capacity": "24000mAh",
@@ -3037,10 +2959,7 @@
       "ports": "2×USB-C, 1×USB-A",
       "charging": "PD 3.1",
       "weight": "550g",
-      "features": [
-        "LCD Screen",
-        "Fast Charging"
-      ],
+      "features": ["LCD Screen", "Fast Charging"],
       "stock": 30,
       "rating": 4.2,
       "reviews": [
@@ -3191,25 +3110,15 @@
       "category": "Accessories",
       "name": "Logitech MX Keys Mini",
       "brand": "Logitech",
-      "price": [
-        99
-      ],
+      "price": [99],
       "color": "Graphite",
       "type": "Wireless Keyboard",
       "connectivity": "Bluetooth/Unifying",
       "batteryLife": "10 days (backlight off)",
       "backlight": "Yes",
-      "compatibility": [
-        "Windows",
-        "macOS",
-        "iOS",
-        "Android"
-      ],
+      "compatibility": ["Windows", "macOS", "iOS", "Android"],
       "weight": "506g",
-      "features": [
-        "Smart Backlight",
-        "Multi-Device"
-      ],
+      "features": ["Smart Backlight", "Multi-Device"],
       "stock": 40,
       "rating": 4.6,
       "reviews": [
@@ -3360,9 +3269,7 @@
       "category": "Accessories",
       "name": "Samsung T7 Shield 1TB",
       "brand": "Samsung",
-      "price": [
-        89
-      ],
+      "price": [89],
       "color": "Blue",
       "type": "Portable SSD",
       "capacity": "1TB",
@@ -3521,10 +3428,7 @@
       "category": "Headphones",
       "name": "Sony WH-1000XM5",
       "brand": "Sony",
-      "price": [
-        399,
-        449
-      ],
+      "price": [399, 449],
       "color": "Black",
       "type": "Over-ear",
       "wireless": true,
@@ -3532,11 +3436,7 @@
       "batteryLife": "30 hours (ANC on)",
       "bluetoothVersion": "5.2",
       "weight": "250g",
-      "features": [
-        "Touch controls",
-        "Speak-to-Chat",
-        "Hi-Res Audio"
-      ],
+      "features": ["Touch controls", "Speak-to-Chat", "Hi-Res Audio"],
       "stock": 25,
       "rating": 4.7,
       "reviews": [
@@ -3687,9 +3587,7 @@
       "category": "Headphones",
       "name": "Apple AirPods Max",
       "brand": "Apple",
-      "price": [
-        549
-      ],
+      "price": [549],
       "color": "Space Gray",
       "type": "Over-ear",
       "wireless": true,
@@ -3697,11 +3595,7 @@
       "batteryLife": "20 hours (ANC on)",
       "bluetoothVersion": "5.0",
       "weight": "385g",
-      "features": [
-        "Spatial Audio",
-        "H1 Chip",
-        "Digital Crown"
-      ],
+      "features": ["Spatial Audio", "H1 Chip", "Digital Crown"],
       "stock": 18,
       "rating": 4.5,
       "reviews": [
@@ -3852,9 +3746,7 @@
       "category": "Headphones",
       "name": "Bose QuietComfort 45",
       "brand": "Bose",
-      "price": [
-        329
-      ],
+      "price": [329],
       "color": "Black",
       "type": "Over-ear",
       "wireless": true,
@@ -3862,11 +3754,7 @@
       "batteryLife": "24 hours (ANC on)",
       "bluetoothVersion": "5.1",
       "weight": "238g",
-      "features": [
-        "Triple-mode ANC",
-        "Built-in mic",
-        "Bose AR"
-      ],
+      "features": ["Triple-mode ANC", "Built-in mic", "Bose AR"],
       "stock": 20,
       "rating": 4.5,
       "reviews": [
@@ -4017,9 +3905,7 @@
       "category": "Headphones",
       "name": "Samsung Galaxy Buds2 Pro",
       "brand": "Samsung",
-      "price": [
-        229
-      ],
+      "price": [229],
       "color": "White",
       "type": "In-ear",
       "wireless": true,
@@ -4027,11 +3913,7 @@
       "batteryLife": "18 hours (with case)",
       "bluetoothVersion": "5.3",
       "weight": "5.5g (each bud)",
-      "features": [
-        "24-bit Hi-Fi",
-        "360 Audio",
-        "IPX7 water resistance"
-      ],
+      "features": ["24-bit Hi-Fi", "360 Audio", "IPX7 water resistance"],
       "stock": 30,
       "rating": 5,
       "reviews": [
@@ -4182,9 +4064,7 @@
       "category": "Headphones",
       "name": "JBL Tune 760NC",
       "brand": "JBL",
-      "price": [
-        129
-      ],
+      "price": [129],
       "color": "Blue",
       "type": "Over-ear",
       "wireless": true,
@@ -4192,11 +4072,7 @@
       "batteryLife": "35 hours (ANC on)",
       "bluetoothVersion": "5.0",
       "weight": "220g",
-      "features": [
-        "JBL Pure Bass",
-        "Ambient Aware",
-        "Fast Charge"
-      ],
+      "features": ["JBL Pure Bass", "Ambient Aware", "Fast Charge"],
       "stock": 35,
       "rating": 4.4,
       "reviews": [
@@ -4347,9 +4223,7 @@
       "category": "Headphones",
       "name": "Beats Studio Pro",
       "brand": "Beats",
-      "price": [
-        349
-      ],
+      "price": [349],
       "color": "Sandstone",
       "type": "Over-ear",
       "wireless": true,
@@ -4357,11 +4231,7 @@
       "batteryLife": "40 hours (ANC off)",
       "bluetoothVersion": "5.3",
       "weight": "260g",
-      "features": [
-        "Spatial Audio",
-        "USB-C Lossless",
-        "Transparency Mode"
-      ],
+      "features": ["Spatial Audio", "USB-C Lossless", "Transparency Mode"],
       "stock": 15,
       "rating": 4.9,
       "reviews": [
@@ -4512,26 +4382,14 @@
       "category": "Computers",
       "name": "MacBook Pro 16\" M3 Max",
       "brand": "Apple",
-      "price": [
-        3499,
-        3999,
-        4599
-      ],
+      "price": [3499, 3999, 4599],
       "color": "Space Gray",
       "type": "Laptop",
       "screenSize": "16.2 inches",
       "resolution": "3456x2234 (Retina)",
       "processor": "Apple M3 Max (12-core CPU, 38-core GPU)",
-      "ram": [
-        32,
-        64,
-        96
-      ],
-      "storage": [
-        512,
-        1024,
-        2048
-      ],
+      "ram": [32, 64, 96],
+      "storage": [512, 1024, 2048],
       "batteryLife": "22 hours",
       "weight": "2.16 kg",
       "os": "macOS Sonoma",
@@ -4685,26 +4543,14 @@
       "category": "Computers",
       "name": "Dell XPS 15 (2024)",
       "brand": "Dell",
-      "price": [
-        2299,
-        2799,
-        3299
-      ],
+      "price": [2299, 2799, 3299],
       "color": "Platinum",
       "type": "Laptop",
       "screenSize": "15.6 inches",
       "resolution": "3840x2400 (4K OLED)",
       "processor": "Intel Core i9-13900H",
-      "ram": [
-        16,
-        32,
-        64
-      ],
-      "storage": [
-        512,
-        1024,
-        2048
-      ],
+      "ram": [16, 32, 64],
+      "storage": [512, 1024, 2048],
       "graphics": "NVIDIA RTX 4070 (8GB)",
       "batteryLife": "14 hours",
       "weight": "1.8 kg",
@@ -4859,23 +4705,14 @@
       "category": "Computers",
       "name": "HP Spectre x360 14",
       "brand": "HP",
-      "price": [
-        1599,
-        1899
-      ],
+      "price": [1599, 1899],
       "color": "Nightfall Black",
       "type": "2-in-1 Laptop",
       "screenSize": "14 inches",
       "resolution": "3000x2000 (OLED)",
       "processor": "Intel Core i7-1360P",
-      "ram": [
-        16,
-        32
-      ],
-      "storage": [
-        512,
-        1024
-      ],
+      "ram": [16, 32],
+      "storage": [512, 1024],
       "batteryLife": "16 hours",
       "weight": "1.37 kg",
       "os": "Windows 11 Home",
@@ -5029,26 +4866,14 @@
       "category": "Computers",
       "name": "Apple iMac 24\" M3",
       "brand": "Apple",
-      "price": [
-        1499,
-        1699,
-        1999
-      ],
+      "price": [1499, 1699, 1999],
       "color": "Blue",
       "type": "All-in-One",
       "screenSize": "24 inches",
       "resolution": "4480x2520 (4.5K Retina)",
       "processor": "Apple M3 (8-core CPU, 10-core GPU)",
-      "ram": [
-        8,
-        16,
-        24
-      ],
-      "storage": [
-        256,
-        512,
-        1024
-      ],
+      "ram": [8, 16, 24],
+      "storage": [256, 512, 1024],
       "weight": "4.48 kg",
       "os": "macOS Sonoma",
       "stock": 10,
@@ -5201,23 +5026,14 @@
       "category": "Computers",
       "name": "Lenovo Legion Pro 7i",
       "brand": "Lenovo",
-      "price": [
-        2499,
-        2999
-      ],
+      "price": [2499, 2999],
       "color": "Storm Gray",
       "type": "Gaming Laptop",
       "screenSize": "16 inches",
       "resolution": "2560x1600 (240Hz)",
       "processor": "Intel Core i9-13900HX",
-      "ram": [
-        32,
-        64
-      ],
-      "storage": [
-        1024,
-        2048
-      ],
+      "ram": [32, 64],
+      "storage": [1024, 2048],
       "graphics": "NVIDIA RTX 4090 (16GB)",
       "batteryLife": "5 hours (gaming)",
       "weight": "2.8 kg",
@@ -5372,23 +5188,14 @@
       "category": "Computers",
       "name": "ASUS ROG Strix G16",
       "brand": "ASUS",
-      "price": [
-        1799,
-        2199
-      ],
+      "price": [1799, 2199],
       "color": "Eclipse Gray",
       "type": "Gaming Laptop",
       "screenSize": "16 inches",
       "resolution": "1920x1200 (165Hz)",
       "processor": "Intel Core i7-13650HX",
-      "ram": [
-        16,
-        32
-      ],
-      "storage": [
-        512,
-        1024
-      ],
+      "ram": [16, 32],
+      "storage": [512, 1024],
       "graphics": "NVIDIA RTX 4060 (8GB)",
       "batteryLife": "6 hours",
       "weight": "2.5 kg",
@@ -5543,24 +5350,15 @@
       "category": "Gaming Consoles",
       "name": "PlayStation 5 (Standard Edition)",
       "brand": "Sony",
-      "price": [
-        499
-      ],
+      "price": [499],
       "color": "White",
       "type": "Home Console",
       "releaseYear": 2020,
       "storage": "825GB SSD",
       "resolution": "4K UHD",
       "fps": "Up to 120Hz",
-      "features": [
-        "Ray Tracing",
-        "3D Audio",
-        "Backward Compatibility"
-      ],
-      "exclusiveGames": [
-        "Spider-Man 2",
-        "God of War: Ragnarök"
-      ],
+      "features": ["Ray Tracing", "3D Audio", "Backward Compatibility"],
+      "exclusiveGames": ["Spider-Man 2", "God of War: Ragnarök"],
       "controller": "DualSense",
       "onlineService": "PlayStation Plus",
       "stock": 20,
@@ -5713,24 +5511,15 @@
       "category": "Gaming Consoles",
       "name": "Xbox Series X",
       "brand": "Microsoft",
-      "price": [
-        499
-      ],
+      "price": [499],
       "color": "Black",
       "type": "Home Console",
       "releaseYear": 2020,
       "storage": "1TB SSD",
       "resolution": "4K UHD",
       "fps": "Up to 120Hz",
-      "features": [
-        "Quick Resume",
-        "Smart Delivery",
-        "Game Pass"
-      ],
-      "exclusiveGames": [
-        "Halo Infinite",
-        "Forza Horizon 5"
-      ],
+      "features": ["Quick Resume", "Smart Delivery", "Game Pass"],
+      "exclusiveGames": ["Halo Infinite", "Forza Horizon 5"],
       "controller": "Xbox Wireless",
       "onlineService": "Xbox Game Pass Ultimate",
       "stock": 18,
@@ -5883,24 +5672,15 @@
       "category": "Gaming Consoles",
       "name": "Nintendo Switch OLED",
       "brand": "Nintendo",
-      "price": [
-        349
-      ],
+      "price": [349],
       "color": "White",
       "type": "Hybrid Console",
       "releaseYear": 2021,
       "storage": "64GB (expandable)",
       "resolution": "720p (Handheld) / 1080p (Docked)",
       "fps": "60Hz",
-      "features": [
-        "Tabletop Mode",
-        "Local Multiplayer",
-        "HD Rumble"
-      ],
-      "exclusiveGames": [
-        "Zelda: Tears of the Kingdom",
-        "Super Mario Odyssey"
-      ],
+      "features": ["Tabletop Mode", "Local Multiplayer", "HD Rumble"],
+      "exclusiveGames": ["Zelda: Tears of the Kingdom", "Super Mario Odyssey"],
       "controller": "Joy-Con",
       "onlineService": "Nintendo Switch Online",
       "stock": 25,
@@ -6053,20 +5833,14 @@
       "category": "Gaming Consoles",
       "name": "Steam Deck OLED (512GB)",
       "brand": "Valve",
-      "price": [
-        549
-      ],
+      "price": [549],
       "color": "Black",
       "type": "Handheld PC",
       "releaseYear": 2023,
       "storage": "512GB SSD",
       "resolution": "1280x800 (OLED)",
       "fps": "90Hz",
-      "features": [
-        "PC Game Library",
-        "Trackpads",
-        "Linux-based OS"
-      ],
+      "features": ["PC Game Library", "Trackpads", "Linux-based OS"],
       "controller": "Built-in Controls",
       "os": "SteamOS",
       "stock": 12,
@@ -6219,17 +5993,12 @@
       "category": "Gaming Consoles",
       "name": "PlayStation Portal",
       "brand": "Sony",
-      "price": [
-        199
-      ],
+      "price": [199],
       "color": "White",
       "type": "Streaming Device",
       "releaseYear": 2023,
       "resolution": "1080p (60Hz)",
-      "features": [
-        "Remote Play for PS5",
-        "DualSense Integration"
-      ],
+      "features": ["Remote Play for PS5", "DualSense Integration"],
       "controller": "Built-in",
       "requirements": "Requires PS5 Console",
       "stock": 15,
@@ -6382,20 +6151,14 @@
       "category": "Gaming Consoles",
       "name": "Xbox Series S",
       "brand": "Microsoft",
-      "price": [
-        299
-      ],
+      "price": [299],
       "color": "White",
       "type": "Home Console",
       "releaseYear": 2020,
       "storage": "512GB SSD",
       "resolution": "1440p (Up to 4K upscaling)",
       "fps": "120Hz",
-      "features": [
-        "All-Digital",
-        "Game Pass",
-        "Quick Resume"
-      ],
+      "features": ["All-Digital", "Game Pass", "Quick Resume"],
       "controller": "Xbox Wireless",
       "onlineService": "Xbox Game Pass",
       "stock": 22,
@@ -6552,43 +6315,19 @@
       "filters": [
         {
           "title": "Brands",
-          "values": [
-            "Apple",
-            "Samsung",
-            "Google",
-            "OnePlus"
-          ]
+          "values": ["Apple", "Samsung", "Google", "OnePlus"]
         },
         {
-          "title": "Memory (GB)",
-          "values": [
-            128,
-            256,
-            512,
-            1024
-          ]
+          "title": "Memory",
+          "values": [128, 256, 512, 1024]
         },
         {
           "title": "Price Range",
-          "values": {
-            "min": 799,
-            "max": 1499
-          }
-        },
-        {
-          "title": "Operating System",
-          "values": [
-            "iOS",
-            "Android"
-          ]
+          "values": [500, 700, 900, 1200, 1500, 2000]
         },
         {
           "title": "Screen Size",
-          "values": [
-            "6.1 inches",
-            "6.7 inches",
-            "6.8 inches"
-          ]
+          "values": ["6.1 inches", "6.7 inches", "6.8 inches"]
         }
       ]
     },
@@ -6599,41 +6338,19 @@
       "filters": [
         {
           "title": "Brands",
-          "values": [
-            "Apple",
-            "Samsung",
-            "Garmin",
-            "Xiaomi",
-            "Huawei"
-          ]
+          "values": ["Apple", "Samsung", "Garmin", "Xiaomi", "Huawei"]
         },
         {
           "title": "Size",
-          "values": [
-            "41mm",
-            "43mm",
-            "45mm",
-            "46mm",
-            "47mm"
-          ]
+          "values": ["41mm", "43mm", "45mm", "46mm", "47mm"]
         },
         {
           "title": "OS",
-          "values": [
-            "watchOS",
-            "Wear OS",
-            "Garmin OS",
-            "HarmonyOS"
-          ]
+          "values": ["watchOS", "Wear OS", "Garmin OS", "HarmonyOS"]
         },
         {
           "title": "Features",
-          "values": [
-            "ECG",
-            "GPS",
-            "Blood Oxygen",
-            "Sleep Tracking"
-          ]
+          "values": ["ECG", "GPS", "Blood Oxygen", "Sleep Tracking"]
         }
       ]
     },
@@ -6644,13 +6361,7 @@
       "filters": [
         {
           "title": "Brands",
-          "values": [
-            "Sony",
-            "Apple",
-            "Anker",
-            "Logitech",
-            "Samsung"
-          ]
+          "values": ["Sony", "Apple", "Anker", "Logitech", "Samsung"]
         },
         {
           "title": "Type",
@@ -6678,29 +6389,15 @@
       "filters": [
         {
           "title": "Brands",
-          "values": [
-            "Sony",
-            "Apple",
-            "Bose",
-            "Samsung",
-            "JBL",
-            "Beats"
-          ]
+          "values": ["Sony", "Apple", "Bose", "Samsung", "JBL", "Beats"]
         },
         {
           "title": "Type",
-          "values": [
-            "Over-ear",
-            "In-ear"
-          ]
+          "values": ["Over-ear", "In-ear"]
         },
         {
           "title": "Features",
-          "values": [
-            "Noise Cancelling",
-            "Wireless",
-            "Water Resistant"
-          ]
+          "values": ["Noise Cancelling", "Wireless", "Water Resistant"]
         }
       ]
     },
@@ -6711,41 +6408,19 @@
       "filters": [
         {
           "title": "Brands",
-          "values": [
-            "Apple",
-            "Dell",
-            "HP",
-            "Lenovo",
-            "ASUS"
-          ]
+          "values": ["Apple", "Dell", "HP", "Lenovo", "ASUS"]
         },
         {
           "title": "Type",
-          "values": [
-            "Laptop",
-            "2-in-1",
-            "All-in-One",
-            "Gaming"
-          ]
+          "values": ["Laptop", "2-in-1", "All-in-One", "Gaming"]
         },
         {
           "title": "RAM (GB)",
-          "values": [
-            8,
-            16,
-            32,
-            64,
-            96
-          ]
+          "values": [8, 16, 32, 64, 96]
         },
         {
           "title": "Storage (GB)",
-          "values": [
-            256,
-            512,
-            1024,
-            2048
-          ]
+          "values": [256, 512, 1024, 2048]
         }
       ]
     },
@@ -6756,37 +6431,19 @@
       "filters": [
         {
           "title": "Brands",
-          "values": [
-            "Sony",
-            "Microsoft",
-            "Nintendo",
-            "Valve"
-          ]
+          "values": ["Sony", "Microsoft", "Nintendo", "Valve"]
         },
         {
           "title": "Type",
-          "values": [
-            "Home Console",
-            "Hybrid",
-            "Handheld"
-          ]
+          "values": ["Home Console", "Hybrid", "Handheld"]
         },
         {
           "title": "Storage",
-          "values": [
-            "64GB",
-            "512GB",
-            "825GB",
-            "1TB"
-          ]
+          "values": ["64GB", "512GB", "825GB", "1TB"]
         },
         {
           "title": "Resolution",
-          "values": [
-            "720p",
-            "1080p",
-            "4K"
-          ]
+          "values": ["720p", "1080p", "4K"]
         }
       ]
     }
@@ -6798,11 +6455,7 @@
       "email": "ysullivan@yahoo.com",
       "passwordHash": "$2b$10$.7DycC1NduZWAhbO0u5Q5eC5m6HZrr.vNny.LGmVVr9e/fooRV2BK",
       "role": "customer",
-      "wishlist": [
-        2,
-        9,
-        17
-      ],
+      "wishlist": [2, 9, 17],
       "cart": [
         {
           "productId": 7,
@@ -6876,12 +6529,7 @@
       "email": "sallywalker@pratt.com",
       "passwordHash": "$2b$10$PLbeQxzYgu5q3NTD8wB8ye2am4JPA5S2rpOQOEBSrqca.fWfjzaHC",
       "role": "customer",
-      "wishlist": [
-        16,
-        15,
-        17,
-        9
-      ],
+      "wishlist": [16, 15, 17, 9],
       "cart": [],
       "orders": [
         {
@@ -7012,11 +6660,7 @@
       "email": "susanlopez@mendoza.com",
       "passwordHash": "$2b$10$oUIszaQV0lE0/OeODzoEEebzpLcbLgDPvNX8cJuXWOLtRcKlYvFN6",
       "role": "customer",
-      "wishlist": [
-        3,
-        20,
-        5
-      ],
+      "wishlist": [3, 20, 5],
       "cart": [
         {
           "productId": 1,
@@ -7084,11 +6728,7 @@
           "totalDiscount": 405
         }
       ],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (+13) 022-5841",
       "addresses": [
         {
@@ -7121,13 +6761,7 @@
       "email": "eric07@hotmail.com",
       "passwordHash": "$2b$10$KIgalOD6pyf.yk0F2C2p/OaO09ykYRJL0EWQPj6xHl2gIloilYwmW",
       "role": "customer",
-      "wishlist": [
-        8,
-        2,
-        18,
-        3,
-        1
-      ],
+      "wishlist": [8, 2, 18, 3, 1],
       "cart": [],
       "orders": [
         {
@@ -7224,12 +6858,7 @@
       "email": "simpsonlarry@williams-carson.biz",
       "passwordHash": "$2b$10$ewc7dt3Cwyt96bIZYoKIiO6v49pK/ZmuUgqgxbEENLymk0p2Bbzs6",
       "role": "customer",
-      "wishlist": [
-        4,
-        13,
-        7,
-        9
-      ],
+      "wishlist": [4, 13, 7, 9],
       "cart": [
         {
           "productId": 8,
@@ -7276,13 +6905,7 @@
       "email": "harrisjordan@potts-mays.com",
       "passwordHash": "$2b$10$ShsOzSBuaEr9MS6BPVNCC.1VrDhmN/keDCWMo/OVoTsBkGVNT5w.2",
       "role": "customer",
-      "wishlist": [
-        6,
-        20,
-        11,
-        17,
-        9
-      ],
+      "wishlist": [6, 20, 11, 17, 9],
       "cart": [],
       "orders": [
         {
@@ -7363,10 +6986,7 @@
       "email": "melodychandler@yahoo.com",
       "passwordHash": "$2b$10$ozGYMrmCpPU/jZvi43XQV.VXRnjZ/ODl8JvNZvpC.u7rIZP7KApdq",
       "role": "customer",
-      "wishlist": [
-        20,
-        10
-      ],
+      "wishlist": [20, 10],
       "cart": [
         {
           "productId": 10,
@@ -7432,11 +7052,7 @@
       "email": "omiller@richards-jackson.com",
       "passwordHash": "$2b$10$0MLii.IXODl7VtuAdhx7muvLFRsPxBfdGOAy3nyQ/hD8R9mdSoHPu",
       "role": "admin",
-      "wishlist": [
-        2,
-        6,
-        15
-      ],
+      "wishlist": [2, 6, 15],
       "cart": [],
       "orders": [
         {
@@ -7539,10 +7155,7 @@
       "email": "yangkevin@scott.com",
       "passwordHash": "$2b$10$J0gMVy71DRA3rPZrGpKVWu8YsN8U/wEu917TR/n6tsCk1UiCxEE5W",
       "role": "customer",
-      "wishlist": [
-        9,
-        6
-      ],
+      "wishlist": [9, 6],
       "cart": [],
       "orders": [
         {
@@ -7562,11 +7175,7 @@
           "totalDiscount": 0
         }
       ],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (+17) 670-1720",
       "addresses": [
         {
@@ -7599,9 +7208,7 @@
       "email": "drodriguez@hotmail.com",
       "passwordHash": "$2b$10$i0XtxusxhjLZayAM9poA1..k0wzlHvuvuZtc6MrtUuK9TtOsYvMYG",
       "role": "customer",
-      "wishlist": [
-        17
-      ],
+      "wishlist": [17],
       "cart": [
         {
           "productId": 2,
@@ -7615,11 +7222,7 @@
         }
       ],
       "orders": [],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (899) 331-8868",
       "addresses": [
         {
@@ -7638,10 +7241,7 @@
       "email": "wallsrobert@gmail.com",
       "passwordHash": "$2b$10$c1pQ6IcJYEf1WHdFhIgaCuHv59ImZoss2kvXm5eEIomU1wvgvDlVy",
       "role": "admin",
-      "wishlist": [
-        18,
-        11
-      ],
+      "wishlist": [18, 11],
       "cart": [
         {
           "productId": 10,
@@ -7733,10 +7333,7 @@
       "email": "david35@yahoo.com",
       "passwordHash": "$2b$10$M9hcNZAQG3ta7JH2Gca8T.sGkIu8Ve/gpMy6kxj6kgJlYrbLjyfnq",
       "role": "customer",
-      "wishlist": [
-        6,
-        17
-      ],
+      "wishlist": [6, 17],
       "cart": [],
       "orders": [
         {
@@ -7826,12 +7423,7 @@
       "email": "fwelch@yahoo.com",
       "passwordHash": "$2b$10$zY0L461tuudouZay/o2PoebkNHH1GwsJcpqFG/Mr5DCUKCzBEUPeK",
       "role": "admin",
-      "wishlist": [
-        13,
-        3,
-        19,
-        18
-      ],
+      "wishlist": [13, 3, 19, 18],
       "cart": [
         {
           "productId": 4,
@@ -7840,11 +7432,7 @@
         }
       ],
       "orders": [],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (+10) 046-8967",
       "addresses": [
         {
@@ -7877,12 +7465,7 @@
       "email": "morenojohn@gmail.com",
       "passwordHash": "$2b$10$XzkQn27yR6QMhivwDoWCz.MduxLrrm9eJ1oN.XcgV1BoXtZdlyY2K",
       "role": "admin",
-      "wishlist": [
-        10,
-        15,
-        16,
-        7
-      ],
+      "wishlist": [10, 15, 16, 7],
       "cart": [
         {
           "productId": 2,
@@ -7901,11 +7484,7 @@
         }
       ],
       "orders": [],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (211) 669-7284",
       "addresses": [
         {
@@ -8022,10 +7601,7 @@
       "email": "sethfletcher@hotmail.com",
       "passwordHash": "$2b$10$nAHGM95ptyF/NO3oelhF4.xNjLxz5r9E0CoMlhNHxvQCw5tzIs1kW",
       "role": "customer",
-      "wishlist": [
-        2,
-        17
-      ],
+      "wishlist": [2, 17],
       "cart": [
         {
           "productId": 5,
@@ -8067,11 +7643,7 @@
           "totalDiscount": 2473
         }
       ],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (394) 918-4567",
       "addresses": [
         {
@@ -8104,13 +7676,7 @@
       "email": "thenry@yahoo.com",
       "passwordHash": "$2b$10$ad0462eIOVUg7MCwtaDW4.XVD2Swg6lMI08JrJFnL0k2OhV1HTGZu",
       "role": "customer",
-      "wishlist": [
-        15,
-        12,
-        17,
-        13,
-        2
-      ],
+      "wishlist": [15, 12, 17, 13, 2],
       "cart": [],
       "orders": [
         {
@@ -8178,10 +7744,7 @@
       "email": "timothy30@yahoo.com",
       "passwordHash": "$2b$10$zOmXyp8JSWOXKXyuSzsy9u7fFymTvFteP2ORJkpB9OxFjZnE5Cpqe",
       "role": "admin",
-      "wishlist": [
-        11,
-        3
-      ],
+      "wishlist": [11, 3],
       "cart": [
         {
           "productId": 5,
@@ -8226,10 +7789,7 @@
       "email": "kimberly89@herrera-green.com",
       "passwordHash": "$2b$10$1coyRC.Jj7GU4zvUWo68dOdmuKZYefrxHjP4CB86KB5CKYbi5D6yi",
       "role": "admin",
-      "wishlist": [
-        2,
-        20
-      ],
+      "wishlist": [2, 20],
       "cart": [
         {
           "productId": 7,
@@ -8273,11 +7833,7 @@
           "totalDiscount": 507
         }
       ],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (+18) 433-1845",
       "addresses": [
         {
@@ -8388,9 +7944,7 @@
       "email": "qbarnett@hotmail.com",
       "passwordHash": "$2b$10$7QnS7WXwjcm4CL8.atQ.ZOqUyMR8vilDhz96vAvDikYE7OMqVFQsO",
       "role": "customer",
-      "wishlist": [
-        15
-      ],
+      "wishlist": [15],
       "cart": [
         {
           "productId": 2,
@@ -8550,13 +8104,7 @@
       "email": "francisco25@wilkins.com",
       "passwordHash": "$2b$10$O51K8WFXpF6l9sPYm82V9.XhbkfEDyQIRacVkBZayUjdrgb7OpEMa",
       "role": "customer",
-      "wishlist": [
-        4,
-        1,
-        10,
-        12,
-        19
-      ],
+      "wishlist": [4, 1, 10, 12, 19],
       "cart": [
         {
           "productId": 3,
@@ -8598,10 +8146,7 @@
       "email": "amanda85@yahoo.com",
       "passwordHash": "$2b$10$F7hq4pK7s2ATGQcuF4JK1OMIph/F6rKGdAzR5BTk5m5gMPYbnpCJi",
       "role": "admin",
-      "wishlist": [
-        5,
-        1
-      ],
+      "wishlist": [5, 1],
       "cart": [
         {
           "productId": 6,
@@ -8674,10 +8219,7 @@
       "email": "johnny59@yahoo.com",
       "passwordHash": "$2b$10$kZ1QCGhCnvSM1qeXbkbQ8OSQDDifCgB.wClHagr/nqwm2JT9EuTSW",
       "role": "customer",
-      "wishlist": [
-        12,
-        14
-      ],
+      "wishlist": [12, 14],
       "cart": [],
       "orders": [],
       "permissions": [],
@@ -8728,11 +8270,7 @@
       "email": "zcarr@boyd-mckinney.com",
       "passwordHash": "$2b$10$bZynLMrJOlqKjvm2E053huRNO7guFIg81j8YMcnMNDaFtdLtNx/RO",
       "role": "admin",
-      "wishlist": [
-        5,
-        19,
-        14
-      ],
+      "wishlist": [5, 19, 14],
       "cart": [
         {
           "productId": 6,
@@ -8810,9 +8348,7 @@
       "email": "samantha16@alexander.org",
       "passwordHash": "$2b$10$VfnEjUfKbdm/MrUv3LIU8OtjlkKbFUvd.8wTzDyXvWaVX/6RI/0CO",
       "role": "customer",
-      "wishlist": [
-        15
-      ],
+      "wishlist": [15],
       "cart": [
         {
           "productId": 9,
@@ -8859,10 +8395,7 @@
       "email": "jdonaldson@garrett.biz",
       "passwordHash": "$2b$10$D.LB.SIAxig6mIdTCnHAu.XPksV3A1maBTIRUOhW6iH.5C7UtBoAa",
       "role": "customer",
-      "wishlist": [
-        1,
-        15
-      ],
+      "wishlist": [1, 15],
       "cart": [
         {
           "productId": 1,
@@ -8933,11 +8466,7 @@
         }
       ],
       "orders": [],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (166) 376-3637",
       "addresses": [
         {
@@ -8970,12 +8499,7 @@
       "email": "munozkimberly@gmail.com",
       "passwordHash": "$2b$10$APqpj7uq1rWQ8heliHAdseayB.0uEkfkySRuO8YxwutzwZfZT6Sb2",
       "role": "customer",
-      "wishlist": [
-        19,
-        13,
-        15,
-        4
-      ],
+      "wishlist": [19, 13, 15, 4],
       "cart": [
         {
           "productId": 6,
@@ -8989,11 +8513,7 @@
         }
       ],
       "orders": [],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (+17) 225-7629",
       "addresses": [
         {
@@ -9012,10 +8532,7 @@
       "email": "nataliescott@silva.com",
       "passwordHash": "$2b$10$iVIjV8ZZHbKzC91YwRPHmuDlnmBpuGbzi1ofiQLScEfKDxwj/OjvG",
       "role": "customer",
-      "wishlist": [
-        18,
-        11
-      ],
+      "wishlist": [18, 11],
       "cart": [],
       "orders": [
         {
@@ -9082,11 +8599,7 @@
       "email": "rachel58@yahoo.com",
       "passwordHash": "$2b$10$zdA38IgXZIL1gRewEx404edAWFHjSQYdbPdEtBJL6FX4k/qT6qkJK",
       "role": "customer",
-      "wishlist": [
-        19,
-        15,
-        5
-      ],
+      "wishlist": [19, 15, 5],
       "cart": [
         {
           "productId": 6,
@@ -9156,12 +8669,7 @@
       "email": "daniel75@hotmail.com",
       "passwordHash": "$2b$10$gEej97P5QDsmf4CEbdzwWOP4ucQ3x/mWOSQKWsckHE9JtqlN4lhFW",
       "role": "customer",
-      "wishlist": [
-        3,
-        20,
-        13,
-        1
-      ],
+      "wishlist": [3, 20, 13, 1],
       "cart": [
         {
           "productId": 1,
@@ -9214,11 +8722,7 @@
           "totalDiscount": 0
         }
       ],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (906) 196-5387",
       "addresses": [
         {
@@ -9237,9 +8741,7 @@
       "email": "obaker@hotmail.com",
       "passwordHash": "$2b$10$C9BwkY5WddvyorduiDQCFuVq6OEh1Xq/ZVWf9Y9dQg2Jp9ZZHrkrm",
       "role": "customer",
-      "wishlist": [
-        7
-      ],
+      "wishlist": [7],
       "cart": [
         {
           "productId": 8,
@@ -9265,11 +8767,7 @@
           "totalDiscount": 0
         }
       ],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (298) 300-6897",
       "addresses": [
         {
@@ -9347,13 +8845,7 @@
       "email": "hberger@moore-cantu.com",
       "passwordHash": "$2b$10$eDUopK06KLSNKQnC5MwJGezGzp5VjziUrFwqFmyIJs7xsaJlJlWUy",
       "role": "admin",
-      "wishlist": [
-        18,
-        14,
-        15,
-        16,
-        9
-      ],
+      "wishlist": [18, 14, 15, 16, 9],
       "cart": [
         {
           "productId": 4,
@@ -9408,11 +8900,7 @@
       "email": "figueroajames@meyer.biz",
       "passwordHash": "$2b$10$Swl.Ql5hWtPTMONqhqfGPO.72D1VCb0/zF.vqGmY3C3q6NrCQR5Da",
       "role": "customer",
-      "wishlist": [
-        7,
-        11,
-        4
-      ],
+      "wishlist": [7, 11, 4],
       "cart": [],
       "orders": [
         {
@@ -9475,13 +8963,7 @@
       "email": "steelethomas@barry.com",
       "passwordHash": "$2b$10$v7Irar2JwCMWRTeCLFFh4uzZgV7sIH8TZLWNH9z.hORV13wIx8eNK",
       "role": "admin",
-      "wishlist": [
-        10,
-        20,
-        17,
-        13,
-        9
-      ],
+      "wishlist": [10, 20, 17, 13, 9],
       "cart": [
         {
           "productId": 6,
@@ -9517,11 +8999,7 @@
           "totalDiscount": 0
         }
       ],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (477) 237-4579",
       "addresses": [
         {
@@ -9614,10 +9092,7 @@
       "email": "kjennings@yahoo.com",
       "passwordHash": "$2b$10$hPISwuTnpP3UFpO1TkbumusgBH3ix8EeXBFcu2rFl.6SWAyGSq5ie",
       "role": "customer",
-      "wishlist": [
-        11,
-        14
-      ],
+      "wishlist": [11, 14],
       "cart": [],
       "orders": [
         {
@@ -9689,13 +9164,7 @@
       "email": "saundersjohn@matthews.com",
       "passwordHash": "$2b$10$IEC7FcJI1hIVjax3GJeIIetQSBpJA7iD7dPqYaqvru/VQM2/u2HtK",
       "role": "admin",
-      "wishlist": [
-        1,
-        18,
-        17,
-        14,
-        2
-      ],
+      "wishlist": [1, 18, 17, 14, 2],
       "cart": [],
       "orders": [
         {
@@ -9755,11 +9224,7 @@
       "email": "anthonynelson@yahoo.com",
       "passwordHash": "$2b$10$9yiHzI/lHV/JEkWbglYXkewVIjc7g7M1HPZ54xXKNM7Xj3Q0c/IiW",
       "role": "admin",
-      "wishlist": [
-        10,
-        19,
-        6
-      ],
+      "wishlist": [10, 19, 6],
       "cart": [
         {
           "productId": 1,
@@ -9785,11 +9250,7 @@
           "totalDiscount": 0
         }
       ],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (+16) 149-1819",
       "addresses": [
         {
@@ -9815,9 +9276,7 @@
       "email": "wendysteele@ross.info",
       "passwordHash": "$2b$10$Ql7zHhdh8HsZqM5p43vpq.garxFQ42T0Hw1x/yen55W2BwW.oKDyG",
       "role": "customer",
-      "wishlist": [
-        7
-      ],
+      "wishlist": [7],
       "cart": [
         {
           "productId": 10,
@@ -9853,11 +9312,7 @@
           "totalDiscount": 0
         }
       ],
-      "permissions": [
-        "manage_products",
-        "view_orders",
-        "manage_users"
-      ],
+      "permissions": ["manage_products", "view_orders", "manage_users"],
       "phone": "+1 (+10) 412-4388",
       "addresses": [
         {
@@ -9876,10 +9331,7 @@
       "email": "grant36@hotmail.com",
       "passwordHash": "$2b$10$O2j6cAq6Nu9ZIgvowvquUu2Ik4YId7H7rnO0IfRswiQbX5H4mSkom",
       "role": "admin",
-      "wishlist": [
-        16,
-        15
-      ],
+      "wishlist": [16, 15],
       "cart": [
         {
           "productId": 1,
@@ -9957,10 +9409,7 @@
       "email": "barrymichael@yahoo.com",
       "passwordHash": "$2b$10$tu/YDbbKJ1ExWfQfxOVO4e11tLleSPkb9bWMqmwA6kkd6ynQgVK5O",
       "role": "customer",
-      "wishlist": [
-        12,
-        6
-      ],
+      "wishlist": [12, 6],
       "cart": [
         {
           "productId": 1,

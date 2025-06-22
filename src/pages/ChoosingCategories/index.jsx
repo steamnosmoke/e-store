@@ -1,11 +1,9 @@
-import { useDispatch} from "react-redux";
 import s from "./categories.module.scss";
-
-import { chooseCategory } from "../../redux/slices/catalogSlice";
 import { Link } from "react-router";
+import { useProductsStore } from "../../zustand/productsStore";
 
 export default function ChoosingCategories() {
-  const dispatch = useDispatch();
+  const setCategory = useProductsStore((state) => state.setCategory);
 
   return (
     <>
@@ -16,7 +14,7 @@ export default function ChoosingCategories() {
               <li className={`${s.item} ${s.phone}`}>
                 <Link
                   to={"/catalog/Phones"}
-                  onClick={() => dispatch(chooseCategory("Phones"))}
+                  onClick={() => setCategory("Phones")}
                   className={s.item_inner}
                 >
                   <div className={`${s.phone_image} ${s.item_image}`}></div>
@@ -27,7 +25,7 @@ export default function ChoosingCategories() {
                 <Link
                   to={"/catalog/Gaming Consoles"}
                   className={s.item_inner}
-                  onClick={() => dispatch(chooseCategory("Gaming Consoles"))}
+                  onClick={() => setCategory("Gaming Consoles")}
                 >
                   <div className={`${s.gaming_image} ${s.item_image}`}></div>
                   <p className={s.category}>Gaming</p>
@@ -37,7 +35,7 @@ export default function ChoosingCategories() {
                 <Link
                   to={"/catalog/Smartwatches"}
                   className={s.item_inner}
-                  onClick={() => dispatch(chooseCategory("Smartwatches"))}
+                  onClick={() => setCategory("Smartwatches")}
                 >
                   <div className={`${s.watch_image} ${s.item_image}`}></div>
                   <p className={s.category}>Smart Watches</p>
@@ -47,7 +45,7 @@ export default function ChoosingCategories() {
                 <Link
                   to={"/catalog/Accessories"}
                   className={s.item_inner}
-                  onClick={() => dispatch(chooseCategory("Accessories"))}
+                  onClick={() => setCategory("Accessories")}
                 >
                   <div className={`${s.accessory_image} ${s.item_image}`}></div>
                   <p className={s.category}>Accessories</p>
@@ -57,7 +55,7 @@ export default function ChoosingCategories() {
                 <Link
                   to={"/catalog/Computers"}
                   className={s.item_inner}
-                  onClick={() => dispatch(chooseCategory("Computers"))}
+                  onClick={() => setCategory("Computers")}
                 >
                   <div className={`${s.computer_image} ${s.item_image}`}></div>
                   <p className={s.category}>Computers</p>
@@ -67,7 +65,7 @@ export default function ChoosingCategories() {
                 <Link
                   to={"/catalog/Headphones"}
                   className={s.item_inner}
-                  onClick={() => dispatch(chooseCategory("Headphones"))}
+                  onClick={() => setCategory("Headphones")}
                 >
                   <div className={`${s.headphone_image} ${s.item_image}`}></div>
                   <p className={s.category}>Headphones</p>

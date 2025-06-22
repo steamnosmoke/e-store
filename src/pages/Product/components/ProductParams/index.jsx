@@ -1,8 +1,4 @@
-
 import s from "./params.module.scss";
-import { useSelector, useDispatch } from "react-redux";
-import { setProduct } from "../../../../redux/slices/productSlice";
-
 import screen from "./images/screen.svg";
 import cpu from "./images/cpu.svg";
 import cores from "./images/cores.svg";
@@ -13,57 +9,48 @@ import Delivery from "./images/Delivery.svg";
 import Stock from "./images/Stock.svg";
 import Guaranteed from "./images/Guaranteed.svg";
 import ProductGallery from "../SwiperPhoto";
-import { addToCart } from "../../../../redux/slices/cartSlice";
-import { addToWishlist } from "../../../../redux/slices/wishlistSlice";
+import { useProductsStore } from "../../../../zustand/productsStore";
+import { useAddToCart } from "../../../../hooks/useCart";
+import { useToggleProduct } from "../../../../hooks/useWihlist";
 
 const ProductParams = ({ product }) => {
-  const dispatch = useDispatch();
-  const { color, memory } = useSelector((state) => state.product);
-  const { cart, activeItem } = useSelector((state) => state.cart);
-
+  const addToCart = useAddToCart();
+  const setProduct = useProductsStore((state) => state.setProduct);
+  const addToWishlist = useToggleProduct();
   const colors = [...new Set(product.variants?.map((v) => v.color))];
   const colorHexs = [...new Set(product.variants?.map((v) => v.colorHex))];
   const memories = [...new Set(product.variants?.map((v) => v.memory))];
 
-  const currentVariant = product.variants.find(
-    (item) => item.color === color && item.memory === memory
-  );
-
-  const price =
-    currentVariant && currentVariant.price - currentVariant.discount;
-
-  const onAddToCart = () => {
-    const cartItem = {
-      total: price,
-      productId: product.id,
-      variantId: product.variants.indexOf(currentVariant),
-      objectId: product.objectId,
-      variant: currentVariant, 
-      name: product.name,
-      category: product.category,
+  const setItem = (color, memory) => {
+    const currentVariant = product.variants.find(
+      (item) => item.color === color && item.memory === memory
+    );
+    const variantId = product.variants.indexOf(currentVariant);
+    const objectId = `${product.id}x${variantId}`;
+    const price =
+      currentVariant && currentVariant.price - currentVariant.discount;
+    const item = {
+      ...product,
+      ...currentVariant,
+      variantId,
+      objectId,
+      price,
     };
-    dispatch(addToCart(cartItem));
+    setProduct(item);
+    return item;
   };
 
-  const onChangeColor = (color)=>{
-    const updatedItem = {...product, color}
-    localStorage.removeItem("product")
-    dispatch(setProduct(updatedItem))
-    localStorage.setItem("product", JSON.stringify(updatedItem))
-  }
-  const onChangeMemory = (memory)=>{
-    const updatedItem = {...product, memory}
-    localStorage.removeItem("product")
-    dispatch(setProduct(updatedItem))
-    localStorage.setItem("product", JSON.stringify(updatedItem))
-  }
+  const onAddToCart = () => {
+    const item = setItem(product.color, product.memory);
+    addToCart.mutate(item);
+  };
 
-  if (!currentVariant) return <div>Loading variant...</div>;
+  if (!product) return <div>Loading variant...</div>;
 
   return (
     <>
       <section className={s.params}>
-        <ProductGallery images={currentVariant.images} />
+        <ProductGallery images={product.images} />
 
         <div className={s.block}>
           <h1 className={s.title}>
@@ -71,7 +58,7 @@ const ProductParams = ({ product }) => {
             {product.color}
           </h1>
           <div className={s.price}>
-            <p className={s.actualy_price}>{price}$</p>
+            <p className={s.actualy_price}>{product.price}$</p>
             <p className={s.old_price}></p>
           </div>
           <div className={s.select_color}>
@@ -80,14 +67,14 @@ const ProductParams = ({ product }) => {
               {colors.map((col, colIndex) => (
                 <li
                   className={`${s.color_item} ${
-                    color === col && s.color_active
+                    product.color === col && s.color_active
                   }`}
                   key={colIndex}
                   style={{
                     background: colorHexs[colIndex],
                     outlineColor: colorHexs[colIndex],
                   }}
-                  onClick={()=>onChangeColor(col)}
+                  onClick={() => setItem(col, product.memory)}
                 ></li>
               ))}
             </ul>
@@ -96,10 +83,10 @@ const ProductParams = ({ product }) => {
             {memories.map((mem, memIndex) => (
               <li
                 className={`${s.memory_item} ${
-                  memory === mem && s.memory_active
+                  product.memory === mem && s.memory_active
                 }`}
                 key={memIndex}
-                onClick={()=>onChangeMemory(mem)}
+                onClick={() => setItem(product.color, mem)}
               >
                 {mem}
                 {mem !== 1 ? "GB" : "TB"}
@@ -163,12 +150,13 @@ const ProductParams = ({ product }) => {
             <button></button>
           </div>
           <div className={s.buttons}>
-            <button className='black-line-btn' onClick={()=>dispatch(addToWishlist(product))}>Add to Wishlist</button>
             <button
-              disabled={activeItem?.count === currentVariant.stock}
               className='black-line-btn'
-              onClick={() => onAddToCart()}
+              onClick={() => addToWishlist.mutate(product)}
             >
+              Add to Wishlist
+            </button>
+            <button className='black-line-btn' onClick={() => onAddToCart()}>
               Add to Cart
             </button>
           </div>

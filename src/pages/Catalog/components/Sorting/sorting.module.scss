@@ -1,0 +1,45 @@
+.sorting {
+  cursor: pointer;
+}
+
+.list {
+  opacity: 0;
+  z-index: -1;
+  margin-top: -10px;
+  position: absolute;
+  background-color: #fff;
+  width: 120px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // gap:6px;
+  transition: all 0.2s ease;
+}
+
+.opened {
+  opacity: 1;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 18px;
+  span {
+    color: #6c6c6c;
+    font-size: 16px;
+  }
+}
+
+.item {
+  width: 100%;
+  padding: 3px;
+  text-align: center;
+  transition: all .2s ease;
+  &:hover{
+    background-color: #f1f1f18c;
+  }
+}

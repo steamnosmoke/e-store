@@ -1,54 +1,47 @@
 import s from "./reviews.module.scss";
 import star from "./images/star.svg";
 import starFilled from "./images/star-filled.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Stars from "./stars";
 import Comment from "./Comment";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchReviews, postComment, setComment } from "../../../../redux/slices/reviewSlice";
+import { useAuthStore } from "../../../../zustand/authStore";
+import { useProductsStore } from "../../../../zustand/productsStore";
+import { useGetReviews, usePostComment } from "../../../../hooks/useProducts";
+
 export default function Reviews({ product }) {
-  const dispatch = useDispatch();
   const marks = ["Poor", "Below Average", "Average", "Good", "Excellent"];
-  const [rates, setRates] = useState([]);
   const [isCommentsOpened, setCommentsOpened] = useState(false);
-  const user = useSelector((state) => state.auth.user);
-  const { comment, reviews } = useSelector((state) => state.review);
   const [rating, setRating] = useState(0);
   const [ratingHover, setRatingHover] = useState(0);
+  const user = useAuthStore((state) => state.user);
+  const comment = useProductsStore((state) => state.comment);
+  const setComment = useProductsStore((state) => state.setComment);
+  const postComment = usePostComment();
+  const { data, status } = useGetReviews(product.id);
 
   const handleSubmit = (e) => {
-  e.preventDefault();
-  if (!comment.trim()) return;
+    e.preventDefault();
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = (now.getMonth() + 1).toString().padStart(2, "0");
+    const day = now.getDate().toString().padStart(2, "0");
+    const date = `${year}-${month}-${day}`;
 
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = (now.getMonth() + 1).toString().padStart(2, "0");
-  const day = now.getDate().toString().padStart(2, "0");
-  const date = `${year}-${month}-${day}`;
-
-  if (!user) return;
-
-  const review = {
-    userId: user.id,
-    userName: user.name,
-    rating,
-    comment,
-    date,
-    productId: product.id,
+    const review = {
+      userId: user.firebaseId,
+      userName: user.name,
+      rating,
+      comment,
+      date,
+      productId: product.id,
+    };
+    postComment.mutate(review);
+    setComment("");
+    setRating([]);
   };
-  dispatch(postComment(review));
-  console.log("Комментарий отправлен:", review);
-  dispatch(setComment(""));
-};
 
-  useEffect(() => {
-    let mas = [0, 0, 0, 0, 0];
-    reviews.map((el) => {
-      mas[el.rating - 1] += 1;
-    });
-    setRates(mas);
-    dispatch(fetchReviews(product.id))
-  }, [user,dispatch,reviews]);
+  if (status === "pending") return <h1>Loading reviews</h1>;
+
   return (
     <>
       <section className={s.reviews}>
@@ -57,22 +50,20 @@ export default function Reviews({ product }) {
           <div className={s.rating}>
             <div className={s.left}>
               <p className={s.number}>{product.rating}</p>
-              <p className={s.count_review}>
-                of {reviews.length} reviews
-              </p>
+              <p className={s.count_review}>of {data.reviews.length} reviews</p>
               <Stars rating={product.rating} />
             </div>
 
             <div className={s.right}>
               <ul className={s.list}>
-                {rates.map((el, i) => (
-                  <li className={s.item}>
+                {data.rates.map((el, i) => (
+                  <li className={s.item} key={i}>
                     <p className={s.item_title}>{marks[i]}</p>
                     <div className={s.bar}>
                       <div
                         className={s.bar_front}
                         style={{
-                          width: `${(600 * el) / reviews.length}px`,
+                          width: `${(600 * el) / data.reviews.length}px`,
                         }}
                       ></div>
                     </div>
@@ -91,7 +82,7 @@ export default function Reviews({ product }) {
                 placeholder='Leave Comment'
                 value={comment}
                 rows={4}
-                onChange={(e) => dispatch(setComment(e.target.value))}
+                onChange={(e) => setComment(e.target.value)}
               ></textarea>
               {comment && (
                 <>
@@ -124,7 +115,7 @@ export default function Reviews({ product }) {
                   <button
                     type='submit'
                     className={`${s.submit} black-line-btn`}
-                    disabled = {!comment || !rating}
+                    disabled={!comment || !rating}
                   >
                     Send Comment
                   </button>
@@ -133,9 +124,10 @@ export default function Reviews({ product }) {
             </form>
           )}
           <ul className={`${s.comments} ${isCommentsOpened && s.all_list}`}>
-            {reviews.map((review, reviewIndex) => (
-              <Comment key={reviewIndex} review={review} />
-            ))}
+            {data.reviews.length > 0 &&
+              data.reviews.map((review, reviewIndex) => (
+                <Comment key={reviewIndex} review={review} />
+              ))}
           </ul>
           <button
             className={s.button}

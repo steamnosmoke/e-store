@@ -10,8 +10,11 @@
 }
 
 .img_item {
-  width: 100px;
-  height: 100px;
+  width: 100px !important;
+  height: 100px !important;
+  &::before{
+    content: "" !important;
+  }
 }
 
 .slick-slide,
@@ -36,7 +39,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  width: 83px;
+  width: 83px !important;
+  list-style: none !important;
+  
 
   li{
     height: 100px !important;
