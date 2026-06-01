@@ -1,5 +1,9 @@
 {
   "ecsstractor_port.attributes": "className",
   "ecsstractor_port.bem_nesting": false,
-  "ecsstractor_port.element_separator": "_"
+  "ecsstractor_port.element_separator": "_",
+  "editor.defaultFormatter": "GitHub.copilot",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

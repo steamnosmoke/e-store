@@ -4,14 +4,12 @@ import { useProductsStore } from "../../zustand/productsStore";
 import { usePage } from "../../hooks/usePage";
 import { useAddToCart } from "../../hooks/useCart";
 import { useToggleProduct } from "../../hooks/useWihlist";
-import { useAuthStore } from "../../zustand/authStore";
 
 export default function Card({ product }) {
   const setProduct = useProductsStore((state) => state.setProduct);
-  const user = useAuthStore((state) => state.user);
   const addToWishlist = useToggleProduct();
   const addToCart = useAddToCart();
-  const { products } = usePage(user.firebaseId, "wishlist");
+  const { products } = usePage("wishlist");
   const isLiked = products?.some(
     (item) =>
       item.productId === product.productId &&

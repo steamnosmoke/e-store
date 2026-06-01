@@ -5,7 +5,7 @@ import { useAuthStore } from "../zustand/authStore";
 const DB_URL =
   "https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app";
 
-const userId = useAuthStore.getState().user.firebaseId;
+const userId = useAuthStore.getState()?.user?.firebaseId || null;
 
 const getCart = async () => {
   const res = await axios.get(`${DB_URL}/users/${userId}/cart.json`);

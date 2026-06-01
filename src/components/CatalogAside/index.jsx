@@ -1,6 +1,9 @@
 import s from "./catalog_aside.module.scss";
+
 import Filter from "./Filter";
+
 import { useFilters } from "../../hooks/useProducts";
+
 import { useProductsStore } from "../../zustand/productsStore";
 
 export default function CatalogAside() {

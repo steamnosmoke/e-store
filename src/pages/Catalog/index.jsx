@@ -1,27 +1,30 @@
-import CatalogAside from "./components/CatalogAside";
-import s from "./catalog.module.scss";
-import Products from "../../components/Products";
-import { useProducts } from "../../hooks/useProducts";
-import { useProductsStore } from "../../zustand/productsStore";
 import { useEffect } from "react";
+
+import s from "./catalog.module.scss";
+
+import CatalogAside from "./components/CatalogAside";
+import Products from "../../components/Products";
 import CatalogHeader from "./components/CatalogHeader";
+
+import { useProductsStore } from "../../zustand/productsStore";
+
+import { useProducts } from "../../hooks/useProducts";
 
 export default function Catalog() {
   const category = useProductsStore((state) => state.category);
-  const { products, status } = useProducts(category);
   const confirmedFilters = useProductsStore((state) => state.confirmedFilters);
-  const setFilteredProducts = useProductsStore(
-    (state) => state.setFilteredProducts
-  );
   const filteredProducts = useProductsStore((state) => state.filteredProducts);
   const param = useProductsStore((state) => state.sortingParams.param);
   const mod = useProductsStore((state) => state.sortingParams.mod);
   const sortProducts = useProductsStore((state) => state.sortProducts);
+  const setFilteredProducts = useProductsStore(
+    (state) => state.setFilteredProducts
+  );
 
+  const { products, status } = useProducts(category);
 
   useEffect(() => {
     setFilteredProducts(products);
-    // sortProducts(filteredProducts, { param, mod });
   }, [confirmedFilters, status, mod, param, setFilteredProducts, sortProducts]);
 
   return (
@@ -31,7 +34,7 @@ export default function Catalog() {
           <CatalogHeader />
           <section className={s.catalog}>
             <div
-              className='container'
+              className="container"
               style={{ display: "flex", position: "relative" }}
             >
               {category === "Phones" ? (

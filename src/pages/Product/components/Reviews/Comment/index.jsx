@@ -1,7 +1,4 @@
 import s from "./comment.module.scss";
-
-import arrow from "../../../../../assets/images/arrow.svg";
-import { useEffect, useState } from "react";
 import Stars from "../stars";
 export default function Comment({ review }) {
   return (

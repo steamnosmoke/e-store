@@ -4,12 +4,10 @@ import { usePage } from "../../hooks/usePage";
 import { useCartStore } from "../../zustand/cartStore";
 import { useEffect } from "react";
 import { useMakeOrder } from "../../hooks/useCart";
-import { useAuthStore } from "../../zustand/authStore";
 import EmptyCart from "./EmptyCart";
 
 export default function Cart() {
-  const user = useAuthStore((state) => state.user);
-  const { products, status } = usePage(user.firebaseId, "cart");
+  const { products, status } = usePage("cart");
   const calcNumbers = useCartStore((state) => state.calcNumbers);
   const subtotal = useCartStore((state) => state.subtotal);
   const discount = useCartStore((state) => state.discount);

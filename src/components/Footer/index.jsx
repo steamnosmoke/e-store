@@ -10,11 +10,11 @@ export default function Footer() {
   return (
     <>
       <footer className={s.footer}>
-        <div className='container'>
+        <div className="container">
           <div className={s.inner}>
             <div className={s.left_block}>
               <Link to={"/"}>
-                <img src={logo} alt='logotype' />
+                <img src={logo} alt="logotype" />
               </Link>
               <p className={s.descr}>
                 We are a residential interior design firm located in Portland.
@@ -25,22 +25,22 @@ export default function Footer() {
               <h4 className={s.title}>Services</h4>
               <ul className={s.list}>
                 <li className={s.item}>
-                  <Link>Bonus program</Link>
+                  <Link to={"/"}>Bonus program</Link>
                 </li>
                 <li className={s.item}>
-                  <Link>Gift cards</Link>
+                  <Link to={"/"}>Gift cards</Link>
                 </li>
                 <li className={s.item}>
-                  <Link>Credit and payment</Link>
+                  <Link to={"/"}>Credit and payment</Link>
                 </li>
                 <li className={s.item}>
-                  <Link>Service contracts</Link>
+                  <Link to={"/"}>Service contracts</Link>
                 </li>
                 <li className={s.item}>
-                  <Link>Non-cash account</Link>
+                  <Link to={"/"}>Non-cash account</Link>
                 </li>
                 <li className={s.item}>
-                  <Link>Payment</Link>
+                  <Link to={"/"}>Payment</Link>
                 </li>
               </ul>
             </div>
@@ -48,45 +48,45 @@ export default function Footer() {
               <h4 className={s.title}>Assistance to the buyer</h4>
               <ul className={s.list}>
                 <li className={s.item}>
-                  <Link>Find an order</Link>
+                  <Link to={"/"}>Find an order</Link>
                 </li>
                 <li className={s.item}>
-                  <Link>Terms of delivery</Link>
+                  <Link to={"/"}>Terms of delivery</Link>
                 </li>
                 <li className={s.item}>
-                  <Link>Exchange and return of goods</Link>
+                  <Link to={"/"}>Exchange and return of goods</Link>
                 </li>
                 <li className={s.item}>
-                  <Link>Guarantee</Link>
+                  <Link to={"/"}>Guarantee</Link>
                 </li>
                 <li className={s.item}>
-                  <Link>Frequently asked questions</Link>
+                  <Link to={"/"}>Frequently asked questions</Link>
                 </li>
                 <li className={s.item}>
-                  <Link>Terms of use of the site</Link>
+                  <Link to={"/"}>Terms of use of the site</Link>
                 </li>
               </ul>
             </div>
           </div>
           <ul className={s.socials}>
             <li className={s.social}>
-              <a href='#'>
-                <img src={twitter} alt='twitter' />
+              <a href="#!">
+                <img src={twitter} alt="twitter" />
               </a>
             </li>
             <li className={s.social}>
-              <a href='#'>
-                <img src={facebook} alt='facebook' />
+              <a href="#!">
+                <img src={facebook} alt="facebook" />
               </a>
             </li>
             <li className={s.social}>
-              <a href='#'>
-                <img src={tiktok} alt='tiktok' />
+              <a href="#!">
+                <img src={tiktok} alt="tiktok" />
               </a>
             </li>
             <li className={s.social}>
-              <a href='#'>
-                <img src={instagram} alt='instagram' />
+              <a href="#!">
+                <img src={instagram} alt="instagram" />
               </a>
             </li>
           </ul>

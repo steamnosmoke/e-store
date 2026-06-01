@@ -5,7 +5,7 @@ import { useAuthStore } from "../zustand/authStore";
 const DB_URL =
   "https://e-store-4ca3a-default-rtdb.europe-west1.firebasedatabase.app";
 
-const userId = useAuthStore.getState().user.firebaseId;
+const userId = useAuthStore.getState()?.user?.firebaseId;
 
 const getWishlist = async () => {
   const url = `${DB_URL}/users/${userId}/wishlist.json`;
